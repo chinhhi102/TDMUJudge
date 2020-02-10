@@ -1,6 +1,14 @@
 body{
     font-size: 13px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.75 0 0 0;
+    max-width: 1200px;
+    min-width: 920px;
+    margin: 0 auto;
+}
+.container{
+    margin: 0;
+    padding: 0;
 }
 *{
     margin: 0;
@@ -84,6 +92,12 @@ ol, ul{
     }
 /* End Navigator */
 
+/* pagination */
+.pagination{
+    margin: 35px 0;
+}
+/* end pagination */
+
 /* footer  */
 .footer{
     border-top: 1px solid #000;
@@ -118,7 +132,7 @@ ol, ul{
 
 /* Article  */
 .article{
-    margin-top: 20px;
+    margin-top: 10px;
 }
     .topic{
         margin: 0 0 0.5em 0;
@@ -148,6 +162,39 @@ ol, ul{
     }
 
     .interactive{
-        display: inline;
+        padding: 5px;
+    }
+    .interactive *{
+        margin: 0;
+    }
+    .interactive .left-meta{
+        float: left;
+        margin: 0;
+    }
+    .interactive .right-meta{
+        float: right;
+        text-align: right;
+        margin: 0;
     }
 /* End Article */
+
+/* aside-right */
+.sidebox{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid rgb(156, 156, 156);
+    margin: 25px 10px;
+}
+    .sidebox .caption{
+        color: rgb(59, 89, 152);
+        font-size: 17px;
+        font-weight: bold;
+        position: relative;
+        margin: 0.2em 0px;
+        padding: 5px;
+    }
+    .sidebox .bottom-link{
+        text-align: right;
+        padding: 5px;
+    }
+/* End aside-right */
