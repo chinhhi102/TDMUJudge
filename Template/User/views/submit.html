@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TDMU Judge</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/boostrap.min.css">
+    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Javascript -->
+    <script language="Javascript" type="text/javascript" src="../javascripts/edit_area/edit_area_full.js"></script>
+    <script language="Javascript" type="text/javascript" src="../javascripts/submit.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/Logo/logo2-removebg-preview.png" alt="Logo Thu Dau Mot Judge">
+                </a>
+            </div>
+            <div class="lang-chooser">
+                <div>
+                    <a href="#">
+                        <img src="//sta.codeforces.com/s/52427/images/flags/24/gb.png" title="In English"
+                            alt="In English" />
+                    </a>
+                    <a href="#"> <img src="//sta.codeforces.com/s/52427/images/flags/24/ru.png" title="Việt Nam"
+                            alt="Việt Nam" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#">Đăng nhập</a> | <a href="#">Đăng ký</a>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+        <!-- End Header -->
+        <!-- Navigator -->
+        <nav class="roundbox menu-box">
+            <div class="menu-list-container">
+                <ul class="menu-list main-menu-list">
+                    <li class="current">
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">Bài tập</a>
+                    </li>
+                    <li>
+                        <a href="#">Kỳ thi</a>
+                    </li>
+                    <li>
+                        <a href="#">Bảng chấm bài</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/seach" method="POST">
+                <input class="search" name="query" data-isplaceholder="true" value="">
+            </form>
+            <br class="clear">
+        </nav>
+        <!-- End Navigator-->
+
+        <!-- Arlert  -->
+        <div class="alert">
+        </div>
+        <!-- End arlert -->
+
+        <!-- Section  -->
+        <section class="section">
+            <article class="article">
+                <div class="subnav">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item">Bài tập</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item current">Bài nộp</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item">Bảng chấm bài</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="datatable">
+                    <div class="title-datatable">
+                        <p>Bài nộp</p>
+                    </div>
+                    <div class="box-form">
+                        <form action="/Submission/Submit" enctype="multipart/form-data" method="post"
+                            novalidate="novalidate"><input name="__RequestVerificationToken" type="hidden"
+                                value="smmW1F1aBGAK038pc82OpoVuzKbxJnK1c6JLJWFZHJfWbGkydNmD23fDkEHmuqhmSsq78V7kq2taGDHjyZ9EblaP6JpWcHMXORChf5ti7E01"><input
+                                data-val="true" data-val-number="The field ContestID must be a number." id="ContestID"
+                                name="ContestID" type="hidden" value="">
+                            <div class="editor-label">
+                                <span style="width:150px;display:inline-block">Bài tập</span>
+                                <span>
+                                    <input data-val="true" data-val-required="chưa nhập" id="ProblemCode"
+                                        name="ProblemCode" type="text" value=""> </span>
+                                <span>
+                                    <span class="field-validation-valid" data-valmsg-for="ProblemCode"
+                                        data-valmsg-replace="true"></span> </span>
+                            </div>
+                            <div class="editor-label">
+                                <span style="width:150px;display:inline-block">Trình biên dịch</span>
+                                <span>
+                                    <select id="CompilerID" name="CompilerID" aria-invalid="false" class="valid">
+                                        <option value=""></option>
+                                        <option value="1">GNU C++</option>
+                                        <option value="4">Free Pascal</option>
+                                        <option selected="selected" value="5">GNU C++11</option>
+                                        <option value="6">Java 8</option>
+                                        <option value="7">Python 2</option>
+                                        <option value="8">Python 3</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="editor-label">
+                                Mã nguồn
+                            </div>
+                            <div class="editor-field">
+                                <textarea id="example_1" style="height: 350px; width: 100%;" name="test_1"></textarea>
+                                <p>Custom controls:<br />
+                                    <input type='button' onclick='alert(editAreaLoader.getValue("example_1"));'
+                                        value='get value' />
+                                    <input type='button' onclick='editAreaLoader.setValue("example_1", "new_value");'
+                                        value='set value' />
+                                    <input type='button' onclick='test_getSelectionRange("example_1");'
+                                        value='getSelectionRange' />
+                                    <input type='button' onclick='test_setSelectionRange("example_1");'
+                                        value='setSelectionRange' />
+                                    <input type='button' onclick='test_getSelectedText("example_1");'
+                                        value='getSelectedText' />
+                                    <input type='button' onclick='test_setSelectedText("example_1");'
+                                        value='setSelectedText' />
+                                    <input type='button'
+                                        onclick='editAreaLoader.insertTags("example_1", "[OPEN]", "[CLOSE]");'
+                                        value='insertTags' />
+                                    <input type='button' onclick='toogle_editable("example_1");'
+                                        value='Toggle readonly mode' />
+                                </p>
+                            </div>
+                            <div class="editor-label">
+                                Hoặc chọn file mã nguồn
+                            </div>
+                            <div class="editor-field">
+                                <input name="file" id="file" type="file">
+                            </div>
+                            <button type="submit" class="button btn btn-outline-success" name="button"
+                                value="Submit">Nộp bài</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+            <aside class="aside-right">
+                <div class="sidebox">
+                    <div class="caption">
+                        → Coder tích cực
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom-link">
+                        <a href="#">View all →</a>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <div class="caption">
+                        → Bài tập mới
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Mã bài</th>
+                                <th scope="col">Tên bài</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>Larry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom-link">
+                        <a href="#">View all →</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <!-- End Section -->
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> Chính hí </a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>

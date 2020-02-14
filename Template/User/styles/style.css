@@ -59,6 +59,15 @@ ol, ul{
     margin: 4px 1em 0 0;
     background: #f4f4f4 url(../images/Logo/search-16x16.png) 2px 2px no-repeat;
 }
+input[type='text'], input[type='password'], input[type='file'], textarea, select {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    border: 1px solid #DDDDDD;
+}
 /* End Search */
 
 /* Menu - Navigator */
@@ -175,6 +184,61 @@ ol, ul{
         float: right;
         text-align: right;
         margin: 0;
+    }
+    .subnav{
+        margin-left: 15px;
+    }
+    .subnav .list-inline{
+        position: relative;
+        height: 29px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .subnav .list-inline li{
+        padding: 3px;
+        border-radius: 5px;
+    }
+    .subnav .list-inline li:hover{
+        background-color: rgb(192, 192, 192);
+    }
+    .subnav .list-inline li a{
+        text-decoration: none;
+    }
+    .subnav .list-inline li a.current{
+        font-weight: bold;
+        background-color: rgb(153, 153, 153);
+        padding: 5px;
+        border-radius: 5px;
+        color: #000;
+    }
+    .datatable{
+        padding: 0 15px;
+    }
+    .datatable .title-datatable{
+        padding: 10px;
+        border: 2px rgb(131, 131, 131) solid;
+        border-radius: 15px 15px 0 0;
+        height: 50px;
+        background-color: rgb(173, 173, 173);
+    }
+    .datatable .title-datatable p{
+        font-size: 15px;
+        font-weight: bold;
+        float: left;
+    }
+    .datatable .title-datatable form{
+        float: right;
+    }
+    .datatable .box-form{
+        border: 1px rgb(131, 131, 131) solid;
+        padding: 20px;
+    }
+    .datatable .box-form .editor-label {
+        margin: 0 0 0.7em 0;
+        text-align: left;
+    }
+    .datatable .box-form .button{
+        margin-top: 15px;
     }
 /* End Article */
 
