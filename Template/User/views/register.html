@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TDMU Judge</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/boostrap.min.css">
+    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Javascript -->
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/Logo/logo2-removebg-preview.png" alt="Logo Thu Dau Mot Judge">
+                </a>
+            </div>
+            <div class="lang-chooser">
+                <div>
+                    <a href="#">
+                        <img src="//sta.codeforces.com/s/52427/images/flags/24/gb.png" title="In English"
+                            alt="In English" />
+                    </a>
+                    <a href="#"> <img src="//sta.codeforces.com/s/52427/images/flags/24/ru.png" title="Tại Việt Nam"
+                            alt="Việt Nam" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#">Đăng nhập</a> | <a href="#">Đăng ký</a>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+        <!-- End Header -->
+        <!-- Navigator -->
+        <nav class="roundbox menu-box">
+            <div class="menu-list-container">
+                <ul class="menu-list main-menu-list">
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">Kỳ thi</a>
+                    </li>
+                    <li>
+                        <a href="#">Bài tập</a>
+                    </li>
+                    <li>
+                        <a href="#">Bảng xếp hạng</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/seach" method="POST">
+                <input class="search" name="query" data-isplaceholder="true" value="">
+            </form>
+            <br class="clear">
+        </nav>
+        <!-- End Navigator-->
+
+
+        <!-- Arlert  -->
+        <div class="alert">
+        </div>
+        <!-- End arlert -->
+
+
+        <!-- Section  -->
+        <section class="section">
+            <article class="article">
+                <div class="form-enter">
+                    <div class="form">
+                        <div class="title">Đăng nhập vào hệ thống</div>
+                    </div>
+                    <form>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail1" class="col-sm-4 col-form-label">Handle</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter username">
+                                <small id="emailHelp" class="form-text text-muted">	
+                                    This means your username (nickname) on Codeforces. Be careful you will be able to change it only once in the first 7 days after registration.</small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail1" class="col-sm-4 col-form-label">Email address</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputEmail1" class="col-sm-4 col-form-label">Password</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Password">
+                                <small id="emailHelp" class="form-text text-muted">Password should contain at least five characters</small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputPassword1" class="col-sm-4 col-form-label">Confirm Password</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form><div class="bottom-link">
+                            <a href="#">Quên mật khẩu</a>
+                            <a href="#">Đăng nhập</a>
+                        </div>
+                </div>
+            </article>
+        </section>
+        <!-- End Section -->
+        <!-- Footer -->
+        <footer class="footer">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> Chính hí </a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>

@@ -27,7 +27,77 @@ ol, ul{
 .clear{
     clear: both;
 }
+/* Status */
+.verdict-accepted {
+    color: #0a0;
+    font-weight: bold;
+}
 
+.verdict-accepted-challenged {
+    color: #0a0;
+}
+
+.verdict-failed {
+    color: red;
+}
+
+.verdict-rejected {
+    color: #00a;
+}
+
+.verdict-waiting {
+    color: gray;
+}
+
+.verdict-successful-challenge {
+    font-weight: bold;
+    color: #0a0;
+}
+
+.verdict-unsuccessful-challenge {
+    color: #00a;
+}
+
+.verdict-challenged {
+    color: red;
+    font-weight: bold;
+}
+
+.status-verdict {
+    font-size: 1.1rem !important;
+}
+
+.status-problem {
+    font-size: 1.1rem !important;
+}
+
+.status-small {
+    font-size: 1.1rem !important;
+}
+.accepted-problem {
+    background-color: #d4edc9 !important;
+}
+
+ .accepted-problem{
+    border-left: 6px solid #d4edc9 !important;
+}
+
+ .rejected-problem{
+    background-color: #ffe3e3 !important;
+}
+
+ .rejected-problem{
+    border-left: 6px solid #ffe3e3 !important;
+}
+
+ .submitted-verdict-problem {
+    background-color: #def !important;
+}
+
+ .submitted-verdict-problem{
+    border-left: 6px solid #def !important;
+}
+/* end Status */
 /* Header */
 .header{
     position: relative;
@@ -278,6 +348,64 @@ input[type='text'], input[type='password'], input[type='file'], textarea, select
     .blog .blog-comment-count a:hover{
         color: rgb(112, 112, 112);
     }
+    .table-contest{
+        font-size: 17px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .table-contest .limit{
+        font-size: 12px;
+        text-align: right;
+    }
+    .table-contest .submit{
+        font-size: 25x;
+        padding: 25px 0 0 0;
+    }
+    .problem-content .problem-header{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .problem-content .problem-header p{
+        margin: 0;
+        padding: 0;
+    }
+    .problem-content .problem-header .title{
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .form-enter{
+        text-align: center;
+        padding: 0 20%;
+    }
+    .form-enter .form{
+        border: rgb(131, 131, 131) 3px solid;
+        border-radius: 10px 10px 0 0;
+        padding: 1%;
+    }
+    .form-enter .form .title{
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+    .form-enter form{
+        padding: 2%;
+        border: rgb(131, 131, 131) 3px solid;
+        border-top: none;
+    }
+    .form-enter form label{
+        text-align: right;
+    }
+    .form-enter form small{
+        text-align: left;
+    }
+    .form-enter .bottom-link{
+        margin: 15px 0;
+    }
+    .form-enter .bottom-link a{
+        margin: 5px;
+    }
 /* End Article */
 
 /* aside-right */
@@ -298,5 +426,14 @@ input[type='text'], input[type='password'], input[type='file'], textarea, select
     .sidebox .bottom-link{
         text-align: right;
         padding: 5px;
+    }
+    .sidebox .countdown{
+        background-color: rgb(131, 131, 131);
+        height: 50px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 15px;
     }
 /* End aside-right */

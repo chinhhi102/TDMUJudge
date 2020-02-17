@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TDMU Judge</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/boostrap.min.css">
+    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Javascript -->
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/Logo/logo2-removebg-preview.png" alt="Logo Thu Dau Mot Judge">
+                </a>
+            </div>
+            <div class="lang-chooser">
+                <div>
+                    <a href="#">
+                        <img src="//sta.codeforces.com/s/52427/images/flags/24/gb.png" title="In English"
+                            alt="In English" />
+                    </a>
+                    <a href="#"> <img src="//sta.codeforces.com/s/52427/images/flags/24/ru.png" title="Việt Nam"
+                            alt="Việt Nam" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#">Đăng nhập</a> | <a href="#">Đăng ký</a>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+        <!-- End Header -->
+        <!-- Navigator -->
+        <nav class="roundbox menu-box">
+            <div class="menu-list-container">
+                <ul class="menu-list main-menu-list">
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#">Kỳ thi</a>
+                    </li>
+                    <li class="current">
+                        <a href="#">Bài tập</a>
+                    </li>
+                    <li>
+                        <a href="#">Bảng xếp hạng</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/seach" method="POST">
+                <input class="search" name="query" data-isplaceholder="true" value="">
+            </form>
+            <br class="clear">
+        </nav>
+        <!-- End Navigator-->
+
+        <!-- Arlert  -->
+        <div class="alert">
+        </div>
+        <!-- End arlert -->
+
+        <!-- Section  -->
+        <section class="section">
+            <article class="article">
+                <div class="subnav">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item current">Bài tập</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item">Nộp bài</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item">Bảng chấm bài ABC</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="subnav-item">Các lần bạn nộp</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="problem-content">
+                    <div class="problem-header">
+                        <div class="title">
+                            <p>WORDGAME - WORDGAME</p>
+                        </div>
+                        <div class="limit">
+                            <p>Dữ liệu vào: standard input</p>
+                            <p>Dữ liệu ra: standard output</p>
+                            <p>Giới hạn thời gian: 1.0 giây</p>
+                            <p>Giới hạn bộ nhớ: 128 megabyte</p>
+                            <p> Đăng bởi: vinhntndu</p>
+                        </div>
+                    </div>
+                    <div class="problem-detail">
+                        <h1><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Giải
+                                    phương trình sau &nbsp;:&nbsp;</span></span></h1>
+
+                        <p><span style="font-family:times new roman,times,serif"><span
+                                    style="font-size:16px">x<sub>1</sub><sup>p<sub>1</sub></sup>&nbsp; +
+                                    &nbsp;x<sub>2</sub><sup>p<sub>2</sub></sup>&nbsp;+ ... + x<sub>n -
+                                        1</sub><sup>p<sub>n - 1</sub></sup>&nbsp;<span
+                                        style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)">≡
+                                        x<sub>n</sub><sup>p<sub>n</sub></sup>&nbsp; ( mod 10<sup>9</sup>&nbsp;+ 7) .
+                                        (Trong đó kí hiệu </span></span><span
+                                    style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20); font-size:16px">≡&nbsp;</span><span
+                                    style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)">là kí hiệu
+                                        đồng dư )&nbsp;</span></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)">Trong đó
+                                        p<sub>1</sub>&nbsp;, p<sub>2</sub>&nbsp;, p<sub>3</sub>&nbsp;, ... ,
+                                        p<sub>n</sub>&nbsp;là các số nguyên tố phân biệt .&nbsp;</span></span></span>
+                        </p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)"><strong>Yêu
+                                            cầu :</strong>&nbsp;</span></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255); color:rgb(20, 20, 20)">Cho n số
+                                        nguyên tố phân biệt sao cho tích của n số nguyên tố này không lớn
+                                        hơn&nbsp;10<sup>18</sup>&nbsp;.&nbsp;</span></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255)">Đưa ra 1 bộ nghiệm sao
+                                        (x<sub>1</sub>&nbsp;, x<sub>2&nbsp;</sub>, x<sub>3&nbsp;</sub>, ... ,
+                                        x<sub>n</sub>&nbsp;) thỏa mãn điều trên sao cho </span></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px"><span
+                                        style="background-color:rgb(252, 252, 255)">&nbsp;1 &nbsp;<u>&lt;</u>&nbsp;
+                                        x<sub>i</sub>&nbsp; &lt;&nbsp; 10<sup>9</sup>&nbsp;+ 7
+                                        .&nbsp;</span></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span
+                                    style="font-size:16px"><strong><span
+                                            style="background-color:rgb(252, 252, 255)">INPUT :
+                                            &nbsp;</span></strong></span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Dòng đầu
+                                    gồm số nguyên dương T (T <u>&lt;</u>&nbsp;100 )&nbsp;là số TEST
+                                    .&nbsp;&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">T phần sau
+                                    &nbsp;:&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Mỗi phần
+                                    sau gồm 2 dòng :&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Dòng 1
+                                    :&nbsp;Gồm số nguyên dương n là số lượng số nguyên tố .&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Dòng 2 :
+                                    Gồm n số nguyên tố .&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span
+                                    style="font-size:16px"><strong>OUTPUT :</strong>&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Gồm T dòng
+                                    :&nbsp;</span></span></p>
+
+                        <p><span style="font-family:times new roman,times,serif"><span style="font-size:16px">Mỗi dòng
+                                    là một bộ nghiệm thỏa mãn của bài toán .&nbsp;</span></span></p>
+
+                    </div>
+                </div>
+            </article>
+            <aside class="aside-right">
+                <div class="sidebox">
+                    <div class="caption">
+                        → Coder tích cực
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom-link">
+                        <a href="#">View all →</a>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <div class="caption">
+                        → Bài tập mới
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Mã bài</th>
+                                <th scope="col">Tên bài</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Mark</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Jacob</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>Larry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom-link">
+                        <a href="#">View all →</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <!-- End Section -->
+        <!-- Footer -->
+        <footer class="footer">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> Chính hí </a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>

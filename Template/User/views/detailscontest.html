@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TDMU Judge</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="../styles/boostrap.min.css">
+    <link rel="stylesheet" href="../styles/font-awesome/css/font-awesome.css">
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Javascript -->
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="container">
+        <div id="header" class="header">
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/Logo/logo2-removebg-preview.png" alt="Logo Thu Dau Mot Judge">
+                </a>
+            </div>
+            <div class="lang-chooser">
+                <div>
+                    <a href="#">
+                        <img src="//sta.codeforces.com/s/52427/images/flags/24/gb.png" title="In English"
+                            alt="In English" />
+                    </a>
+                    <a href="#"> <img src="//sta.codeforces.com/s/52427/images/flags/24/ru.png" title="Việt Nam"
+                            alt="Việt Nam" />
+                    </a>
+                </div>
+                <div>
+                    <a href="#">Đăng nhập</a> | <a href="#">Đăng ký</a>
+                </div>
+            </div>
+            <br class="clear" />
+        </div>
+        <!-- End Header -->
+        <!-- Navigator -->
+        <nav class="roundbox menu-box">
+            <div class="menu-list-container">
+                <ul class="menu-list main-menu-list">
+                    <li>
+                        <a href="#">Trang chủ</a>
+                    </li>
+                    <li class="current">
+                        <a href="#">Kỳ thi</a>
+                    </li>
+                    <li>
+                        <a href="#">Bài tập</a>
+                    </li>
+                    <li>
+                        <a href="#">Bảng xếp hạng</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <form action="/seach" method="POST">
+                <input class="search" name="query" data-isplaceholder="true" value="">
+            </form>
+            <br class="clear">
+        </nav>
+        <!-- End Navigator-->
+
+        <!-- Arlert  -->
+        <div class="alert">
+        </div>
+        <!-- End arlert -->
+
+        <!-- Section  -->
+        <section class="section">
+            <article class="article">
+                <div class="topic">
+                    <div class="subnav">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="subnav-item current">Bài thi</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="subnav-item">Nộp bài</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="subnav-item">Bài nộp của tôi</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="subnav-item">Bảng chấm bài</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="subnav-item">Bảng xếp hạng</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="datatable">
+                    <div class="title-datatable">
+                        <p>Danh sách bài</p>
+                        <form class="form-inline search-datatable">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input class="form-control form-control-sm ml-3 w-15" type="text" placeholder="Search"
+                                aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="table-contest">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Limit</th>
+                                <th scope="col">Submit</th>
+                                <th scope="col">Solved</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">A</th>
+                                <td>Sweet Problem</td>
+                                <td class="limit">
+                                    <p>standard input/output</p>
+                                    <p>1 s, 256 MB</p></td>
+                                <td class="submit rejected-problem"><i class="fa fa-paper-plane" aria-hidden="true"></i></td>
+                                <td><a href="#"><i class="fa fa-user" aria-hidden="true"></i>1234</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">B</th>
+                                <td>Sweet Problem</td>
+                                <td class="limit">
+                                    <p>standard input/output</p>
+                                    <p>1 s, 256 MB</p></td>
+                                <td class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></td>
+                                <td><a href="#"><i class="fa fa-user" aria-hidden="true"></i>1234</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">C</th>
+                                <td>Sweet Problem</td>
+                                <td class="limit">
+                                    <p>standard input/output</p>
+                                    <p>1 s, 256 MB</p></td>
+                                <td class="submit accepted-problem"><i class="fa fa-paper-plane" aria-hidden="true"></i></td>
+                                <td><a href="#"><i class="fa fa-user" aria-hidden="true"></i>1234</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </article>
+            <aside class="aside-right">
+                <div class="sidebox">
+                    <div class="caption">
+                        → Thời gian còn lại
+                    </div>
+                    <div class="countdown">
+                        12:20:5
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <!-- End Section -->
+        <!-- Footer -->
+        <footer class="footer">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="#"> Chính hí </a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- End Footer -->
+    </div>
+</body>
+
+</html>
