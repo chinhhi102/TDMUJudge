@@ -1,0 +1,103 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\Get'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Get')),
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Annotations\\Schema'] ?? Registry::p('Swagger\\Annotations\\Schema')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+            'attributes' => [
+                [
+                    'ROLE_JURY',
+                    'ROLE_JUDGEHOST',
+                ],
+            ],
+        ],
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                1 => '/{id}',
+            ],
+            'methods' => [
+                1 => [
+                    'GET',
+                ],
+            ],
+        ],
+        'stdClass' => [
+            'ref' => [
+                2 => '#/parameters/id',
+            ],
+            '_context' => [
+                2 => $o[3],
+                4 => $o[7],
+                $o[6],
+            ],
+            'filename' => [
+                3 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                6 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                3 => 827,
+                6 => 827,
+                827,
+            ],
+            'method' => [
+                3 => 'Annotation',
+                6 => 'Annotation',
+                'Annotation',
+            ],
+            'class' => [
+                3 => 'DocParser',
+                6 => 'DocParser',
+                'DocParser',
+            ],
+            'namespace' => [
+                3 => 'Doctrine\\Common\\Annotations',
+                6 => 'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                3 => [
+                    $o[2],
+                ],
+                6 => [
+                    $o[5],
+                ],
+                [
+                    $o[4],
+                ],
+            ],
+            'response' => [
+                4 => '200',
+            ],
+            'description' => [
+                4 => 'Information about the requested executable',
+                'Base64-encoded executable contents',
+            ],
+            'schema' => [
+                4 => $o[5],
+            ],
+            'type' => [
+                5 => 'string',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[4],
+    ],
+    []
+);

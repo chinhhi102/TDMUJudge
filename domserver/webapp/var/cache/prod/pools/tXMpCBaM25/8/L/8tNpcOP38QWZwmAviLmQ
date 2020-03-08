@@ -1,0 +1,24 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{probId<\\d+>}/testcases/{rank<\\d+>}/move/{direction<up|down>}',
+            ],
+            'name' => [
+                'jury_problem_testcase_move',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+);

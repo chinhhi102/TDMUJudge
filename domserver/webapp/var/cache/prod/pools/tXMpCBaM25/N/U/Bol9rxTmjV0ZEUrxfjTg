@@ -1,0 +1,94 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Get'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Get')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone ($p['Nelmio\\ApiDocBundle\\Annotation\\Model'] ?? Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Model')),
+        clone $p['Swagger\\Context'],
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{id}',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                1 => '200',
+            ],
+            'description' => [
+                1 => 'Returns the given team for this contest',
+            ],
+            '_context' => [
+                1 => $o[2],
+                3 => $o[4],
+                5 => $o[6],
+            ],
+            '_unmerged' => [
+                1 => [
+                    $o[3],
+                ],
+            ],
+            'filename' => [
+                2 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                4 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                6 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                2 => 827,
+                4 => 827,
+                6 => 827,
+            ],
+            'method' => [
+                2 => 'Annotation',
+                4 => 'Annotation',
+                6 => 'Annotation',
+            ],
+            'class' => [
+                2 => 'DocParser',
+                4 => 'DocParser',
+                6 => 'DocParser',
+            ],
+            'namespace' => [
+                2 => 'Doctrine\\Common\\Annotations',
+                4 => 'Doctrine\\Common\\Annotations',
+                6 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                2 => [
+                    $o[1],
+                ],
+                4 => [
+                    $o[3],
+                ],
+                6 => [
+                    $o[5],
+                ],
+            ],
+            'type' => [
+                3 => 'App\\Entity\\Team',
+            ],
+            'ref' => [
+                5 => '#/parameters/id',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[5],
+    ],
+    []
+);

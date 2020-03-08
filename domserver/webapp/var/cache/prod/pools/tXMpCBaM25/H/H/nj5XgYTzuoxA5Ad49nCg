@@ -1,0 +1,196 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted'] ?? Registry::p('Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted')),
+        clone ($p['FOS\\RestBundle\\Controller\\Annotations\\Get'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Get')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Annotations\\Schema'] ?? Registry::p('Swagger\\Annotations\\Schema')),
+        clone ($p['Swagger\\Annotations\\Items'] ?? Registry::p('Swagger\\Annotations\\Items')),
+        clone $p['Swagger\\Annotations\\Schema'],
+        clone ($p['Nelmio\\ApiDocBundle\\Annotation\\Model'] ?? Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Model')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Schema'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Sensio\\Bundle\\FrameworkExtraBundle\\Configuration\\IsGranted' => [
+            'attributes' => [
+                [
+                    'ROLE_JURY',
+                    'ROLE_TEAM',
+                    'ROLE_JUDGEHOST',
+                    'ROLE_API_READER',
+                ],
+            ],
+        ],
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                1 => '',
+            ],
+            'methods' => [
+                1 => [
+                    'GET',
+                ],
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                2 => '200',
+            ],
+            'description' => [
+                2 => 'Returns all the judgements for this contest',
+                16 => 'Only show judgements with the given result',
+                18 => 'Only show judgements for the given submission',
+            ],
+            'schema' => [
+                2 => $o[3],
+            ],
+            '_context' => [
+                2 => $o[13],
+                $o[12],
+                $o[11],
+                $o[8],
+                $o[7],
+                9 => $o[10],
+                14 => $o[15],
+                16 => $o[17],
+                18 => $o[19],
+            ],
+            'type' => [
+                3 => 'array',
+                6 => 'App\\Entity\\Judging',
+                16 => 'string',
+                18 => 'string',
+            ],
+            'items' => [
+                3 => $o[4],
+            ],
+            'allOf' => [
+                4 => [
+                    $o[5],
+                    $o[9],
+                ],
+            ],
+            'ref' => [
+                5 => $o[6],
+                9 => '#/definitions/JudgementExtraFields',
+                14 => '#/parameters/idlist',
+            ],
+            'filename' => [
+                7 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                10 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                15 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                17 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                19 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                7 => 827,
+                827,
+                10 => 827,
+                827,
+                827,
+                827,
+                15 => 827,
+                17 => 827,
+                19 => 827,
+            ],
+            'method' => [
+                7 => 'Annotation',
+                'Annotation',
+                10 => 'Annotation',
+                'Annotation',
+                'Annotation',
+                'Annotation',
+                15 => 'Annotation',
+                17 => 'Annotation',
+                19 => 'Annotation',
+            ],
+            'class' => [
+                7 => 'DocParser',
+                'DocParser',
+                10 => 'DocParser',
+                'DocParser',
+                'DocParser',
+                'DocParser',
+                15 => 'DocParser',
+                17 => 'DocParser',
+                19 => 'DocParser',
+            ],
+            'namespace' => [
+                7 => 'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                10 => 'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                15 => 'Doctrine\\Common\\Annotations',
+                17 => 'Doctrine\\Common\\Annotations',
+                19 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                7 => [
+                    $o[6],
+                ],
+                [
+                    $o[5],
+                ],
+                10 => [
+                    $o[9],
+                ],
+                [
+                    $o[4],
+                ],
+                [
+                    $o[3],
+                ],
+                [
+                    $o[2],
+                ],
+                15 => [
+                    $o[14],
+                ],
+                17 => [
+                    $o[16],
+                ],
+                19 => [
+                    $o[18],
+                ],
+            ],
+            'name' => [
+                16 => 'result',
+                18 => 'submission_id',
+            ],
+            'in' => [
+                16 => 'query',
+                18 => 'query',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[14],
+        $o[16],
+        $o[18],
+    ],
+    []
+);

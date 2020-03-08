@@ -1,0 +1,34 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'submissions_public',
+            ],
+            'type' => [
+                'integer',
+            ],
+            'length' => [
+                4,
+            ],
+            'options' => [
+                [
+                    'comment' => 'Number of submissions made (public)',
+                    'unsigned' => true,
+                    'default' => '0',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+);

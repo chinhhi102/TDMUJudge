@@ -1,0 +1,38 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['JMS\\Serializer\\Annotation\\Exclude'] ?? Registry::p('JMS\\Serializer\\Annotation\\Exclude')),
+        clone ($p['App\\Validator\\Constraints\\TimeString'] ?? Registry::p('App\\Validator\\Constraints\\TimeString')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'endtime_string',
+            ],
+            'length' => [
+                64,
+            ],
+            'options' => [
+                [
+                    'comment' => 'Authoritative absolute or relative string representation of endtime',
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);

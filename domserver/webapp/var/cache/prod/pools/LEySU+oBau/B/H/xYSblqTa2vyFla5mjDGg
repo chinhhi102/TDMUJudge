@@ -1,0 +1,67 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        (($f = &Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\ContestProblem',
+                'points',
+            ],
+            'defaultGroup' => [
+                'ContestProblem',
+            ],
+            'members' => [
+                [
+                    'points' => [
+                        $o[1],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'points' => $o[1],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\ContestProblem',
+            ],
+            'property' => [
+                1 => 'points',
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                    ],
+                    'ContestProblem' => [
+                        $o[2],
+                    ],
+                ],
+            ],
+            'value' => [
+                2 => 0,
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'ContestProblem',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

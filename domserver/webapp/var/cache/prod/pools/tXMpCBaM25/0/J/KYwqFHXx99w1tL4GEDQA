@@ -1,0 +1,171 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Get'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Get')),
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Annotations\\Schema'] ?? Registry::p('Swagger\\Annotations\\Schema')),
+        clone ($p['Swagger\\Annotations\\Items'] ?? Registry::p('Swagger\\Annotations\\Items')),
+        clone ($p['Nelmio\\ApiDocBundle\\Annotation\\Model'] ?? Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Model')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
+            ],
+        ],
+        'stdClass' => [
+            'response' => [
+                1 => '200',
+            ],
+            'description' => [
+                1 => 'Returns all the teams for this contest',
+                11 => 'Only show teams for the given category',
+                13 => 'Only show teams for the given affiliation / organization',
+                15 => 'Only show visible teams, even for users with more permissions',
+            ],
+            'schema' => [
+                1 => $o[2],
+            ],
+            '_context' => [
+                1 => $o[8],
+                $o[7],
+                $o[6],
+                $o[5],
+                9 => $o[10],
+                11 => $o[12],
+                13 => $o[14],
+                15 => $o[16],
+            ],
+            'type' => [
+                2 => 'array',
+                4 => 'App\\Entity\\Team',
+                11 => 'string',
+                13 => 'string',
+                15 => 'boolean',
+            ],
+            'items' => [
+                2 => $o[3],
+            ],
+            'ref' => [
+                3 => $o[4],
+                9 => '#/parameters/idlist',
+            ],
+            'filename' => [
+                5 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                10 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                12 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                14 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                16 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                5 => 827,
+                827,
+                827,
+                827,
+                10 => 827,
+                12 => 827,
+                14 => 827,
+                16 => 827,
+            ],
+            'method' => [
+                5 => 'Annotation',
+                'Annotation',
+                'Annotation',
+                'Annotation',
+                10 => 'Annotation',
+                12 => 'Annotation',
+                14 => 'Annotation',
+                16 => 'Annotation',
+            ],
+            'class' => [
+                5 => 'DocParser',
+                'DocParser',
+                'DocParser',
+                'DocParser',
+                10 => 'DocParser',
+                12 => 'DocParser',
+                14 => 'DocParser',
+                16 => 'DocParser',
+            ],
+            'namespace' => [
+                5 => 'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                10 => 'Doctrine\\Common\\Annotations',
+                12 => 'Doctrine\\Common\\Annotations',
+                14 => 'Doctrine\\Common\\Annotations',
+                16 => 'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                5 => [
+                    $o[4],
+                ],
+                [
+                    $o[3],
+                ],
+                [
+                    $o[2],
+                ],
+                [
+                    $o[1],
+                ],
+                10 => [
+                    $o[9],
+                ],
+                12 => [
+                    $o[11],
+                ],
+                14 => [
+                    $o[13],
+                ],
+                16 => [
+                    $o[15],
+                ],
+            ],
+            'name' => [
+                11 => 'category',
+                13 => 'affiliation',
+                15 => 'public',
+            ],
+            'in' => [
+                11 => 'query',
+                13 => 'query',
+                15 => 'query',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[9],
+        $o[11],
+        $o[13],
+        $o[15],
+    ],
+    []
+);

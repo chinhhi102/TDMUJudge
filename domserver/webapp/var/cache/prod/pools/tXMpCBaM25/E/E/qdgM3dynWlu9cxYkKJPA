@@ -1,0 +1,37 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['JMS\\Serializer\\Annotation\\Expose'] ?? Registry::p('JMS\\Serializer\\Annotation\\Expose')),
+        clone ($p['JMS\\Serializer\\Annotation\\SerializedName'] ?? Registry::p('JMS\\Serializer\\Annotation\\SerializedName')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'judgehost',
+                2 => 'judgehost',
+            ],
+            'length' => [
+                64,
+            ],
+            'options' => [
+                [
+                    'comment' => 'Judgehost that performed the judging',
+                ],
+            ],
+            'if' => [
+                1 => 'context.getAttribute(\'domjudge_service\').checkrole(\'jury\')',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);

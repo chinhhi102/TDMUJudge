@@ -1,0 +1,92 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Table'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Table')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Index'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Index')),
+        clone $p['Doctrine\\ORM\\Mapping\\Index'],
+        clone ($p['Doctrine\\ORM\\Mapping\\UniqueConstraint'] ?? Registry::p('Doctrine\\ORM\\Mapping\\UniqueConstraint')),
+        clone ($p['JMS\\Serializer\\Annotation\\VirtualProperty'] ?? Registry::p('JMS\\Serializer\\Annotation\\VirtualProperty')),
+        clone ($p['JMS\\Serializer\\Annotation\\Type'] ?? Registry::p('JMS\\Serializer\\Annotation\\Type')),
+        clone $p['JMS\\Serializer\\Annotation\\VirtualProperty'],
+        clone ($p['JMS\\Serializer\\Annotation\\Groups'] ?? Registry::p('JMS\\Serializer\\Annotation\\Groups')),
+        clone $p['JMS\\Serializer\\Annotation\\Type'],
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                1 => 'contestproblem',
+                'cid',
+                'probid',
+                'shortname',
+                'id',
+                'string',
+                'short_name',
+                9 => 'string',
+            ],
+            'indexes' => [
+                1 => [
+                    $o[2],
+                    $o[3],
+                ],
+            ],
+            'uniqueConstraints' => [
+                1 => [
+                    $o[4],
+                ],
+            ],
+            'options' => [
+                1 => [
+                    'collate' => 'utf8mb4_unicode_ci',
+                    'charset' => 'utf8mb4',
+                    'comment' => 'Many-to-Many mapping of contests and problems',
+                ],
+                4 => [
+                    'lengths' => [
+                        null,
+                        '190',
+                    ],
+                ],
+                [
+                    $o[6],
+                ],
+                7 => [
+                    $o[8],
+                    $o[9],
+                ],
+            ],
+            'columns' => [
+                2 => [
+                    'cid',
+                ],
+                [
+                    'probid',
+                ],
+                [
+                    'cid',
+                    'shortname',
+                ],
+            ],
+            'exp' => [
+                5 => 'object.getProblem().getProbid()',
+                7 => 'object.getShortname()',
+            ],
+            'groups' => [
+                8 => [
+                    'Nonstrict',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[5],
+        $o[7],
+    ],
+    []
+);

@@ -1,0 +1,987 @@
+[Mar 05 20:07:18.836] judgedaemon[2063]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:07:18.839] judgedaemon[2063]: Installing signal handlers
+[Mar 05 20:07:18.840] judgedaemon[2063]: executing chroot script: 'chroot-startstop.sh check'
+[Mar 05 20:07:18.843] judgedaemon[2063]: error: chroot sanity check exited with exitcode 2
+[Mar 05 20:37:49.637] judgedaemon[30748]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:37:49.643] judgedaemon[30748]: Installing signal handlers
+[Mar 05 20:37:49.644] judgedaemon[30748]: executing chroot script: 'chroot-startstop.sh check'
+[Mar 05 20:37:49.650] judgedaemon[30748]: Registering judgehost on endpoint default: http://localhost/domjudge/api
+[Mar 05 20:37:49.669] judgedaemon[30748]: API request POST judgehosts
+[Mar 05 20:37:49.732] judgedaemon[30748]: warning: Error while executing curl POST to url http://localhost/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:22:10</span>
+</div>
+
+<script>
+    var initial = 1583415469;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:37:49.733] judgedaemon[30748]: Registering judgehost on endpoint default failed.
+[Mar 05 20:38:19.734] judgedaemon[30748]: Registering judgehost on endpoint default: http://localhost/domjudge/api
+[Mar 05 20:38:19.738] judgedaemon[30748]: API request POST judgehosts
+[Mar 05 20:38:19.761] judgedaemon[30748]: warning: Error while executing curl POST to url http://localhost/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:21:40</span>
+</div>
+
+<script>
+    var initial = 1583415499;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:38:19.763] judgedaemon[30748]: Registering judgehost on endpoint default failed.
+[Mar 05 20:38:49.764] judgedaemon[30748]: Registering judgehost on endpoint default: http://localhost/domjudge/api
+[Mar 05 20:38:49.772] judgedaemon[30748]: API request POST judgehosts
+[Mar 05 20:38:49.806] judgedaemon[30748]: warning: Error while executing curl POST to url http://localhost/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:21:10</span>
+</div>
+
+<script>
+    var initial = 1583415529;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:38:49.807] judgedaemon[30748]: Registering judgehost on endpoint default failed.
+[Mar 05 20:39:19.808] judgedaemon[30748]: Registering judgehost on endpoint default: http://localhost/domjudge/api
+[Mar 05 20:39:19.813] judgedaemon[30748]: API request POST judgehosts
+[Mar 05 20:39:19.867] judgedaemon[30748]: warning: Error while executing curl POST to url http://localhost/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:20:40</span>
+</div>
+
+<script>
+    var initial = 1583415559;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:39:19.868] judgedaemon[30748]: Registering judgehost on endpoint default failed.
+[Mar 05 20:39:49.869] judgedaemon[30748]: Registering judgehost on endpoint default: http://localhost/domjudge/api
+[Mar 05 20:39:49.875] judgedaemon[30748]: API request POST judgehosts
+[Mar 05 20:39:49.915] judgedaemon[30748]: warning: Error while executing curl POST to url http://localhost/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:20:10</span>
+</div>
+
+<script>
+    var initial = 1583415589;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:39:49.916] judgedaemon[30748]: Registering judgehost on endpoint default failed.
+[Mar 05 20:40:03.070] judgedaemon[30748]: Signal 2 received
+[Mar 05 20:40:03.070] judgedaemon[30748]: Received signal, exiting.
+[Mar 05 20:40:04.434] judgedaemon[30821]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:40:04.439] judgedaemon[30821]: Installing signal handlers
+[Mar 05 20:40:04.440] judgedaemon[30821]: executing chroot script: 'chroot-startstop.sh check'
+[Mar 05 20:40:04.444] judgedaemon[30821]: Registering judgehost on endpoint default: http://tdmu-judge.vn/domjudge/api
+[Mar 05 20:40:04.461] judgedaemon[30821]: API request POST judgehosts
+[Mar 05 20:40:04.518] judgedaemon[30821]: warning: Error while executing curl POST to url http://tdmu-judge.vn/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:19:55</span>
+</div>
+
+<script>
+    var initial = 1583415604;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:40:04.519] judgedaemon[30821]: Registering judgehost on endpoint default failed.
+[Mar 05 20:40:08.829] judgedaemon[30821]: Signal 2 received
+[Mar 05 20:40:08.829] judgedaemon[30821]: Received signal, exiting.
+[Mar 05 20:40:10.644] judgedaemon[30835]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:40:10.648] judgedaemon[30835]: Installing signal handlers
+[Mar 05 20:40:10.648] judgedaemon[30835]: executing chroot script: 'chroot-startstop.sh check'
+[Mar 05 20:40:10.651] judgedaemon[30835]: Registering judgehost on endpoint default: http://tdmu-judge.vn/domjudge/api
+[Mar 05 20:40:10.655] judgedaemon[30835]: API request POST judgehosts
+[Mar 05 20:40:10.707] judgedaemon[30835]: warning: Error while executing curl POST to url http://tdmu-judge.vn/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:19:49</span>
+</div>
+
+<script>
+    var initial = 1583415610;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:40:10.708] judgedaemon[30835]: Registering judgehost on endpoint default failed.
+[Mar 05 20:40:40.709] judgedaemon[30835]: Registering judgehost on endpoint default: http://tdmu-judge.vn/domjudge/api
+[Mar 05 20:40:40.720] judgedaemon[30835]: API request POST judgehosts
+[Mar 05 20:40:40.751] judgedaemon[30835]: warning: Error while executing curl POST to url http://tdmu-judge.vn/domjudge/api/judgehosts: http status code: 404, request size = 32, response: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- DOMjudge version 7.2.0 -->
+    <meta charset="utf-8">
+    <title>DOMjudge</title>
+    <link rel="icon" href="/favicon.ico?v=7.2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css?v=7.2.0">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css?v=7.2.0">
+    <script src="/js/jquery.min.js?v=7.2.0"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=7.2.0"></script>
+
+    <script src="/js/domjudge.js?v=7.2.0"></script>
+            <link rel="stylesheet" href="/style_domjudge.css?v=7.2.0">
+
+        
+    </head>
+<body style="padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
+            aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="menuDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="/public"><i class="fas fa-list-ol"></i> Scoreboard</a>
+            </li>
+            <li class="nav-item ">
+                                    <a class="nav-link" href="/public/problems">
+                        <i class="fas fa-book-open"></i> Problemset
+                    </a>
+                            </li>
+
+            
+                    </ul>
+
+            <a class="nav-link justify-content-center" href="/login">
+        <button type="button" class="btn btn-info btn-sm">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </button>
+    </a>
+
+        <ul class="navbar-nav">
+                    </ul>
+
+        <div class="navbar-text" style="white-space:nowrap;">
+    <span style="padding-left: 10px;">
+        <i class="fas fa-clock loading-indicator"></i>
+    </span>
+        <span id="timeleft">667d 2:19:19</span>
+</div>
+
+<script>
+    var initial = 1583415640;
+    var localInitial = new Date().getTime();
+    var activatetime = 1577874599.877000000;
+    var starttime = 1577876400.000000000;
+    var endtime = 1641052800.000000000;
+    var clientOffset = localInitial - new Date(initial * 1000).getTime();
+    var timeleftelt = document.getElementById("timeleft");
+
+    setInterval(function () {
+        updateClock();
+    }, 1000);
+    updateClock();
+</script>
+    </div>
+</nav>
+        <div class="progress" style="margin-top:-9px; height: 10px;" data-progress-bar>
+        <div class="progress-bar" role="progressbar" style="width: 8%;"
+             aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    404 Not Found</h1>
+                <div class="error-details">
+                    Sorry, an error has occured: Not Found.
+                </div>
+                <div class="error-details">
+                    Please contact a staff member for assistance.
+                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+            var domjudge_base_url = "";
+        $(function () {
+        $('body').on('change', '.custom-file-input', function () {
+            var files = this.files;
+            var fileNames = [];
+            for (var i = 0; i < files.length; i++) {
+                fileNames.push(files.item(i).name);
+            }
+            $(this).next('.custom-file-label').html(fileNames.join(", "));
+            $(this).next('.custom-file-label').removeClass('text-muted');
+        });
+
+        /* toggle refresh if set */
+                /* Enable page refresh if set if wanted by the page, and wanted by the user */
+        
+        initializeAjaxModals();
+    });
+</script>
+</body>
+</html>
+
+[Mar 05 20:40:40.752] judgedaemon[30835]: Registering judgehost on endpoint default failed.
+[Mar 05 20:40:49.040] judgedaemon[30835]: Signal 2 received
+[Mar 05 20:40:49.041] judgedaemon[30835]: Received signal, exiting.
+[Mar 05 20:40:50.026] judgedaemon[30877]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:40:50.030] judgedaemon[30877]: Installing signal handlers
+[Mar 05 20:40:50.031] judgedaemon[30877]: executing chroot script: 'chroot-startstop.sh check'
+[Mar 05 20:40:50.034] judgedaemon[30877]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Mar 05 20:40:50.038] judgedaemon[30877]: API request POST judgehosts
+[Mar 05 20:40:50.594] judgedaemon[30877]: API request GET config
+[Mar 05 20:40:50.775] judgedaemon[30877]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Mar 05 20:40:51.056] judgedaemon[30877]: No submissions in queue (for endpoint default), waiting...

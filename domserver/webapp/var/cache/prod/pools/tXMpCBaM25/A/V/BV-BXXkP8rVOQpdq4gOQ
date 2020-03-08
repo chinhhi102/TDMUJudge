@@ -1,0 +1,139 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['FOS\\RestBundle\\Controller\\Annotations\\Get'] ?? Registry::p('FOS\\RestBundle\\Controller\\Annotations\\Get')),
+        clone ($p['Swagger\\Annotations\\Parameter'] ?? Registry::p('Swagger\\Annotations\\Parameter')),
+        clone ($p['Swagger\\Context'] ?? Registry::p('Swagger\\Context')),
+        clone $p['Swagger\\Annotations\\Parameter'],
+        clone $p['Swagger\\Context'],
+        clone ($p['Swagger\\Annotations\\Response'] ?? Registry::p('Swagger\\Annotations\\Response')),
+        clone ($p['Swagger\\Annotations\\Schema'] ?? Registry::p('Swagger\\Annotations\\Schema')),
+        clone ($p['Swagger\\Annotations\\Items'] ?? Registry::p('Swagger\\Annotations\\Items')),
+        clone ($p['Nelmio\\ApiDocBundle\\Annotation\\Model'] ?? Registry::p('Nelmio\\ApiDocBundle\\Annotation\\Model')),
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+        clone $p['Swagger\\Context'],
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '',
+            ],
+            'methods' => [
+                [
+                    'GET',
+                ],
+            ],
+        ],
+        'stdClass' => [
+            'ref' => [
+                1 => '#/parameters/idlist',
+                7 => $o[8],
+            ],
+            '_context' => [
+                1 => $o[2],
+                3 => $o[4],
+                5 => $o[12],
+                $o[11],
+                $o[10],
+                $o[9],
+            ],
+            'filename' => [
+                2 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                4 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                9 => '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+                '/home/chinhhi/domjudge/domserver/lib/vendor/doctrine/annotations/lib/Doctrine/Common/Annotations/DocParser.php',
+            ],
+            'line' => [
+                2 => 827,
+                4 => 827,
+                9 => 827,
+                827,
+                827,
+                827,
+            ],
+            'method' => [
+                2 => 'Annotation',
+                4 => 'Annotation',
+                9 => 'Annotation',
+                'Annotation',
+                'Annotation',
+                'Annotation',
+            ],
+            'class' => [
+                2 => 'DocParser',
+                4 => 'DocParser',
+                9 => 'DocParser',
+                'DocParser',
+                'DocParser',
+                'DocParser',
+            ],
+            'namespace' => [
+                2 => 'Doctrine\\Common\\Annotations',
+                4 => 'Doctrine\\Common\\Annotations',
+                9 => 'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+                'Doctrine\\Common\\Annotations',
+            ],
+            'annotations' => [
+                2 => [
+                    $o[1],
+                ],
+                4 => [
+                    $o[3],
+                ],
+                9 => [
+                    $o[8],
+                ],
+                [
+                    $o[7],
+                ],
+                [
+                    $o[6],
+                ],
+                [
+                    $o[5],
+                ],
+            ],
+            'name' => [
+                3 => 'public',
+            ],
+            'in' => [
+                3 => 'query',
+            ],
+            'description' => [
+                3 => 'Only show public groups, even for users with more permissions',
+                5 => 'Returns all the groups for this contest',
+            ],
+            'type' => [
+                3 => 'boolean',
+                6 => 'array',
+                8 => 'App\\Entity\\TeamCategory',
+            ],
+            'response' => [
+                5 => '200',
+            ],
+            'schema' => [
+                5 => $o[6],
+            ],
+            'items' => [
+                6 => $o[7],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[3],
+        $o[5],
+    ],
+    []
+);

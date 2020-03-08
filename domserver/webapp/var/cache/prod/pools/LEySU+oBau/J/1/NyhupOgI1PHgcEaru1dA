@@ -1,0 +1,70 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        (($f = &Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (Registry::$prototypes['Symfony\\Component\\Form\\Extension\\Validator\\Constraints\\Form'] ?? Registry::p('Symfony\\Component\\Form\\Extension\\Validator\\Constraints\\Form')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'Symfony\\Component\\Form\\Form',
+                'children',
+            ],
+            'defaultGroup' => [
+                'Form',
+            ],
+            'members' => [
+                [
+                    'children' => [
+                        $o[1],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'children' => $o[1],
+                ],
+            ],
+            'constraints' => [
+                [
+                    $o[2],
+                ],
+            ],
+            'constraintsByGroup' => [
+                [
+                    'Default' => [
+                        $o[2],
+                    ],
+                    'Form' => [
+                        $o[2],
+                    ],
+                ],
+            ],
+            'class' => [
+                1 => 'Symfony\\Component\\Form\\Form',
+            ],
+            'property' => [
+                1 => 'children',
+            ],
+            'cascadingStrategy' => [
+                1 => 2,
+            ],
+            'traversalStrategy' => [
+                1 => 1,
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Form',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

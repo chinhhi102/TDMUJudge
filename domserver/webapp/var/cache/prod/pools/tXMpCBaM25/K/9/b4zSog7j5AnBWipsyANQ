@@ -1,0 +1,43 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Id'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Id')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        clone ($p['App\\Validator\\Constraints\\Identifier'] ?? Registry::p('App\\Validator\\Constraints\\Identifier')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                1 => 'execid',
+            ],
+            'length' => [
+                1 => 32,
+            ],
+            'options' => [
+                1 => [
+                    'comment' => 'Executable ID (string)',
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+                [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+        $o[3],
+    ],
+    []
+);

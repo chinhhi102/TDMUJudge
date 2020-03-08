@@ -1,0 +1,16 @@
+# Generated from 'static.yaml.in' on Thứ năm, 05 Tháng ba năm 2020 18:48:48 +07.
+
+parameters:
+    domjudge.version: 7.2.0
+    domjudge.bindir: /home/chinhhi/domjudge/domserver/bin
+    domjudge.etcdir: /home/chinhhi/domjudge/domserver/etc
+    domjudge.webappdir: /home/chinhhi/domjudge/domserver/webapp
+    domjudge.libdir: /home/chinhhi/domjudge/domserver/lib
+    domjudge.sqldir: /home/chinhhi/domjudge/domserver/sql
+    domjudge.libvendordir: /home/chinhhi/domjudge/domserver/lib/vendor
+    domjudge.logdir: /home/chinhhi/domjudge/domserver/log
+    domjudge.rundir: /home/chinhhi/domjudge/domserver/run
+    domjudge.tmpdir: /home/chinhhi/domjudge/domserver/tmp
+    domjudge.submitdir: /home/chinhhi/domjudge/domserver/submissions
+    domjudge.baseurl: http://tdmu-judge.vn
+    domjudge.submitclient_enabled: yes

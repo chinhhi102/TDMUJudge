@@ -1,0 +1,44 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['JMS\\Serializer\\Annotation\\SerializedName'] ?? Registry::p('JMS\\Serializer\\Annotation\\SerializedName')),
+        clone ($p['JMS\\Serializer\\Annotation\\Groups'] ?? Registry::p('JMS\\Serializer\\Annotation\\Groups')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'externalid',
+                'id',
+            ],
+            'length' => [
+                255,
+            ],
+            'nullable' => [
+                true,
+            ],
+            'options' => [
+                [
+                    'default' => 'NULL',
+                    'comment' => 'Language ID to expose in the REST API',
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Nonstrict',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);

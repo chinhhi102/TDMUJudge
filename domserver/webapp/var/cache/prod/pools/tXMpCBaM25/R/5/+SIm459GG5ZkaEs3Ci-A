@@ -1,0 +1,46 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['JMS\\Serializer\\Annotation\\Expose'] ?? Registry::p('JMS\\Serializer\\Annotation\\Expose')),
+        clone ($p['App\\Validator\\Constraints\\Country'] ?? Registry::p('App\\Validator\\Constraints\\Country')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'country',
+            ],
+            'length' => [
+                3,
+            ],
+            'nullable' => [
+                true,
+            ],
+            'options' => [
+                [
+                    'comment' => 'ISO 3166-1 alpha-3 country code',
+                    'default' => 'NULL',
+                    'fixed' => true,
+                ],
+            ],
+            'if' => [
+                1 => 'context.getAttribute(\'domjudge_service\').dbconfig_get(\'show_flags\', true)',
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);

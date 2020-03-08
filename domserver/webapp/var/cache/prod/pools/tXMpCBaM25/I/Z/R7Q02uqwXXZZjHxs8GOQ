@@ -1,0 +1,46 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['JMS\\Serializer\\Annotation\\Exclude'] ?? Registry::p('JMS\\Serializer\\Annotation\\Exclude')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\GreaterThan'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\GreaterThan')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'memlimit',
+            ],
+            'type' => [
+                'integer',
+            ],
+            'nullable' => [
+                true,
+            ],
+            'options' => [
+                [
+                    'comment' => 'Maximum memory available (in kB) for this problem',
+                    'unsigned' => true,
+                    'default' => 'NULL',
+                ],
+            ],
+            'value' => [
+                2 => 0,
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);

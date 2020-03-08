@@ -1,0 +1,26 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\Callback'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\Callback')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'callback' => [
+                [],
+            ],
+            'groups' => [
+                [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+);

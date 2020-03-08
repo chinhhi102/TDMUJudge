@@ -1,0 +1,100 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.teamid AS teamid_0, t0_.externalid AS externalid_1, t0_.name AS name_2, t0_.categoryid AS categoryid_3, t0_.affilid AS affilid_4, t0_.enabled AS enabled_5, t0_.members AS members_6, t0_.room AS room_7, t0_.comments AS comments_8, t0_.judging_last_started AS judging_last_started_9, t0_.penalty AS penalty_10, t0_.affilid AS affilid_11, t0_.categoryid AS categoryid_12 FROM team t0_ ORDER BY t0_.name ASC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    't' => 'App\\Entity\\Team',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'teamid_0' => 'teamid',
+                    'externalid_1' => 'externalid',
+                    'name_2' => 'name',
+                    'categoryid_3' => 'categoryid',
+                    'affilid_4' => 'affilid',
+                    'enabled_5' => 'enabled',
+                    'members_6' => 'members',
+                    'room_7' => 'room',
+                    'comments_8' => 'comments',
+                    'judging_last_started_9' => 'judging_last_started',
+                    'penalty_10' => 'penalty',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'affilid_11' => 'integer',
+                    'categoryid_12' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    't' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'affilid_11' => 'affilid',
+                    'categoryid_12' => 'categoryid',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'teamid_0' => 't',
+                    'externalid_1' => 't',
+                    'name_2' => 't',
+                    'categoryid_3' => 't',
+                    'affilid_4' => 't',
+                    'enabled_5' => 't',
+                    'members_6' => 't',
+                    'room_7' => 't',
+                    'comments_8' => 't',
+                    'judging_last_started_9' => 't',
+                    'penalty_10' => 't',
+                    'affilid_11' => 't',
+                    'categoryid_12' => 't',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'teamid_0' => 'App\\Entity\\Team',
+                    'externalid_1' => 'App\\Entity\\Team',
+                    'name_2' => 'App\\Entity\\Team',
+                    'categoryid_3' => 'App\\Entity\\Team',
+                    'affilid_4' => 'App\\Entity\\Team',
+                    'enabled_5' => 'App\\Entity\\Team',
+                    'members_6' => 'App\\Entity\\Team',
+                    'room_7' => 'App\\Entity\\Team',
+                    'comments_8' => 'App\\Entity\\Team',
+                    'judging_last_started_9' => 'App\\Entity\\Team',
+                    'penalty_10' => 'App\\Entity\\Team',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

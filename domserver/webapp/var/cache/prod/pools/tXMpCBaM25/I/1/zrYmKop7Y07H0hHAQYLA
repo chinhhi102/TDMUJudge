@@ -1,0 +1,85 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Table'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Table')),
+        clone ($p['Doctrine\\ORM\\Mapping\\UniqueConstraint'] ?? Registry::p('Doctrine\\ORM\\Mapping\\UniqueConstraint')),
+        clone ($p['JMS\\Serializer\\Annotation\\VirtualProperty'] ?? Registry::p('JMS\\Serializer\\Annotation\\VirtualProperty')),
+        clone ($p['JMS\\Serializer\\Annotation\\Type'] ?? Registry::p('JMS\\Serializer\\Annotation\\Type')),
+        clone $p['JMS\\Serializer\\Annotation\\VirtualProperty'],
+        clone $p['JMS\\Serializer\\Annotation\\Type'],
+        clone ($p['JMS\\Serializer\\Annotation\\SerializedName'] ?? Registry::p('JMS\\Serializer\\Annotation\\SerializedName')),
+        clone ($p['JMS\\Serializer\\Annotation\\Groups'] ?? Registry::p('JMS\\Serializer\\Annotation\\Groups')),
+        clone ($p['Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity'] ?? Registry::p('Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                1 => 'team_affiliation',
+                'externalid',
+                'icpcId',
+                'string',
+                'shortName',
+                'string',
+                'shortname',
+            ],
+            'uniqueConstraints' => [
+                1 => [
+                    $o[2],
+                ],
+            ],
+            'options' => [
+                1 => [
+                    'collate' => 'utf8mb4_unicode_ci',
+                    'charset' => 'utf8mb4',
+                    'comment' => 'Affilitations for teams (e.g.: university, company)',
+                ],
+                [
+                    'lengths' => [
+                        '190',
+                    ],
+                ],
+                [
+                    $o[4],
+                ],
+                5 => [
+                    $o[6],
+                    $o[7],
+                    $o[8],
+                ],
+            ],
+            'columns' => [
+                2 => [
+                    'externalid',
+                ],
+            ],
+            'exp' => [
+                3 => 'object.getAffilid()',
+                5 => 'object.getShortname()',
+            ],
+            'groups' => [
+                8 => [
+                    'Nonstrict',
+                ],
+                [
+                    'Default',
+                ],
+            ],
+            'fields' => [
+                9 => 'externalid',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[3],
+        $o[5],
+        $o[9],
+    ],
+    []
+);

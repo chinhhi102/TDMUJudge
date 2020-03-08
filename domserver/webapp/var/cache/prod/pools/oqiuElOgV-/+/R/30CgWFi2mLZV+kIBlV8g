@@ -1,0 +1,152 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.teamid AS teamid_0, t0_.externalid AS externalid_1, t0_.name AS name_2, t0_.categoryid AS categoryid_3, t0_.affilid AS affilid_4, t0_.enabled AS enabled_5, t0_.members AS members_6, t0_.room AS room_7, t0_.comments AS comments_8, t0_.judging_last_started AS judging_last_started_9, t0_.penalty AS penalty_10, t1_.categoryid AS categoryid_11, t1_.name AS name_12, t1_.sortorder AS sortorder_13, t1_.color AS color_14, t1_.visible AS visible_15, t2_.affilid AS affilid_16, t2_.externalid AS externalid_17, t2_.shortname AS shortname_18, t2_.name AS name_19, t2_.country AS country_20, t2_.comments AS comments_21, t0_.affilid AS affilid_22, t0_.categoryid AS categoryid_23 FROM team t0_ INNER JOIN team_category t1_ ON t0_.categoryid = t1_.categoryid LEFT JOIN team_affiliation t2_ ON t0_.affilid = t2_.affilid WHERE t0_.enabled = 1 AND t1_.visible = 1',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    't' => 'App\\Entity\\Team',
+                    'tc' => 'App\\Entity\\TeamCategory',
+                    'ta' => 'App\\Entity\\TeamAffiliation',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'tc' => 'category',
+                    'ta' => 'affiliation',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'tc' => 't',
+                    'ta' => 't',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'teamid_0' => 'teamid',
+                    'externalid_1' => 'externalid',
+                    'name_2' => 'name',
+                    'categoryid_3' => 'categoryid',
+                    'affilid_4' => 'affilid',
+                    'enabled_5' => 'enabled',
+                    'members_6' => 'members',
+                    'room_7' => 'room',
+                    'comments_8' => 'comments',
+                    'judging_last_started_9' => 'judging_last_started',
+                    'penalty_10' => 'penalty',
+                    'categoryid_11' => 'categoryid',
+                    'name_12' => 'name',
+                    'sortorder_13' => 'sortorder',
+                    'color_14' => 'color',
+                    'visible_15' => 'visible',
+                    'affilid_16' => 'affilid',
+                    'externalid_17' => 'externalid',
+                    'shortname_18' => 'shortname',
+                    'name_19' => 'name',
+                    'country_20' => 'country',
+                    'comments_21' => 'comments',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'affilid_22' => 'integer',
+                    'categoryid_23' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    't' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'affilid_22' => 'affilid',
+                    'categoryid_23' => 'categoryid',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'teamid_0' => 't',
+                    'externalid_1' => 't',
+                    'name_2' => 't',
+                    'categoryid_3' => 't',
+                    'affilid_4' => 't',
+                    'enabled_5' => 't',
+                    'members_6' => 't',
+                    'room_7' => 't',
+                    'comments_8' => 't',
+                    'judging_last_started_9' => 't',
+                    'penalty_10' => 't',
+                    'categoryid_11' => 'tc',
+                    'name_12' => 'tc',
+                    'sortorder_13' => 'tc',
+                    'color_14' => 'tc',
+                    'visible_15' => 'tc',
+                    'affilid_16' => 'ta',
+                    'externalid_17' => 'ta',
+                    'shortname_18' => 'ta',
+                    'name_19' => 'ta',
+                    'country_20' => 'ta',
+                    'comments_21' => 'ta',
+                    'affilid_22' => 't',
+                    'categoryid_23' => 't',
+                ],
+            ],
+            'indexByMap' => [
+                2 => [
+                    't' => 'teamid_0',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'teamid_0' => 'App\\Entity\\Team',
+                    'externalid_1' => 'App\\Entity\\Team',
+                    'name_2' => 'App\\Entity\\Team',
+                    'categoryid_3' => 'App\\Entity\\Team',
+                    'affilid_4' => 'App\\Entity\\Team',
+                    'enabled_5' => 'App\\Entity\\Team',
+                    'members_6' => 'App\\Entity\\Team',
+                    'room_7' => 'App\\Entity\\Team',
+                    'comments_8' => 'App\\Entity\\Team',
+                    'judging_last_started_9' => 'App\\Entity\\Team',
+                    'penalty_10' => 'App\\Entity\\Team',
+                    'categoryid_11' => 'App\\Entity\\TeamCategory',
+                    'name_12' => 'App\\Entity\\TeamCategory',
+                    'sortorder_13' => 'App\\Entity\\TeamCategory',
+                    'color_14' => 'App\\Entity\\TeamCategory',
+                    'visible_15' => 'App\\Entity\\TeamCategory',
+                    'affilid_16' => 'App\\Entity\\TeamAffiliation',
+                    'externalid_17' => 'App\\Entity\\TeamAffiliation',
+                    'shortname_18' => 'App\\Entity\\TeamAffiliation',
+                    'name_19' => 'App\\Entity\\TeamAffiliation',
+                    'country_20' => 'App\\Entity\\TeamAffiliation',
+                    'comments_21' => 'App\\Entity\\TeamAffiliation',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

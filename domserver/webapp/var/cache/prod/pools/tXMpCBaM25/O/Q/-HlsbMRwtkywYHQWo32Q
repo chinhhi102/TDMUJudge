@@ -1,0 +1,24 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+    ],
+    null,
+    [
+        'Symfony\\Component\\Routing\\Annotation\\Route' => [
+            'path' => [
+                '/{submission}/runs/{contest}/{run}/team-output',
+            ],
+            'name' => [
+                'jury_submission_team_output',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+);

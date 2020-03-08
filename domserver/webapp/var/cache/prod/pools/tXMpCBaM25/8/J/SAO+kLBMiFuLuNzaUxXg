@@ -1,0 +1,44 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Id'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Id')),
+        clone ($p['Doctrine\\ORM\\Mapping\\Column'] ?? Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Regex'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\Regex')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                1 => 'hostname',
+            ],
+            'length' => [
+                1 => 64,
+            ],
+            'options' => [
+                1 => [
+                    'comment' => 'Resolvable hostname of judgehost',
+                ],
+            ],
+            'message' => [
+                2 => 'Invalid hostname. Only characters in [A-Za-z0-9_\\-.] are allowed.',
+            ],
+            'pattern' => [
+                2 => '/^[A-Za-z0-9_\\-.]*$/',
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+        $o[2],
+    ],
+    []
+);
