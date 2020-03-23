@@ -55,7 +55,7 @@ tr.summary td { border-top: 1px solid black; }
 
 #djlogo {
 	position: absolute; right: 1ex;
-	width: 93px; height: 196px;
+	width: 300px; height: 196px;
 }
 
 a.collapse { color: black; text-decoration: none; }

@@ -50,7 +50,7 @@ class __TwigTemplate_bb1c7e1a6eaa88966c5274dfc85561a9d7574f99efab14a1c684226387a
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo twig_escape_filter($this->env, (((isset($context["title"]) || array_key_exists("title", $context))) ? (_twig_default_filter(($context["title"] ?? null), "DOMjudge")) : ("DOMjudge")), "html", null, true);
+        echo twig_escape_filter($this->env, (((isset($context["title"]) || array_key_exists("title", $context))) ? (_twig_default_filter(($context["title"] ?? null), "TDMU Judge")) : ("TDMU Judge")), "html", null, true);
     }
 
     // line 5

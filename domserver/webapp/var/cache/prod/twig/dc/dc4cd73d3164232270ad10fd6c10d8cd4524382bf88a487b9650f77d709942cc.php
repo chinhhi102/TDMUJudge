@@ -67,7 +67,7 @@ class __TwigTemplate_84b8b0106d1eb94870ca35d451972e5454c17988d97f50732d43dba0ce7
     {
         $macros = $this->macros;
         // line 10
-        echo "<h1>DOMjudge Jury interface</h1>
+        echo "<h1>TDMU Judge Jury Interface</h1>
 
 ";
         // line 12
@@ -104,11 +104,11 @@ class __TwigTemplate_84b8b0106d1eb94870ca35d451972e5454c17988d97f50732d43dba0ce7
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 15
         echo "
-<a href=\"https://www.domjudge.org/\">
+<a href=\"https://www.domjudge.org/\" target=\"_blank\">
   <img src=\"";
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/DOMjudgelogo.png"), "html", null, true);
-        echo "\" id=\"djlogo\" alt=\"DOMjudge logo\" class=\"float-right d-none d-md-block\" title=\"The DOMjudge logo: free as in beer!\" />
+        echo "\" id=\"djlogo\" alt=\"TDMU Judge logo\" class=\"float-right d-none d-md-block\" title=\"The TDMU Judge logo: free as in beer!\" />
 </a>
 
 <div class=\"row equal mt-3\">
@@ -122,44 +122,44 @@ class __TwigTemplate_84b8b0106d1eb94870ca35d451972e5454c17988d97f50732d43dba0ce7
                 Before contest:
             </div>
             <div class=\"card-body\">
-                <ul>
-                    <li><a href=\"";
+                <ul class=\"list-group\">
+                    <li class=\"list-group-item\"><a href=\"";
             // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_contests");
             echo "\">Contests</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 30
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_executables");
             echo "\">Executables</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehosts");
             echo "\">Judgehosts</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 32
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehost_restrictions");
             echo "\">Judgehost Restrictions</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 33
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_languages");
             echo "\">Languages</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_problems");
             echo "\">Problems</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 35
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_users");
             echo "\">Users</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 36
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_teams");
             echo "\">Teams</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 37
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_team_categories");
             echo "\">Team Categories</a></li>
-                    <li><a href=\"";
+                    <li class=\"list-group-item\"><a href=\"";
             // line 38
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_team_affiliations");
             echo "\">Team Affiliations</a></li>
@@ -294,7 +294,7 @@ class __TwigTemplate_84b8b0106d1eb94870ca35d451972e5454c17988d97f50732d43dba0ce7
         <li><a href=\"";
         // line 98
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("doc/manual/build/html/index.html"), "html", null, true);
-        echo "\">DOMjudge manual</a></li>
+        echo "\">TDMU Judge manual</a></li>
         <li><a href=\"";
         // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("doc/team/team-manual.pdf"), "html", null, true);

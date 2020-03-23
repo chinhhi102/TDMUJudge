@@ -1,114 +1,754 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="{{ path('jury_index') }}">DOMjudge</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault" aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<!-- ============================================================== -->
+<!-- navbar -->
+<!-- ============================================================== -->
+<div class="dashboard-header"> 
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+		<a class="navbar-brand" href="/jury"><img src="{{ asset('images/DOMjudgelogo.png') }}" alt="TDMU Judge logo" style="height: 50px; width: 250px" title="The TDMU Judge logo: free as in beer!"/></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul
+				class="navbar-nav ml-auto navbar-right-top">
+				<!-- Render user information + logout button -->
+				{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+					<li class="nav-item dropdown nav-user">
+						<a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{ asset('images/NCKH.png') }}" alt="{{ app.user.getUsername() }}" class="user-avatar-md rounded-circle"></a>
+						<div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdown">
+							{% if app.user and app.user.getName() %}
+								<a class="dropdown-item disabled" href="#">{{ app.user.getName() }}</a>
+							{% endif %}
 
-    <div class="collapse navbar-collapse" id="menuDefault" data-update-url="{{ path('jury_ajax_updates') }}">
-        <ul class="navbar-nav mr-auto">
+							<a class="dropdown-item d-none" href="#" id="notify_disable">
+								<i class="fas fa-bell-slash fa-fw"></i>
+								Disable Notifications
+							</a>
+							<a class="dropdown-item d-none" href="#" id="notify_enable">
+								<i class="fas fa-bell fa-fw"></i>
+								Enable Notifications
+							</a>
 
-            {% if is_granted('ROLE_BALLOON') and not is_granted('ROLE_JURY') and not is_granted('ROLE_ADMIN') %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('jury_balloons') }}"><i class="fas fa-map-marker-alt"></i> balloons</a>
-                </li>
-            {% endif %}
+							{% if refresh is defined and refresh %}
+								<a class="dropdown-item" href="#" id="refresh-navitem">
+									<i class="fas fa-sync-alt fa-fw"></i>
+									<span id="refresh-toggle">
+										{% if refresh_flag %}
+											Disable Refresh
+										{% else %}
+											Enable Refresh
+										{% endif %}
+									</span>
+									{% if refresh %}
+										<span class="small text-muted">({{ refresh.after }}s)</span>
+									{% endif %}
+								</a>
+							{% endif %}
 
-            {% if is_granted('ROLE_ADMIN') %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJudgehosts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-gavel"></i> judgehosts
-                        <span class="badge badge-warning" id="num-alerts-judgehosts"></span>
-                        <span class="badge badge-danger" id="num-alerts-internalerrors"></span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">
-                            <i class="fas fa-server fa-fw"></i> judgehosts <span class="badge badge-warning" id="num-alerts-judgehosts-sub"></span>
-                        </a>
-                        <a class="dropdown-item dropdown-disabled" href="{{ path('jury_internal_errors') }}" id="menu_internal_error">
-                            <i class="fas fa-bolt fa-fw"></i> internal error <span class="badge badge-danger" id="num-alerts-internalerrors-sub"></span>
-                        </a>
-                    </div>
-                </li>
-            {% endif %}
+							<a class="dropdown-item" href="{{ path('logout') }}">
+								<i class="fas fa-sign-out-alt fa-fw"></i>Logout
+							</a>
+						</div>
+					</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" target="_top" href="{{ path('login') }}">
+							<i class="fas fa-sign-in-alt fa-fw"></i>
+							Log in</a>
+					</li>
+				{% endif %}
 
-            {% if is_granted('ROLE_JURY') %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('jury_clarifications') }}" id="menu_clarifications"><i class="fas fa-comments"></i> clarifications <span class="badge badge-info" id="num-alerts-clarifications"></span></a>
-                </li>
+				{% include 'partials/menu_change_contest.html.twig' with {contest: current_contest, contests: current_contests, change_path: 'jury_change_contest', show_no_contest: true} %}
+			</ul>
+			{% include 'partials/menu_countdown.html.twig' with {contest: current_contest} %}
+		</div>
+	</nav>
+</div>
+<!-- ============================================================== -->
+<!-- end navbar -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- left sidebar -->
+<!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuDefault" data-update-url="{{ path('jury_ajax_updates') }}">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            {% if is_granted('ROLE_BALLOON') and not is_granted('ROLE_JURY') and not is_granted('ROLE_ADMIN') %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('jury_balloons') }}">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Balloons</a>
+                                </li>
+                            {% endif %}
+
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
+                                        <i class="fas fa-gavel"></i>
+                                        Judgehosts
+                                        <span class="badge badge-warning" id="num-alerts-judgehosts"></span>
+                                        <span class="badge badge-danger" id="num-alerts-internalerrors"></span>
+                                    </a>
+                                    <div class="collapse submenu" id="submenu-1" aria-labelledby="navbarDropdown">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="dropdown-item" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">
+                                                    <i class="fas fa-server fa-fw"></i>
+                                                    Judgehosts
+                                                    <span class="badge badge-warning" id="num-alerts-judgehosts-sub"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item dropdown-disabled" href="{{ path('jury_internal_errors') }}" id="menu_internal_error">
+                                                    <i class="fas fa-bolt fa-fw"></i>
+                                                    Internal error
+                                                    <span class="badge badge-danger" id="num-alerts-internalerrors-sub"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            {% endif %}
+
+                            {% if is_granted('ROLE_JURY') %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('jury_clarifications') }}" id="menu_clarifications">
+                                        <i class="fas fa-comments"></i>
+                                        Clarifications
+                                        <span class="badge badge-info" id="num-alerts-clarifications"></span>
+                                    </a>
+                                </li>
 
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('jury_submissions') }}"><i class="fas fa-file-code"></i> submissions</a>
-                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('jury_submissions') }}">
+                                        <i class="fas fa-file-code"></i>
+                                        Submissions</a>
+                                </li>
 
-                {% if show_shadow_differences %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('jury_shadow_differences') }}"><i class="fas fa-not-equal"></i> shadow differences</a>
-                    </li>
-                {% endif %}
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('jury_rejudgings') }}" id="menu_rejudgings"><i class="fas fa-sync"></i> rejudgings <span class="badge badge-info" id="num-alerts-rejudgings"></span></a>
-                </li>
-            {% endif %}
-
-            {% if is_granted('ROLE_JURY') %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('jury_scoreboard') }}"><i class="fas fa-list-ol"></i> scoreboard</a>
-                </li>
-            {% endif %}
-            {% if is_granted('ROLE_TEAM') %}
-                <li class="nav-item">
-                    <a class="nav-link" target="_top" href="{{ path('team_index') }}"><i class="fas fa-arrow-right"></i> team</a>
-                </li>
-            {% endif %}
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-            {# Render user information + logout button #}
-            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i> {{ app.user.getUsername() }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {% if app.user and app.user.getName() %}
-                            <a class="dropdown-item disabled" href="#">{{ app.user.getName() }}</a>
-                        {% endif %}
-
-                        <a class="dropdown-item d-none" href="#" id="notify_disable">
-                            <i class="fas fa-bell-slash fa-fw"></i> Disable Notifications
-                        </a>
-                        <a class="dropdown-item d-none" href="#" id="notify_enable">
-                            <i class="fas fa-bell fa-fw"></i> Enable Notifications
-                        </a>
-
-                        {% if refresh is defined and refresh %}
-                            <a class="dropdown-item" href="#" id="refresh-navitem">
-                                <i class="fas fa-sync-alt fa-fw"></i> <span id="refresh-toggle">
-                  {% if refresh_flag %}
-                      Disable Refresh
-                  {% else %}
-                      Enable Refresh
-                  {% endif %}
-                </span>
-                                {% if refresh %}
-                                    <span class="small text-muted">({{ refresh.after }}s)</span>
+                                {% if show_shadow_differences %}
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ path('jury_shadow_differences') }}">
+                                            <i class="fas fa-not-equal"></i>
+                                            Shadow differences</a>
+                                    </li>
                                 {% endif %}
-                            </a>
-                        {% endif %}
 
-                        <a class="dropdown-item" href="{{ path('logout') }}"><i class="fas fa-sign-out-alt fa-fw"></i>Logout </a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('jury_rejudgings') }}" id="menu_rejudgings">
+                                        <i class="fas fa-sync"></i>
+                                        Rejudgings
+                                        <span class="badge badge-info" id="num-alerts-rejudgings"></span>
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if is_granted('ROLE_JURY') %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ path('jury_scoreboard') }}">
+                                        <i class="fas fa-list-ol"></i>
+                                        Scoreboard</a>
+                                </li>
+                            {% endif %}
+                            {% if is_granted('ROLE_TEAM') %}
+                                <li class="nav-item">
+                                    <a class="nav-link" target="_top" href="{{ path('team_index') }}">
+                                        <i class="fas fa-arrow-right"></i>
+                                        Team</a>
+                                </li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+                                <div id="submenu-10" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Level 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
+                                            <div id="submenu-11" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Level 1</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Level 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Level 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </li>
-            {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" target="_top" href="{{ path('login') }}"><i class="fas fa-sign-in-alt fa-fw"></i> log in</a>
-                </li>
-            {% endif %}
+                </nav>
+            </div>
+	
+			{# <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+						            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+									<div class="collapse navbar-collapse" id="menuDefault" data-update-url="{{ path('jury_ajax_updates') }}">
+										<ul class="navbar-nav mr-auto">
+						
+											{% if is_granted('ROLE_BALLOON') and not is_granted('ROLE_JURY') and not is_granted('ROLE_ADMIN') %}
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_balloons') }}">
+														<i class="fas fa-map-marker-alt"></i>
+														Balloons</a>
+												</li>
+											{% endif %}
+						
+											{% if is_granted('ROLE_ADMIN') %}
+												<li class="nav-item dropdown">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJudgehosts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="fas fa-gavel"></i>
+														Judgehosts
+														<span class="badge badge-warning" id="num-alerts-judgehosts"></span>
+														<span class="badge badge-danger" id="num-alerts-internalerrors"></span>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+														<a class="dropdown-item" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">
+															<i class="fas fa-server fa-fw"></i>
+															Judgehosts
+															<span class="badge badge-warning" id="num-alerts-judgehosts-sub"></span>
+														</a>
+														<a class="dropdown-item dropdown-disabled" href="{{ path('jury_internal_errors') }}" id="menu_internal_error">
+															<i class="fas fa-bolt fa-fw"></i>
+															Internal error
+															<span class="badge badge-danger" id="num-alerts-internalerrors-sub"></span>
+														</a>
+													</div>
+												</li>
+											{% endif %}
+						
+											{% if is_granted('ROLE_JURY') %}
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_clarifications') }}" id="menu_clarifications">
+														<i class="fas fa-comments"></i>
+														Clarifications
+														<span class="badge badge-info" id="num-alerts-clarifications"></span>
+													</a>
+												</li>
+						
+						
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_submissions') }}">
+														<i class="fas fa-file-code"></i>
+														Submissions</a>
+												</li>
+						
+												{% if show_shadow_differences %}
+													<li class="nav-item">
+														<a class="nav-link" href="{{ path('jury_shadow_differences') }}">
+															<i class="fas fa-not-equal"></i>
+															Shadow differences</a>
+													</li>
+												{% endif %}
+						
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_rejudgings') }}" id="menu_rejudgings">
+														<i class="fas fa-sync"></i>
+														Rejudgings
+														<span class="badge badge-info" id="num-alerts-rejudgings"></span>
+													</a>
+												</li>
+											{% endif %}
+						
+											{% if is_granted('ROLE_JURY') %}
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_scoreboard') }}">
+														<i class="fas fa-list-ol"></i>
+														Scoreboard</a>
+												</li>
+											{% endif %}
+											{% if is_granted('ROLE_TEAM') %}
+												<li class="nav-item">
+													<a class="nav-link" target="_top" href="{{ path('team_index') }}">
+														<i class="fas fa-arrow-right"></i>
+														Team</a>
+												</li>
+											{% endif %}
+										</ul>
+									</div> #}
 
-            {% include 'partials/menu_change_contest.html.twig' with {contest: current_contest, contests: current_contests, change_path: 'jury_change_contest', show_no_contest: true} %}
-        </ul>
-        {% include 'partials/menu_countdown.html.twig' with {contest: current_contest} %}
-    </div>
-</nav>
+
+			{# <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault" aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+									<div class="collapse navbar-collapse" id="menuDefault" data-update-url="{{ path('jury_ajax_updates') }}">
+						            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						                        <span class="navbar-toggler-icon"></span>
+						                    </button>
+						            <div class="collapse navbar-collapse" id="navbarNav">
+										<ul class="navbar-nav flex-column">
+											<li class="nav-divider">
+												Menu
+											</li>
+						                    {% if is_granted('ROLE_BALLOON') and not is_granted('ROLE_JURY') and not is_granted('ROLE_ADMIN') %}
+												<li class="nav-item">
+													<a class="nav-link" href="{{ path('jury_balloons') }}">
+														<i class="fas fa-map-marker-alt"></i>
+														Balloons</a>
+												</li>
+											{% endif %}
+						
+						                    {% if is_granted('ROLE_ADMIN') %}
+						                        <li class="nav-item">
+						                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJudgehosts" role="button" data-toggle="collapse" aria-haspopup="true" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
+						                                <i class="fas fa-gavel"></i>
+						                                Judgehosts
+						                                <span class="badge badge-warning" id="num-alerts-judgehosts"></span>
+						                                <span class="badge badge-danger" id="num-alerts-internalerrors"></span>
+						                            </a>
+						                            <div id="submenu-1" class="collapse submenu" style="">
+						                                <ul class="nav flex-column">
+						                                    <li class="nav-item">
+						                                        <a class="nav-link" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">Judgehosts
+						                                            <span class="badge badge-secondary">New</span>
+						                                        </a>
+						                                    </li>
+						                                    <li class="nav-item">
+						                                        <a class="dropdown-item" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">
+						                                            <i class="fas fa-server fa-fw"></i>
+						                                            Judgehosts
+						                                            <span class="badge badge-warning" id="num-alerts-judgehosts-sub"></span>
+						                                        </a>
+						                                    </li>
+						                                    <li class="nav-item">
+						                                        <a class="dropdown-item dropdown-disabled" href="{{ path('jury_internal_errors') }}" id="menu_internal_error">
+						                                            <i class="fas fa-bolt fa-fw"></i>
+						                                            Internal error
+						                                            <span class="badge badge-danger" id="num-alerts-internalerrors-sub"></span>
+						                                        </a>
+						                                    </li>
+						                                </ul>
+						                            </div>
+						                        </li>
+						
+											{% endif %}
+						
+											<li class="nav-item ">
+												<a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
+													<i class="fa fa-fw fa-user-circle"></i>Dashboard
+													<span class="badge badge-success">6</span>
+												</a>
+												<div id="submenu-1" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+															<div id="submenu-1-2" class="collapse submenu" style="">
+																<ul class="nav flex-column">
+																	<li class="nav-item">
+																		<a class="nav-link" href="index.html">E Commerce Dashboard</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="ecommerce-product.html">Product List</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="ecommerce-product-single.html">Product Single</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="ecommerce-product-checkout.html">Product Checkout</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="dashboard-finance.html">Finance</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="dashboard-sales.html">Sales</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Infulencer</a>
+															<div id="submenu-1-1" class="collapse submenu" style="">
+																<ul class="nav flex-column">
+																	<li class="nav-item">
+																		<a class="nav-link" href="dashboard-influencer.html">Influencer</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="influencer-finder.html">Influencer Finder</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="influencer-profile.html">Influencer Profile</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2">
+													<i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+												<div id="submenu-2" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/cards.html">Cards
+																<span class="badge badge-secondary">New</span>
+															</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/general.html">General</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/carousel.html">Carousel</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/listgroup.html">List Group</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/typography.html">Typography</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/accordions.html">Accordions</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/tabs.html">Tabs</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3">
+													<i class="fas fa-fw fa-chart-pie"></i>Chart</a>
+												<div id="submenu-3" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-c3.html">C3 Charts</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-charts.html">Chart</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-morris.html">Morris</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/chart-gauge.html">Guage</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item ">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4">
+													<i class="fab fa-fw fa-wpforms"></i>Forms</a>
+												<div id="submenu-4" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/multiselect.html">Multiselect</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/datepicker.html">Date Picker</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5">
+													<i class="fas fa-fw fa-table"></i>Tables</a>
+												<div id="submenu-5" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/general-table.html">General Tables</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/data-tables.html">Data Tables</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-divider">
+												Features
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6">
+													<i class="fas fa-fw fa-file"></i>
+													Pages
+												</a>
+												<div id="submenu-6" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/blank-page.html">Blank Page</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/login.html">Login</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/404-page.html">404 page</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/timeline.html">Timeline</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/calendar.html">Calendar</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/widgets.html">Widgets</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/media-object.html">Media Objects</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/cropper-image.html">Cropper</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/color-picker.html">Color Picker</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7">
+													<i class="fas fa-fw fa-inbox"></i>Apps
+													<span class="badge badge-secondary">New</span>
+												</a>
+												<div id="submenu-7" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/inbox.html">Inbox</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/email-details.html">Email Detail</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/email-compose.html">Email Compose</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/message-chat.html">Message Chat</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8">
+													<i class="fas fa-fw fa-columns"></i>Icons</a>
+												<div id="submenu-8" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-material.html">Material Icons</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9">
+													<i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+												<div id="submenu-9" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="pages/map-google.html">Google Maps</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10">
+													<i class="fas fa-f fa-folder"></i>Menu Level</a>
+												<div id="submenu-10" class="collapse submenu" style="">
+													<ul class="nav flex-column">
+														<li class="nav-item">
+															<a class="nav-link" href="#">Level 1</a>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
+															<div id="submenu-11" class="collapse submenu" style="">
+																<ul class="nav flex-column">
+																	<li class="nav-item">
+																		<a class="nav-link" href="#">Level 1</a>
+																	</li>
+																	<li class="nav-item">
+																		<a class="nav-link" href="#">Level 2</a>
+																	</li>
+																</ul>
+															</div>
+														</li>
+														<li class="nav-item">
+															<a class="nav-link" href="#">Level 3</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div> #}
+<!-- ============================================================== -->
+<!-- end main wrapper  -->
+<!-- ============================================================== -->
+<!--
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	    <a class="navbar-brand hidden-sm-down" href="{{ path('jury_index') }}">Trang chủ</a>
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault" aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	    </button>
+	
+	    <div class="collapse navbar-collapse" id="menuDefault" data-update-url="{{ path('jury_ajax_updates') }}">
+	        <ul class="navbar-nav mr-auto">
+	
+	            {% if is_granted('ROLE_BALLOON') and not is_granted('ROLE_JURY') and not is_granted('ROLE_ADMIN') %}
+	                <li class="nav-item">
+	                    <a class="nav-link" href="{{ path('jury_balloons') }}"><i class="fas fa-map-marker-alt"></i> Balloons</a>
+	                </li>
+	            {% endif %}
+	
+	            {% if is_granted('ROLE_ADMIN') %}
+	                <li class="nav-item dropdown">
+	                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownJudgehosts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        <i class="fas fa-gavel"></i> Judgehosts
+	                        <span class="badge badge-warning" id="num-alerts-judgehosts"></span>
+	                        <span class="badge badge-danger" id="num-alerts-internalerrors"></span>
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	                        <a class="dropdown-item" href="{{ path('jury_judgehosts') }}" id="menu_judgehosts">
+	                            <i class="fas fa-server fa-fw"></i> Judgehosts <span class="badge badge-warning" id="num-alerts-judgehosts-sub"></span>
+	                        </a>
+	                        <a class="dropdown-item dropdown-disabled" href="{{ path('jury_internal_errors') }}" id="menu_internal_error">
+	                            <i class="fas fa-bolt fa-fw"></i> Internal error <span class="badge badge-danger" id="num-alerts-internalerrors-sub"></span>
+	                        </a>
+	                    </div>
+	                </li>
+	            {% endif %}
+	
+	            {% if is_granted('ROLE_JURY') %}
+	                <li class="nav-item">
+	                    <a class="nav-link" href="{{ path('jury_clarifications') }}" id="menu_clarifications"><i class="fas fa-comments"></i> Clarifications <span class="badge badge-info" id="num-alerts-clarifications"></span></a>
+	                </li>
+	
+	
+	                <li class="nav-item">
+	                    <a class="nav-link" href="{{ path('jury_submissions') }}"><i class="fas fa-file-code"></i> Submissions</a>
+	                </li>
+	
+	                {% if show_shadow_differences %}
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="{{ path('jury_shadow_differences') }}"><i class="fas fa-not-equal"></i> Shadow differences</a>
+	                    </li>
+	                {% endif %}
+	
+	                <li class="nav-item">
+	                    <a class="nav-link" href="{{ path('jury_rejudgings') }}" id="menu_rejudgings"><i class="fas fa-sync"></i> Rejudgings <span class="badge badge-info" id="num-alerts-rejudgings"></span></a>
+	                </li>
+	            {% endif %}
+	
+	            {% if is_granted('ROLE_JURY') %}
+	                <li class="nav-item">
+	                    <a class="nav-link" href="{{ path('jury_scoreboard') }}"><i class="fas fa-list-ol"></i> Scoreboard</a>
+	                </li>
+	            {% endif %}
+	            {% if is_granted('ROLE_TEAM') %}
+	                <li class="nav-item">
+	                    <a class="nav-link" target="_top" href="{{ path('team_index') }}"><i class="fas fa-arrow-right"></i> Team</a>
+	                </li>
+	            {% endif %}
+	        </ul>
+	
+	        <ul class="navbar-nav ml-auto">
+	            {# Render user information + logout button #}
+	            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+	                <li class="nav-item dropdown">
+	                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        <i class="fas fa-user"></i> {{ app.user.getUsername() }}
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	                        {% if app.user and app.user.getName() %}
+	                            <a class="dropdown-item disabled" href="#">{{ app.user.getName() }}</a>
+	                        {% endif %}
+	
+	                        <a class="dropdown-item d-none" href="#" id="notify_disable">
+	                            <i class="fas fa-bell-slash fa-fw"></i> Disable Notifications
+	                        </a>
+	                        <a class="dropdown-item d-none" href="#" id="notify_enable">
+	                            <i class="fas fa-bell fa-fw"></i> Enable Notifications
+	                        </a>
+	
+	                        {% if refresh is defined and refresh %}
+	                            <a class="dropdown-item" href="#" id="refresh-navitem">
+	                                <i class="fas fa-sync-alt fa-fw"></i> <span id="refresh-toggle">
+	                  {% if refresh_flag %}
+	                      Disable Refresh
+	                  {% else %}
+	                      Enable Refresh
+	                  {% endif %}
+	                </span>
+	                                {% if refresh %}
+	                                    <span class="small text-muted">({{ refresh.after }}s)</span>
+	                                {% endif %}
+	                            </a>
+	                        {% endif %}
+	
+	                        <a class="dropdown-item" href="{{ path('logout') }}"><i class="fas fa-sign-out-alt fa-fw"></i>Logout </a>
+	                    </div>
+	                </li>
+	            {% else %}
+	                <li class="nav-item">
+	                    <a class="nav-link" target="_top" href="{{ path('login') }}"><i class="fas fa-sign-in-alt fa-fw"></i> Log in</a>
+	                </li>
+	            {% endif %}
+	
+	            {% include 'partials/menu_change_contest.html.twig' with {contest: current_contest, contests: current_contests, change_path: 'jury_change_contest', show_no_contest: true} %}
+	        </ul>
+	        {% include 'partials/menu_countdown.html.twig' with {contest: current_contest} %}
+	    </div>
+	</nav>
+	-->
+

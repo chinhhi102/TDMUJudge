@@ -12,7 +12,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,7 +28,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -132,7 +132,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -148,7 +148,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -252,7 +252,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -268,7 +268,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -372,7 +372,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -388,7 +388,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -492,7 +492,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -508,7 +508,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -617,7 +617,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -633,7 +633,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -732,7 +732,7 @@
 [Mar 05 20:40:04.519] judgedaemon[30821]: Registering judgehost on endpoint default failed.
 [Mar 05 20:40:08.829] judgedaemon[30821]: Signal 2 received
 [Mar 05 20:40:08.829] judgedaemon[30821]: Received signal, exiting.
-[Mar 05 20:40:10.644] judgedaemon[30835]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Mar 05 20:40:10.644] judgedaemon[30835]: Judge started on chinhhi-Virtual-Machine [TDMU Judge/7.2.0]
 [Mar 05 20:40:10.648] judgedaemon[30835]: Installing signal handlers
 [Mar 05 20:40:10.648] judgedaemon[30835]: executing chroot script: 'chroot-startstop.sh check'
 [Mar 05 20:40:10.651] judgedaemon[30835]: Registering judgehost on endpoint default: http://tdmu-judge.vn/domjudge/api
@@ -742,7 +742,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -758,7 +758,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -862,7 +862,7 @@
 <head>
     <!-- DOMjudge version 7.2.0 -->
     <meta charset="utf-8">
-    <title>DOMjudge</title>
+    <title>TDMU Judge</title>
     <link rel="icon" href="/favicon.ico?v=7.2.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -878,7 +878,7 @@
     </head>
 <body style="padding-top: 4.5rem;">
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-    <a class="navbar-brand hidden-sm-down" href="/public">DOMjudge</a>
+    <a class="navbar-brand hidden-sm-down" href="/public">TDMU Judge</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuDefault"
             aria-controls="menuDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

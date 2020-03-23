@@ -1,0 +1,90 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT DISTINCT logid_0 FROM (SELECT DISTINCT logid_0 FROM (SELECT a0_.logid AS logid_0, a0_.logtime AS logtime_1, a0_.cid AS cid_2, a0_.user AS user_3, a0_.datatype AS datatype_4, a0_.dataid AS dataid_5, a0_.action AS action_6, a0_.extrainfo AS extrainfo_7 FROM auditlog a0_) dctrn_result_inner ORDER BY logid_0 DESC) dctrn_result LIMIT 1000',
+            ],
+        ],
+        'stdClass' => [
+            'isMixed' => [
+                2 => true,
+            ],
+            'aliasMap' => [
+                2 => [
+                    'a' => 'App\\Entity\\AuditLog',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'logid_0' => 'logid',
+                    'logtime_1' => 'logtime',
+                    'cid_2' => 'cid',
+                    'user_3' => 'user',
+                    'datatype_4' => 'datatype',
+                    'dataid_5' => 'dataid',
+                    'action_6' => 'action',
+                    'extrainfo_7' => 'extrainfo',
+                ],
+            ],
+            'scalarMappings' => [
+                2 => [
+                    'logid_0' => 'logid',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'logid_0' => 'string',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'a' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'logid_0' => 'a',
+                    'logtime_1' => 'a',
+                    'cid_2' => 'a',
+                    'user_3' => 'a',
+                    'datatype_4' => 'a',
+                    'dataid_5' => 'a',
+                    'action_6' => 'a',
+                    'extrainfo_7' => 'a',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'logid_0' => 'App\\Entity\\AuditLog',
+                    'logtime_1' => 'App\\Entity\\AuditLog',
+                    'cid_2' => 'App\\Entity\\AuditLog',
+                    'user_3' => 'App\\Entity\\AuditLog',
+                    'datatype_4' => 'App\\Entity\\AuditLog',
+                    'dataid_5' => 'App\\Entity\\AuditLog',
+                    'action_6' => 'App\\Entity\\AuditLog',
+                    'extrainfo_7' => 'App\\Entity\\AuditLog',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

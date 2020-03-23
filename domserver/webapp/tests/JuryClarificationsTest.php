@@ -89,7 +89,7 @@ class JuryClarificationsTest extends WebTestCase
         $message = var_export($response, true);
         $this->assertEquals(200, $response->getStatusCode(), $message);
 
-        $this->assertEquals(1, $crawler->filter('html:contains("DOMjudge Jury interface")')->count());
+        $this->assertEquals(1, $crawler->filter('html:contains("TDMU Judge Jury interface")')->count());
     }
 
     public function testClarificationRequestIndex()
@@ -153,7 +153,7 @@ class JuryClarificationsTest extends WebTestCase
 
         $options = $crawler->filter('option')->extract(array('_text'));
         $this->assertEquals('ALL', $options[1]);
-        $this->assertEquals('DOMjudge (t1)', $options[2]);
+        $this->assertEquals('TDMU Judge (t1)', $options[2]);
         $this->assertEquals('Example teamname (t2)', $options[3]);
 
         $labels = $crawler->filter('label')->extract(array('_text'));

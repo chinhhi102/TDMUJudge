@@ -1,0 +1,70 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        (($f = &Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\Regex'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\Regex')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Judgehost',
+                'hostname',
+            ],
+            'defaultGroup' => [
+                'Judgehost',
+            ],
+            'members' => [
+                [
+                    'hostname' => [
+                        $o[1],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'hostname' => $o[1],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\Judgehost',
+            ],
+            'property' => [
+                1 => 'hostname',
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                    ],
+                    'Judgehost' => [
+                        $o[2],
+                    ],
+                ],
+            ],
+            'message' => [
+                2 => 'Invalid hostname. Only characters in [A-Za-z0-9_\\-.] are allowed.',
+            ],
+            'pattern' => [
+                2 => '/^[A-Za-z0-9_\\-.]*$/',
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Judgehost',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

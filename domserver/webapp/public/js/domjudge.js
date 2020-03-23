@@ -33,7 +33,7 @@ function enableNotifications()
     }
 
     setCookie('domjudge_notify', 1);
-    sendNotification('DOMjudge notifications enabled.');
+    sendNotification('TDMU Judge notifications enabled.');
     $("#notify_disable").removeClass('d-none');
     $("#notify_disable").show();
     $("#notify_enable").hide();

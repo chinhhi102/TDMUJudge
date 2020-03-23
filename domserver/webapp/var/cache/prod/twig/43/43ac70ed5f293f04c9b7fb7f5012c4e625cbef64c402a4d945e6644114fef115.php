@@ -171,7 +171,7 @@ class __TwigTemplate_08e1fddccca7c1fa9ea9cf456dac13ebfdfbaef6247ded907bedfe2713f
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "DOMjudge";
+        echo "TDMU Judge";
     }
 
     // line 16

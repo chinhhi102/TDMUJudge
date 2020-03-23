@@ -38,7 +38,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
     <a class=\"navbar-brand hidden-sm-down\" href=\"";
         // line 2
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_index");
-        echo "\">DOMjudge</a>
+        echo "\">TDMU Judge</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#menuDefault\" aria-controls=\"menuDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
         <span class=\"navbar-toggler-icon\"></span>
     </button>
@@ -57,7 +57,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" href=\"";
             // line 12
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_balloons");
-            echo "\"><i class=\"fas fa-map-marker-alt\"></i> balloons</a>
+            echo "\"><i class=\"fas fa-map-marker-alt\"></i> Balloons</a>
                 </li>
             ";
         }
@@ -69,7 +69,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
             // line 17
             echo "                <li class=\"nav-item dropdown\">
                     <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownJudgehosts\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                        <i class=\"fas fa-gavel\"></i> judgehosts
+                        <i class=\"fas fa-gavel\"></i> Judgehosts
                         <span class=\"badge badge-warning\" id=\"num-alerts-judgehosts\"></span>
                         <span class=\"badge badge-danger\" id=\"num-alerts-internalerrors\"></span>
                     </a>
@@ -78,13 +78,13 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
             // line 24
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehosts");
             echo "\" id=\"menu_judgehosts\">
-                            <i class=\"fas fa-server fa-fw\"></i> judgehosts <span class=\"badge badge-warning\" id=\"num-alerts-judgehosts-sub\"></span>
+                            <i class=\"fas fa-server fa-fw\"></i> Judgehosts <span class=\"badge badge-warning\" id=\"num-alerts-judgehosts-sub\"></span>
                         </a>
                         <a class=\"dropdown-item dropdown-disabled\" href=\"";
             // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_internal_errors");
             echo "\" id=\"menu_internal_error\">
-                            <i class=\"fas fa-bolt fa-fw\"></i> internal error <span class=\"badge badge-danger\" id=\"num-alerts-internalerrors-sub\"></span>
+                            <i class=\"fas fa-bolt fa-fw\"></i> Internal error <span class=\"badge badge-danger\" id=\"num-alerts-internalerrors-sub\"></span>
                         </a>
                     </div>
                 </li>
@@ -100,7 +100,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" href=\"";
             // line 36
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_clarifications");
-            echo "\" id=\"menu_clarifications\"><i class=\"fas fa-comments\"></i> clarifications <span class=\"badge badge-info\" id=\"num-alerts-clarifications\"></span></a>
+            echo "\" id=\"menu_clarifications\"><i class=\"fas fa-comments\"></i> Clarifications <span class=\"badge badge-info\" id=\"num-alerts-clarifications\"></span></a>
                 </li>
 
 
@@ -108,7 +108,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" href=\"";
             // line 41
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_submissions");
-            echo "\"><i class=\"fas fa-file-code\"></i> submissions</a>
+            echo "\"><i class=\"fas fa-file-code\"></i> Submissions</a>
                 </li>
 
                 ";
@@ -119,7 +119,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                         <a class=\"nav-link\" href=\"";
                 // line 46
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_shadow_differences");
-                echo "\"><i class=\"fas fa-not-equal\"></i> shadow differences</a>
+                echo "\"><i class=\"fas fa-not-equal\"></i> Shadow differences</a>
                     </li>
                 ";
             }
@@ -129,7 +129,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" href=\"";
             // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_rejudgings");
-            echo "\" id=\"menu_rejudgings\"><i class=\"fas fa-sync\"></i> rejudgings <span class=\"badge badge-info\" id=\"num-alerts-rejudgings\"></span></a>
+            echo "\" id=\"menu_rejudgings\"><i class=\"fas fa-sync\"></i> Rejudgings <span class=\"badge badge-info\" id=\"num-alerts-rejudgings\"></span></a>
                 </li>
             ";
         }
@@ -143,7 +143,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" href=\"";
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_scoreboard");
-            echo "\"><i class=\"fas fa-list-ol\"></i> scoreboard</a>
+            echo "\"><i class=\"fas fa-list-ol\"></i> Scoreboard</a>
                 </li>
             ";
         }
@@ -155,7 +155,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" target=\"_top\" href=\"";
             // line 62
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("team_index");
-            echo "\"><i class=\"fas fa-arrow-right\"></i> team</a>
+            echo "\"><i class=\"fas fa-arrow-right\"></i> Team</a>
                 </li>
             ";
         }
@@ -241,7 +241,7 @@ class __TwigTemplate_28e5f0dac574f515e776302c1bc4f29c5d3bb7249b4cd40e04145d501c8
                     <a class=\"nav-link\" target=\"_top\" href=\"";
             // line 106
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
-            echo "\"><i class=\"fas fa-sign-in-alt fa-fw\"></i> log in</a>
+            echo "\"><i class=\"fas fa-sign-in-alt fa-fw\"></i> Log in</a>
                 </li>
             ";
         }
