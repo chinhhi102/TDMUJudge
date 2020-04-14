@@ -95,24 +95,25 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
         // line 23
         echo "</head>
 <body style=\"padding-top: 4.5rem;\">
+<div class=\"dashboard-main-wrapper\">
 ";
-        // line 25
-        $this->displayBlock('menu', $context, $blocks);
         // line 26
+        $this->displayBlock('menu', $context, $blocks);
+        // line 27
         $this->displayBlock('body', $context, $blocks);
-        // line 38
-        echo "
+        // line 39
+        echo "</div>
 <script>
     ";
-        // line 40
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "request", [], "any", false, false, false, 40)) {
-            // line 41
+        // line 41
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "request", [], "any", false, false, false, 41)) {
+            // line 42
             echo "        var domjudge_base_url = \"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "request", [], "any", false, false, false, 41), "getBaseURL", [], "method", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 42, $this->source); })()), "request", [], "any", false, false, false, 42), "getBaseURL", [], "method", false, false, false, 42), "html", null, true);
             echo "\";
     ";
         }
-        // line 43
+        // line 44
         echo "    \$(function () {
         \$('body').on('change', '.custom-file-input', function () {
             var files = this.files;
@@ -126,47 +127,47 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
 
         /* toggle refresh if set */
         ";
-        // line 55
-        if (((isset($context["refresh"]) || array_key_exists("refresh", $context)) && (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 55, $this->source); })()))) {
-            // line 56
+        // line 56
+        if (((isset($context["refresh"]) || array_key_exists("refresh", $context)) && (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 56, $this->source); })()))) {
+            // line 57
             echo "        \$('#refresh-navitem').on('click', function () {
             toggleRefresh('";
-            // line 57
-            echo twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 57, $this->source); })()), "url", [], "any", false, false, false, 57);
+            // line 58
+            echo twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 58, $this->source); })()), "url", [], "any", false, false, false, 58);
             echo "', ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 57, $this->source); })()), "after", [], "any", false, false, false, 57), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 58, $this->source); })()), "after", [], "any", false, false, false, 58), "html", null, true);
             echo ", ";
-            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", true, true, false, 57)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", false, false, false, 57), 0)) : (0)), "html", null, true);
+            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", true, true, false, 58)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", false, false, false, 58), 0)) : (0)), "html", null, true);
             echo ");
         });
         ";
         }
-        // line 60
+        // line 61
         echo "        /* Enable page refresh if set if wanted by the page, and wanted by the user */
         ";
-        // line 61
-        if ((((isset($context["refresh"]) || array_key_exists("refresh", $context)) && (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 61, $this->source); })())) && (isset($context["refresh_flag"]) || array_key_exists("refresh_flag", $context) ? $context["refresh_flag"] : (function () { throw new RuntimeError('Variable "refresh_flag" does not exist.', 61, $this->source); })()))) {
-            // line 62
+        // line 62
+        if ((((isset($context["refresh"]) || array_key_exists("refresh", $context)) && (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 62, $this->source); })())) && (isset($context["refresh_flag"]) || array_key_exists("refresh_flag", $context) ? $context["refresh_flag"] : (function () { throw new RuntimeError('Variable "refresh_flag" does not exist.', 62, $this->source); })()))) {
+            // line 63
             echo "        enableRefresh('";
-            echo twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 62, $this->source); })()), "url", [], "any", false, false, false, 62);
+            echo twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 63, $this->source); })()), "url", [], "any", false, false, false, 63);
             echo "', ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 62, $this->source); })()), "after", [], "any", false, false, false, 62), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["refresh"]) || array_key_exists("refresh", $context) ? $context["refresh"] : (function () { throw new RuntimeError('Variable "refresh" does not exist.', 63, $this->source); })()), "after", [], "any", false, false, false, 63), "html", null, true);
             echo ", ";
-            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", true, true, false, 62)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", false, false, false, 62), 0)) : (0)), "html", null, true);
+            echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", true, true, false, 63)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, ($context["refresh"] ?? null), "ajax", [], "any", false, false, false, 63), 0)) : (0)), "html", null, true);
             echo ");
         ";
         }
-        // line 64
+        // line 65
         echo "
         initializeAjaxModals();
     });
 </script>
 ";
-        // line 68
-        $this->displayBlock('footer', $context, $blocks);
         // line 69
-        $this->displayBlock('extrafooter', $context, $blocks);
+        $this->displayBlock('footer', $context, $blocks);
         // line 70
+        $this->displayBlock('extrafooter', $context, $blocks);
+        // line 71
         echo "</body>
 </html>
 ";
@@ -195,58 +196,58 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
     ";
     }
 
-    // line 25
+    // line 26
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 26
+    // line 27
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 27
-        echo "    <div class=\"container-fluid\">
+        // line 28
+        echo "    <div class=\"dashboard-wrapper\">
         <div class=\"row\">
             <div class=\"col-12\">
                 ";
-        // line 30
+        // line 31
         $this->displayBlock('messages', $context, $blocks);
-        // line 33
+        // line 34
         echo "                ";
         $this->displayBlock('content', $context, $blocks);
-        // line 34
+        // line 35
         echo "            </div>
         </div>
     </div>
 ";
     }
 
-    // line 30
+    // line 31
     public function block_messages($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 31
-        echo "                    ";
-        $this->loadTemplate("partials/messages.html.twig", "base.html.twig", 31)->display($context);
         // line 32
+        echo "                    ";
+        $this->loadTemplate("partials/messages.html.twig", "base.html.twig", 32)->display($context);
+        // line 33
         echo "                ";
     }
 
-    // line 33
+    // line 34
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo (isset($context["body"]) || array_key_exists("body", $context) ? $context["body"] : (function () { throw new RuntimeError('Variable "body" does not exist.', 33, $this->source); })());
+        echo (isset($context["body"]) || array_key_exists("body", $context) ? $context["body"] : (function () { throw new RuntimeError('Variable "body" does not exist.', 34, $this->source); })());
     }
 
-    // line 68
+    // line 69
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 69
+    // line 70
     public function block_extrafooter($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -264,7 +265,7 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
 
     public function getDebugInfo()
     {
-        return array (  250 => 69,  244 => 68,  237 => 33,  233 => 32,  230 => 31,  226 => 30,  219 => 34,  216 => 33,  214 => 30,  209 => 27,  205 => 26,  199 => 25,  193 => 21,  187 => 19,  183 => 18,  176 => 6,  170 => 70,  168 => 69,  166 => 68,  160 => 64,  150 => 62,  148 => 61,  145 => 60,  135 => 57,  132 => 56,  130 => 55,  116 => 43,  110 => 41,  108 => 40,  104 => 38,  102 => 26,  100 => 25,  96 => 23,  94 => 18,  90 => 17,  85 => 15,  81 => 14,  76 => 12,  72 => 11,  68 => 10,  62 => 7,  58 => 6,  54 => 5,  50 => 4,  45 => 1,);
+        return array (  251 => 70,  245 => 69,  238 => 34,  234 => 33,  231 => 32,  227 => 31,  220 => 35,  217 => 34,  215 => 31,  210 => 28,  206 => 27,  200 => 26,  194 => 21,  188 => 19,  184 => 18,  177 => 6,  171 => 71,  169 => 70,  167 => 69,  161 => 65,  151 => 63,  149 => 62,  146 => 61,  136 => 58,  133 => 57,  131 => 56,  117 => 44,  111 => 42,  109 => 41,  105 => 39,  103 => 27,  101 => 26,  96 => 23,  94 => 18,  90 => 17,  85 => 15,  81 => 14,  76 => 12,  72 => 11,  68 => 10,  62 => 7,  58 => 6,  54 => 5,  50 => 4,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -293,9 +294,10 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
     {% endblock %}
 </head>
 <body style=\"padding-top: 4.5rem;\">
+<div class=\"dashboard-main-wrapper\">
 {% block menu %}{% endblock %}
 {% block body %}
-    <div class=\"container-fluid\">
+    <div class=\"dashboard-wrapper\">
         <div class=\"row\">
             <div class=\"col-12\">
                 {% block messages %}
@@ -306,7 +308,7 @@ class __TwigTemplate_7ff8ab00fe635a129c35796aeebcaf7897a7b31e0adaa0a0f91dcf4053c
         </div>
     </div>
 {% endblock %}
-
+</div>
 <script>
     {% if app.request %}
         var domjudge_base_url = \"{{ app.request.getBaseURL() }}\";

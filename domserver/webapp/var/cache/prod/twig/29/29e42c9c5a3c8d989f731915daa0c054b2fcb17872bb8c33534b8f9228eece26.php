@@ -75,131 +75,132 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
     {
         $macros = $this->macros;
         // line 12
-        echo "    <h1>Contests</h1>
+        echo "<div class=\"container-fluid dashboard-content\">
+    <h1>Contests</h1>
 
     <h3>Current contests</h3>
 
     ";
-        // line 16
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["current_contests"]) || array_key_exists("current_contests", $context) ? $context["current_contests"] : (function () { throw new RuntimeError('Variable "current_contests" does not exist.', 16, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["current_contests"]) || array_key_exists("current_contests", $context) ? $context["current_contests"] : (function () { throw new RuntimeError('Variable "current_contests" does not exist.', 17, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["contest"]) {
-            // line 17
-            echo "        ";
             // line 18
+            echo "        ";
+            // line 19
             echo "        <form action=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_contests");
             echo "\" method=\"post\">
             <input type=\"hidden\" name=\"contest\" value=\"";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "cid", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "cid", [], "any", false, false, false, 20), "html", null, true);
             echo "\"/>
             <div class=\"row mb-4\">
-                <div class=\"col-lg-8\">
+                <div class=\"col-lg-12\">
                     <div class=\"card\">
                         <div class=\"card-header\">
                             ";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "name", [], "any", false, false, false, 24), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "name", [], "any", false, false, false, 25), "html", null, true);
             echo " (";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "shortname", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "shortname", [], "any", false, false, false, 25), "html", null, true);
             echo " - c";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "cid", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["contest"], "cid", [], "any", false, false, false, 25), "html", null, true);
             echo ")
                         </div>
                         <div class=\"card-body\">
                             ";
-            // line 27
-            if (( !twig_get_attribute($this->env, $this->source, $context["contest"], "starttimeEnabled", [], "any", false, false, false, 27) &&  !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["contest"], "finalizetime", [], "any", false, false, false, 27)))) {
-                // line 28
+            // line 28
+            if (( !twig_get_attribute($this->env, $this->source, $context["contest"], "starttimeEnabled", [], "any", false, false, false, 28) &&  !twig_test_empty(twig_get_attribute($this->env, $this->source, $context["contest"], "finalizetime", [], "any", false, false, false, 28)))) {
+                // line 29
                 echo "                                <div class=\"alert alert-warning\">
                                     <strong>Warning:</strong> start time is undefined, but contest is finalized!
                                 </div>
                             ";
             }
-            // line 32
+            // line 33
             echo "                            <table class=\"table table-hover\">
                                 <tbody>
                                 ";
-            // line 34
+            // line 35
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["contest"], "juryTimeData", [], "any", false, false, false, 34));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["contest"], "juryTimeData", [], "any", false, false, false, 35));
             foreach ($context['_seq'] as $context["type"] => $context["data"]) {
-                // line 35
+                // line 36
                 echo "                                    <tr>
                                         <td class=\"";
-                // line 36
-                echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", true, true, false, 36)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", false, false, false, 36), "")) : ("")), "html", null, true);
+                // line 37
+                echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", true, true, false, 37)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", false, false, false, 37), "")) : ("")), "html", null, true);
                 echo "\">
                                             ";
-                // line 37
-                if (twig_get_attribute($this->env, $this->source, $context["data"], "icon", [], "any", true, true, false, 37)) {
-                    // line 38
+                // line 38
+                if (twig_get_attribute($this->env, $this->source, $context["data"], "icon", [], "any", true, true, false, 38)) {
+                    // line 39
                     echo "                                                <i class=\"fas fa-";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "icon", [], "any", false, false, false, 38), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "icon", [], "any", false, false, false, 39), "html", null, true);
                     echo "\"></i>
                                             ";
                 }
-                // line 40
-                echo "                                        </td>
-                                        <td class=\"";
                 // line 41
-                echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", true, true, false, 41)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", false, false, false, 41), "")) : ("")), "html", null, true);
-                echo "\"><b>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "label", [], "any", false, false, false, 41), "html", null, true);
-                echo ":</b></td>
+                echo "                                        </td>
                                         <td class=\"";
                 // line 42
                 echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", true, true, false, 42)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", false, false, false, 42), "")) : ("")), "html", null, true);
+                echo "\"><b>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "label", [], "any", false, false, false, 42), "html", null, true);
+                echo ":</b></td>
+                                        <td class=\"";
+                // line 43
+                echo twig_escape_filter($this->env, ((twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", true, true, false, 43)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["data"], "class", [], "any", false, false, false, 43), "")) : ("")), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "time", [], "any", false, false, false, 42), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["data"], "time", [], "any", false, false, false, 43), "html", null, true);
                 echo "</td>
                                         ";
-                // line 43
+                // line 44
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                    // line 44
+                    // line 45
                     echo "                                            <td>
                                                 ";
-                    // line 45
-                    if (twig_get_attribute($this->env, $this->source, $context["data"], "show_button", [], "any", false, false, false, 45)) {
-                        // line 46
+                    // line 46
+                    if (twig_get_attribute($this->env, $this->source, $context["data"], "show_button", [], "any", false, false, false, 46)) {
+                        // line 47
                         echo "                                                    <input type=\"submit\" class=\"btn btn-primary btn-sm\"
                                                            name=\"donow[";
-                        // line 47
+                        // line 48
                         echo twig_escape_filter($this->env, $context["type"], "html", null, true);
                         echo "]\" value=\"";
                         echo twig_escape_filter($this->env, $context["type"], "html", null, true);
                         echo " now\"/>
                                                 ";
                     }
-                    // line 49
+                    // line 50
                     echo "                                                ";
-                    if (twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", true, true, false, 49)) {
-                        // line 50
+                    if (twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", true, true, false, 50)) {
+                        // line 51
                         echo "                                                    <input type=\"submit\" class=\"btn btn-primary btn-sm\"
                                                            name=\"donow[";
-                        // line 51
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", false, false, false, 51), "type", [], "any", false, false, false, 51), "html", null, true);
+                        // line 52
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", false, false, false, 52), "type", [], "any", false, false, false, 52), "html", null, true);
                         echo "]\"
                                                            value=\"";
-                        // line 52
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", false, false, false, 52), "label", [], "any", false, false, false, 52), "html", null, true);
+                        // line 53
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["data"], "extra_button", [], "any", false, false, false, 53), "label", [], "any", false, false, false, 53), "html", null, true);
                         echo "\"/>
                                                 ";
                     }
-                    // line 54
+                    // line 55
                     echo "                                            </td>
                                         ";
                 }
-                // line 56
+                // line 57
                 echo "                                    </tr>
                                 ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['type'], $context['data'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 58
+            // line 59
             echo "                                </tbody>
                             </table>
                         </div>
@@ -211,72 +212,72 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 66
+            // line 67
             echo "        ";
-            if (twig_test_empty((isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 66, $this->source); })()))) {
-                // line 67
+            if (twig_test_empty((isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 67, $this->source); })()))) {
+                // line 68
                 echo "            <div class=\"alert alert-danger\">
                 No upcoming contest
             </div>
         ";
             } else {
-                // line 71
+                // line 72
                 echo "            <div class=\"alert alert-warning\">
                 <strong>No active contest.</strong> Upcoming:<br/>
                 <p>
                     <i>";
-                // line 74
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 74, $this->source); })()), "name", [], "any", false, false, false, 74), "html", null, true);
+                // line 75
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 75, $this->source); })()), "name", [], "any", false, false, false, 75), "html", null, true);
                 echo " (";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 74, $this->source); })()), "shortname", [], "any", false, false, false, 74), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 75, $this->source); })()), "shortname", [], "any", false, false, false, 75), "html", null, true);
                 echo ")</i>;
                     active from ";
-                // line 75
-                echo twig_escape_filter($this->env, $this->extensions['App\Twig\TwigExtension']->printtime(twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 75, $this->source); })()), "activatetime", [], "any", false, false, false, 75), "%a %d %b %Y %T %Z"), "html", null, true);
+                // line 76
+                echo twig_escape_filter($this->env, $this->extensions['App\Twig\TwigExtension']->printtime(twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 76, $this->source); })()), "activatetime", [], "any", false, false, false, 76), "%a %d %b %Y %T %Z"), "html", null, true);
                 echo "
                 </p>
                 <form action=\"";
-                // line 77
+                // line 78
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_contests");
                 echo "\" method=\"post\">
                     <input type=\"hidden\" name=\"contest\" value=\"";
-                // line 78
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 78, $this->source); })()), "cid", [], "any", false, false, false, 78), "html", null, true);
+                // line 79
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["upcoming_contest"]) || array_key_exists("upcoming_contest", $context) ? $context["upcoming_contest"] : (function () { throw new RuntimeError('Variable "upcoming_contest" does not exist.', 79, $this->source); })()), "cid", [], "any", false, false, false, 79), "html", null, true);
                 echo "\"/>
                     <input type=\"submit\" class=\"btn btn-primary\" name=\"donow[activate]\" value=\"Activate now\"/>
                 </form>
             </div>
         ";
             }
-            // line 83
+            // line 84
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contest'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
-        echo "
-    <h3>All available contests</h3>
+        // line 85
+        echo "    <div style=\"overflow:auto\">
+        <h3>All available contests</h3>
 
-    ";
-        // line 87
-        echo twig_call_macro($macros["macros"], "macro_table", [(isset($context["contests_table"]) || array_key_exists("contests_table", $context) ? $context["contests_table"] : (function () { throw new RuntimeError('Variable "contests_table" does not exist.', 87, $this->source); })()), (isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 87, $this->source); })()), (isset($context["num_actions"]) || array_key_exists("num_actions", $context) ? $context["num_actions"] : (function () { throw new RuntimeError('Variable "num_actions" does not exist.', 87, $this->source); })())], 87, $context, $this->getSourceContext());
+        ";
+        // line 88
+        echo twig_call_macro($macros["macros"], "macro_table", [(isset($context["contests_table"]) || array_key_exists("contests_table", $context) ? $context["contests_table"] : (function () { throw new RuntimeError('Variable "contests_table" does not exist.', 88, $this->source); })()), (isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 88, $this->source); })()), (isset($context["num_actions"]) || array_key_exists("num_actions", $context) ? $context["num_actions"] : (function () { throw new RuntimeError('Variable "num_actions" does not exist.', 88, $this->source); })())], 88, $context, $this->getSourceContext());
         echo "
-
-    ";
-        // line 89
+    </div>
+        ";
+        // line 90
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 90
-            echo "        <p>
-            ";
             // line 91
+            echo "            <p>
+                ";
+            // line 92
             echo $this->extensions['App\Twig\TwigExtension']->button($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_contest_add"), "Add new contest", "primary", "plus");
             echo "
-        </p>
-    ";
+            </p>
+        ";
         }
-        // line 94
-        echo "
+        // line 95
+        echo "</div>
 ";
     }
 
@@ -292,7 +293,7 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
 
     public function getDebugInfo()
     {
-        return array (  279 => 94,  273 => 91,  270 => 90,  268 => 89,  263 => 87,  258 => 84,  252 => 83,  244 => 78,  240 => 77,  235 => 75,  229 => 74,  224 => 71,  218 => 67,  215 => 66,  203 => 58,  196 => 56,  192 => 54,  187 => 52,  183 => 51,  180 => 50,  177 => 49,  170 => 47,  167 => 46,  165 => 45,  162 => 44,  160 => 43,  154 => 42,  148 => 41,  145 => 40,  139 => 38,  137 => 37,  133 => 36,  130 => 35,  126 => 34,  122 => 32,  116 => 28,  114 => 27,  104 => 24,  96 => 19,  91 => 18,  89 => 17,  84 => 16,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  280 => 95,  274 => 92,  271 => 91,  269 => 90,  264 => 88,  259 => 85,  253 => 84,  245 => 79,  241 => 78,  236 => 76,  230 => 75,  225 => 72,  219 => 68,  216 => 67,  204 => 59,  197 => 57,  193 => 55,  188 => 53,  184 => 52,  181 => 51,  178 => 50,  171 => 48,  168 => 47,  166 => 46,  163 => 45,  161 => 44,  155 => 43,  149 => 42,  146 => 41,  140 => 39,  138 => 38,  134 => 37,  131 => 36,  127 => 35,  123 => 33,  117 => 29,  115 => 28,  105 => 25,  97 => 20,  92 => 19,  90 => 18,  85 => 17,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -308,6 +309,7 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
 {% endblock %}
 
 {% block content %}
+<div class=\"container-fluid dashboard-content\">
     <h1>Contests</h1>
 
     <h3>Current contests</h3>
@@ -317,7 +319,7 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
         <form action=\"{{ path('jury_contests') }}\" method=\"post\">
             <input type=\"hidden\" name=\"contest\" value=\"{{ contest.cid }}\"/>
             <div class=\"row mb-4\">
-                <div class=\"col-lg-8\">
+                <div class=\"col-lg-12\">
                     <div class=\"card\">
                         <div class=\"card-header\">
                             {{ contest.name }} ({{ contest.shortname }} - c{{ contest.cid }})
@@ -380,17 +382,17 @@ class __TwigTemplate_13b75dd3d01d77eac8a11504616088922c6393cda73547bba37e02b487e
             </div>
         {% endif %}
     {% endfor %}
+    <div style=\"overflow:auto\">
+        <h3>All available contests</h3>
 
-    <h3>All available contests</h3>
-
-    {{ macros.table(contests_table, table_fields, num_actions) }}
-
-    {% if is_granted('ROLE_ADMIN') %}
-        <p>
-            {{ button(path('jury_contest_add'), 'Add new contest', 'primary', 'plus') }}
-        </p>
-    {% endif %}
-
+        {{ macros.table(contests_table, table_fields, num_actions) }}
+    </div>
+        {% if is_granted('ROLE_ADMIN') %}
+            <p>
+                {{ button(path('jury_contest_add'), 'Add new contest', 'primary', 'plus') }}
+            </p>
+        {% endif %}
+</div>
 {% endblock %}
 ", "jury/contests.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/contests.html.twig");
     }

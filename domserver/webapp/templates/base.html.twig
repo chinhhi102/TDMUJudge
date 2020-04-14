@@ -22,9 +22,10 @@
     {% endblock %}
 </head>
 <body style="padding-top: 4.5rem;">
+<div class="dashboard-main-wrapper">
 {% block menu %}{% endblock %}
 {% block body %}
-    <div class="container-fluid">
+    <div class="dashboard-wrapper">
         <div class="row">
             <div class="col-12">
                 {% block messages %}
@@ -35,7 +36,7 @@
         </div>
     </div>
 {% endblock %}
-
+</div>
 <script>
     {% if app.request %}
         var domjudge_base_url = "{{ app.request.getBaseURL() }}";

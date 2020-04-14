@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block content %}
-
     <h1>Judgehost {{ judgehost.hostname | printHost }}</h1>
 
     <div class="row">
@@ -73,5 +72,4 @@
     <div data-ajax-refresh-target>
         {% include 'jury/partials/judgehost_judgings.html.twig' %}
     </div>
-
 {% endblock %}
