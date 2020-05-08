@@ -51,72 +51,87 @@ class __TwigTemplate_9f31d7ddb7b31506ffa5ca2997f1fe347d117e45ce11b9465cfc0a371b8
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Judgehosts - ";
+        // line 5
+        echo "  Judgehosts - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 8, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 11
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 13
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 12
-        echo "
-    <h1>Judgehosts</h1>
+        // line 14
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Judgehosts
+        </h1>
 
-    <div data-ajax-refresh-target>
-        ";
-        // line 16
-        $this->loadTemplate("jury/partials/judgehost_list.html.twig", "jury/judgehosts.html.twig", 16)->display($context);
-        // line 17
-        echo "    </div>";
-        // line 19
+        <div data-ajax-refresh-target>
+          ";
+        // line 22
+        $this->loadTemplate("jury/partials/judgehost_list.html.twig", "jury/judgehosts.html.twig", 22)->display($context);
+        // line 23
+        echo "        </div>";
+        // line 25
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 20
-            echo "
-        <div class=\"mb-4\">
+            // line 26
+            echo "          <div class=\"mb-4\">
             <form action=\"";
-            // line 22
+            // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehost_activate_all");
-            echo "\" method=\"post\" class=\"d-inline\">
-                <button type=\"submit\" name=\"cmd-activate\" class=\"btn btn-success\">
-                    <i class=\"fas fa-play\"></i>
-                    Start all judgehosts
-                </button>
+            echo "\"
+              method=\"post\"
+              class=\"d-inline\">
+              <button type=\"submit\" name=\"cmd-activate\" class=\"btn btn-success\">
+                <i class=\"fas fa-play\"></i>
+                Start all judgehosts
+              </button>
             </form>
             <form action=\"";
-            // line 28
+            // line 35
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehost_deactivate_all");
-            echo "\" method=\"post\" class=\"d-inline\">
-                <button type=\"submit\" name=\"cmd-deactivate\" class=\"btn btn-warning\">
-                    <i class=\"fas fa-pause\"></i>
-                    Stop all judgehosts
-                </button>
+            echo "\"
+              method=\"post\"
+              class=\"d-inline\">
+              <button type=\"submit\"
+                name=\"cmd-deactivate\"
+                class=\"btn btn-warning\">
+                <i class=\"fas fa-pause\"></i>
+                Stop all judgehosts
+              </button>
             </form>
             <div class=\"d-inline\">
-                ";
-            // line 35
+              ";
+            // line 46
             echo $this->extensions['App\Twig\TwigExtension']->button($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_judgehost_edit"), "Edit judgehosts", "secondary", "edit");
+            // line 53
             echo "
             </div>
-        </div>";
+          </div>";
         }
-        // line 40
-        echo "
+        // line 57
+        echo "      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -132,51 +147,70 @@ class __TwigTemplate_9f31d7ddb7b31506ffa5ca2997f1fe347d117e45ce11b9465cfc0a371b8
 
     public function getDebugInfo()
     {
-        return array (  119 => 40,  113 => 35,  103 => 28,  94 => 22,  90 => 20,  88 => 19,  86 => 17,  84 => 16,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  132 => 57,  127 => 53,  125 => 46,  111 => 35,  100 => 27,  97 => 26,  95 => 25,  93 => 23,  91 => 22,  81 => 14,  77 => 13,  71 => 10,  66 => 9,  62 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Judgehosts - {{ parent() }}{% endblock %}
+{% block title %}
+  Judgehosts - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Judgehosts
+        </h1>
 
-    <h1>Judgehosts</h1>
-
-    <div data-ajax-refresh-target>
-        {% include 'jury/partials/judgehost_list.html.twig' %}
-    </div>
-
-    {%- if is_granted('ROLE_ADMIN') %}
-
-        <div class=\"mb-4\">
-            <form action=\"{{ path('jury_judgehost_activate_all') }}\" method=\"post\" class=\"d-inline\">
-                <button type=\"submit\" name=\"cmd-activate\" class=\"btn btn-success\">
-                    <i class=\"fas fa-play\"></i>
-                    Start all judgehosts
-                </button>
-            </form>
-            <form action=\"{{ path('jury_judgehost_deactivate_all') }}\" method=\"post\" class=\"d-inline\">
-                <button type=\"submit\" name=\"cmd-deactivate\" class=\"btn btn-warning\">
-                    <i class=\"fas fa-pause\"></i>
-                    Stop all judgehosts
-                </button>
-            </form>
-            <div class=\"d-inline\">
-                {{ button(path('jury_judgehost_edit'), 'Edit judgehosts', 'secondary', 'edit') }}
-            </div>
+        <div data-ajax-refresh-target>
+          {% include 'jury/partials/judgehost_list.html.twig' %}
         </div>
 
-    {%- endif %}
-
+        {%- if is_granted('ROLE_ADMIN') %}
+          <div class=\"mb-4\">
+            <form action=\"{{ path('jury_judgehost_activate_all') }}\"
+              method=\"post\"
+              class=\"d-inline\">
+              <button type=\"submit\" name=\"cmd-activate\" class=\"btn btn-success\">
+                <i class=\"fas fa-play\"></i>
+                Start all judgehosts
+              </button>
+            </form>
+            <form action=\"{{ path('jury_judgehost_deactivate_all') }}\"
+              method=\"post\"
+              class=\"d-inline\">
+              <button type=\"submit\"
+                name=\"cmd-deactivate\"
+                class=\"btn btn-warning\">
+                <i class=\"fas fa-pause\"></i>
+                Stop all judgehosts
+              </button>
+            </form>
+            <div class=\"d-inline\">
+              {{
+                button(
+                  path('jury_judgehost_edit'),
+                  'Edit judgehosts',
+                  'secondary',
+                  'edit'
+                )
+              }}
+            </div>
+          </div>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/judgehosts.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/judgehosts.html.twig");
     }

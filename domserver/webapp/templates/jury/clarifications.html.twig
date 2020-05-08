@@ -9,7 +9,10 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12" >
+                
     <h1>Clarifications</h1>
 
     {%- if current_contests is empty %}
@@ -42,55 +45,55 @@
                        {% if currentFilter == 'general' %}checked{% endif %}> General
             </label>
         </div>
-
-        {% if queues | length > 0 %}
-            Queue:
-            <div class="btn-group btn-group-toggle btn-group-sm mb-3" data-toggle="buttons">
-                <label class="btn btn-secondary {% if currentQueue is null %}active{% endif %}">
-                    <input type="radio" name="queue" autocomplete="off" value="all"
-                           {% if currentQueue is null %}checked{% endif %}> All
-                </label>
-                <label class="btn btn-secondary {% if currentQueue is not null and currentQueue == '' %}active{% endif %}">
-                    <input type="radio" name="queue" autocomplete="off" value=""
-                           {% if currentQueue is not null and currentQueue == '' %}checked{% endif %}> Unassigned
-                </label>
-                {%- for queue, name in queues %}
-                    <label class="btn btn-secondary {% if currentQueue == queue %}active{% endif %}">
-                        <input type="radio" name="queue" autocomplete="off" value="{{ queue }}"
-                               {% if currentQueue == queue %}checked{% endif %}> {{ name }}
+        <div  style="overflow: auto">
+            {% if queues | length > 0 %}
+                Queue:
+                <div class="btn-group btn-group-toggle btn-group-sm mb-3" data-toggle="buttons">
+                    <label class="btn btn-secondary {% if currentQueue is null %}active{% endif %}">
+                        <input type="radio" name="queue" autocomplete="off" value="all"
+                            {% if currentQueue is null %}checked{% endif %}> All
                     </label>
-                {%- endfor %}
-            </div>
-        {% endif %}
+                    <label class="btn btn-secondary {% if currentQueue is not null and currentQueue == '' %}active{% endif %}">
+                        <input type="radio" name="queue" autocomplete="off" value=""
+                            {% if currentQueue is not null and currentQueue == '' %}checked{% endif %}> Unassigned
+                    </label>
+                    {%- for queue, name in queues %}
+                        <label class="btn btn-secondary {% if currentQueue == queue %}active{% endif %}">
+                            <input type="radio" name="queue" autocomplete="off" value="{{ queue }}"
+                                {% if currentQueue == queue %}checked{% endif %}> {{ name }}
+                        </label>
+                    {%- endfor %}
+                </div>
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'new' %}
-            <h3 id="newrequests">New requests:</h3>
-            {%- if newClarifications | length == 0 %}
-                <p class="nodata">No new clarification requests.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: newClarifications} %}
-            {%- endif %}
-        {% endif %}
+            {% if currentFilter is null or currentFilter == 'new' %}
+                <h3 id="newrequests">New requests:</h3>
+                {%- if newClarifications | length == 0 %}
+                    <p class="nodata">No new clarification requests.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: newClarifications} %}
+                {%- endif %}
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'old' %}
-            <h3 id="oldrequests">Old requests:</h3>
-            {%- if oldClarifications | length == 0 %}
-                <p class="nodata">No old clarification requests.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: oldClarifications} %}
-            {%- endif %}
-        {% endif %}
+            {% if currentFilter is null or currentFilter == 'old' %}
+                <h3 id="oldrequests">Old requests:</h3>
+                {%- if oldClarifications | length == 0 %}
+                    <p class="nodata">No old clarification requests.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: oldClarifications} %}
+                {%- endif %}
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'general' %}
-            <h3 id="clarifications">General clarifications:</h3>
-            {%- if generalClarifications | length == 0 %}
-                <p class="nodata">No general clarifications.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: generalClarifications} %}
-            {%- endif %}
-        {% endif %}
-    {%- endif %}
-
+            {% if currentFilter is null or currentFilter == 'general' %}
+                <h3 id="clarifications">General clarifications:</h3>
+                {%- if generalClarifications | length == 0 %}
+                    <p class="nodata">No general clarifications.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: generalClarifications} %}
+                {%- endif %}
+            {% endif %}
+        {%- endif %}
+    </div>
     <script>
         function doSwitch() {
             // Fallback the queue to all, since it might not be defined.
@@ -136,5 +139,8 @@
             $('input[name=filter]').on('change', doSwitch);
         });
     </script>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

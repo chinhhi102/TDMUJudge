@@ -1,17 +1,25 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Add category - {{ parent() }}{% endblock %}
+{% block title %}
+  Add category - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.jscolor_extrahead() }}
+  {{ parent() }}
+  {{ macros.jscolor_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Add category
+        </h1>
 
-    <h1>Add category</h1>
-
-    {% include 'jury/partials/team_category_form.html.twig' %}
-
+        {% include 'jury/partials/team_category_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

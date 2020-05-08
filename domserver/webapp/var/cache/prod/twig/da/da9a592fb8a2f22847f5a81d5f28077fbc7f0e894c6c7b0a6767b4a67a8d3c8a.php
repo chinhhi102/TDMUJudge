@@ -51,38 +51,45 @@ class __TwigTemplate_ca0b1b1f735ab32093b09be1377f8910b996542222fddea64a6d64ee242
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Scoreboard - ";
+        // line 5
+        echo "  Scoreboard - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 8, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 11
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 13
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 12
-        echo "
-    <div data-ajax-refresh-target>
-        ";
         // line 14
-        $this->loadTemplate("partials/scoreboard.html.twig", "jury/scoreboard.html.twig", 14)->display(twig_array_merge($context, ["jury" => true]));
-        // line 15
-        echo "    </div>
-
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <div data-ajax-refresh-target style=\"overflow: auto\">
+          ";
+        // line 18
+        $this->loadTemplate("partials/scoreboard.html.twig", "jury/scoreboard.html.twig", 18)->display(twig_array_merge($context, ["jury" => true]));
+        // line 21
+        echo "        </div>
+      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -98,27 +105,35 @@ class __TwigTemplate_ca0b1b1f735ab32093b09be1377f8910b996542222fddea64a6d64ee242
 
     public function getDebugInfo()
     {
-        return array (  84 => 15,  82 => 14,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  89 => 21,  87 => 18,  81 => 14,  77 => 13,  71 => 10,  66 => 9,  62 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Scoreboard - {{ parent() }}{% endblock %}
+{% block title %}
+  Scoreboard - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
-
-    <div data-ajax-refresh-target>
-        {% include 'partials/scoreboard.html.twig' with {jury: true} %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <div data-ajax-refresh-target style=\"overflow: auto\">
+          {% include 'partials/scoreboard.html.twig' with {
+            jury: true
+          } %}
+        </div>
+      </div>
     </div>
-
+  </div>
 {% endblock %}
 ", "jury/scoreboard.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/scoreboard.html.twig");
     }

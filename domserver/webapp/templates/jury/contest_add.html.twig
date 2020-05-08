@@ -1,20 +1,28 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Add contest - {{ parent() }}{% endblock %}
+{% block title %}
+  Add contest - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.select2_extrahead() }}
-    {{ macros.jscolor_extrahead() }}
+  {{ parent() }}
+  {{ macros.select2_extrahead() }}
+  {{ macros.jscolor_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Add contest
+        </h1>
 
-    <h1>Add contest</h1>
+        {% include 'jury/partials/contest_form.html.twig' %}
 
-    {% include 'jury/partials/contest_form.html.twig' %}
-
-    {{ macros.collection_scripts() }}
-
+        {{ macros.collection_scripts() }}
+      </div>
+    </div>
+  </div>
 {% endblock %}

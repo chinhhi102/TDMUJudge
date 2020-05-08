@@ -51,47 +51,56 @@ class __TwigTemplate_349f03e971c0209bf7e24018c4109649f3d9f115821e79a996937edef19
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Add contest - ";
+        // line 5
+        echo "  Add contest - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_select2_extrahead", [], 8, $context, $this->getSourceContext());
-        echo "
-    ";
-        // line 9
-        echo twig_call_macro($macros["macros"], "macro_jscolor_extrahead", [], 9, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 12
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_select2_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+  ";
+        // line 11
+        echo twig_call_macro($macros["macros"], "macro_jscolor_extrahead", [], 11, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 14
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 13
-        echo "
-    <h1>Add contest</h1>
+        // line 15
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Add contest
+        </h1>
 
-    ";
-        // line 16
-        $this->loadTemplate("jury/partials/contest_form.html.twig", "jury/contest_add.html.twig", 16)->display($context);
-        // line 17
+        ";
+        // line 22
+        $this->loadTemplate("jury/partials/contest_form.html.twig", "jury/contest_add.html.twig", 22)->display($context);
+        // line 23
         echo "
-    ";
-        // line 18
-        echo twig_call_macro($macros["macros"], "macro_collection_scripts", [], 18, $context, $this->getSourceContext());
+        ";
+        // line 24
+        echo twig_call_macro($macros["macros"], "macro_collection_scripts", [], 24, $context, $this->getSourceContext());
         echo "
-
+      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -107,30 +116,38 @@ class __TwigTemplate_349f03e971c0209bf7e24018c4109649f3d9f115821e79a996937edef19
 
     public function getDebugInfo()
     {
-        return array (  92 => 18,  89 => 17,  87 => 16,  82 => 13,  78 => 12,  72 => 9,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  99 => 24,  96 => 23,  94 => 22,  85 => 15,  81 => 14,  75 => 11,  71 => 10,  66 => 9,  62 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Add contest - {{ parent() }}{% endblock %}
+{% block title %}
+  Add contest - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.select2_extrahead() }}
-    {{ macros.jscolor_extrahead() }}
+  {{ parent() }}
+  {{ macros.select2_extrahead() }}
+  {{ macros.jscolor_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Add contest
+        </h1>
 
-    <h1>Add contest</h1>
+        {% include 'jury/partials/contest_form.html.twig' %}
 
-    {% include 'jury/partials/contest_form.html.twig' %}
-
-    {{ macros.collection_scripts() }}
-
+        {{ macros.collection_scripts() }}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/contest_add.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/contest_add.html.twig");
     }

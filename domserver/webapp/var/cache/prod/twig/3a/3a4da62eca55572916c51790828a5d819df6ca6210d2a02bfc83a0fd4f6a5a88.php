@@ -70,7 +70,7 @@ class __TwigTemplate_40b3c526df41f5e9eef599a9b61e7e052d8881c7982a6f84c908c3bdb35
         }
         // line 9
         echo "
-    <div data-ajax-refresh-target data-ajax-refresh-after=\"initializeScoreboard\" class=\"mt-3\">
+    <div data-ajax-refresh-target data-ajax-refresh-after=\"initializeScoreboard\" class=\"mt-3\" style=\"clear:both\">
         ";
         // line 11
         $this->loadTemplate("partials/scoreboard.html.twig", "public/scoreboard.html.twig", 11)->display(twig_array_merge($context, ["jury" => false, "public" => true, "current_contest" => (isset($context["current_public_contest"]) || array_key_exists("current_public_contest", $context) ? $context["current_public_contest"] : (function () { throw new RuntimeError('Variable "current_public_contest" does not exist.', 11, $this->source); })())]));
@@ -134,7 +134,7 @@ class __TwigTemplate_40b3c526df41f5e9eef599a9b61e7e052d8881c7982a6f84c908c3bdb35
         <img class=\"banner\" src=\"{{ asset('images/banner.png') }}\" alt=\"Banner\"/>
     {% endif %}
 
-    <div data-ajax-refresh-target data-ajax-refresh-after=\"initializeScoreboard\" class=\"mt-3\">
+    <div data-ajax-refresh-target data-ajax-refresh-after=\"initializeScoreboard\" class=\"mt-3\" style=\"clear:both\">
         {% include 'partials/scoreboard.html.twig' with {jury: false, public: true, current_contest: current_public_contest} %}
     </div>
 {% endblock %}

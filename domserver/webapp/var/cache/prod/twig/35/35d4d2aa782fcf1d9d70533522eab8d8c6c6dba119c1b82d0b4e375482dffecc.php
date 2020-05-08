@@ -51,55 +51,67 @@ class __TwigTemplate_3638a580a0285ea53a2c8f8163d2e284448d4abec48251c5fdcaa775d02
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Rejudgings - ";
+        // line 5
+        echo "  Rejudgings - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 8, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 11
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 13
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 12
-        echo "
-    <h1>Rejudgings</h1>
+        // line 14
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Rejudgings
+        </h1>
 
-    ";
-        // line 15
-        if (twig_test_empty((isset($context["rejudgings"]) || array_key_exists("rejudgings", $context) ? $context["rejudgings"] : (function () { throw new RuntimeError('Variable "rejudgings" does not exist.', 15, $this->source); })()))) {
-            // line 16
-            echo "        <div class=\"alert alert-warning\">No rejudgings defined</div>
-    ";
-        } else {
-            // line 18
-            echo "        ";
-            echo twig_call_macro($macros["macros"], "macro_table", [(isset($context["rejudgings"]) || array_key_exists("rejudgings", $context) ? $context["rejudgings"] : (function () { throw new RuntimeError('Variable "rejudgings" does not exist.', 18, $this->source); })()), (isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 18, $this->source); })()), 0], 18, $context, $this->getSourceContext());
-            echo "
-    ";
-        }
-        // line 20
-        echo "
-    <p>
         ";
-        // line 22
-        echo $this->extensions['App\Twig\TwigExtension']->button($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_rejudging_add"), "Add new rejudging", "primary", "plus");
+        // line 21
+        if (twig_test_empty((isset($context["rejudgings"]) || array_key_exists("rejudgings", $context) ? $context["rejudgings"] : (function () { throw new RuntimeError('Variable "rejudgings" does not exist.', 21, $this->source); })()))) {
+            // line 22
+            echo "          <div class=\"alert alert-warning\">
+            No rejudgings defined
+          </div>
+        ";
+        } else {
+            // line 26
+            echo "          ";
+            echo twig_call_macro($macros["macros"], "macro_table", [(isset($context["rejudgings"]) || array_key_exists("rejudgings", $context) ? $context["rejudgings"] : (function () { throw new RuntimeError('Variable "rejudgings" does not exist.', 26, $this->source); })()), (isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 26, $this->source); })()), 0], 26, $context, $this->getSourceContext());
+            echo "
+        ";
+        }
+        // line 28
         echo "
-    </p>
-
+        <p>
+          ";
+        // line 30
+        echo $this->extensions['App\Twig\TwigExtension']->button($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_rejudging_add"), "Add new rejudging", "primary", "plus");
+        // line 37
+        echo "
+        </p>
+      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -115,35 +127,52 @@ class __TwigTemplate_3638a580a0285ea53a2c8f8163d2e284448d4abec48251c5fdcaa775d02
 
     public function getDebugInfo()
     {
-        return array (  99 => 22,  95 => 20,  89 => 18,  85 => 16,  83 => 15,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  110 => 37,  108 => 30,  104 => 28,  98 => 26,  92 => 22,  90 => 21,  81 => 14,  77 => 13,  71 => 10,  66 => 9,  62 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Rejudgings - {{ parent() }}{% endblock %}
+{% block title %}
+  Rejudgings - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Rejudgings
+        </h1>
 
-    <h1>Rejudgings</h1>
+        {% if rejudgings is empty %}
+          <div class=\"alert alert-warning\">
+            No rejudgings defined
+          </div>
+        {% else %}
+          {{ macros.table(rejudgings, table_fields, 0) }}
+        {% endif %}
 
-    {% if rejudgings is empty %}
-        <div class=\"alert alert-warning\">No rejudgings defined</div>
-    {% else %}
-        {{ macros.table(rejudgings, table_fields, 0) }}
-    {% endif %}
-
-    <p>
-        {{ button(path('jury_rejudging_add'), 'Add new rejudging', 'primary', 'plus') }}
-    </p>
-
+        <p>
+          {{
+            button(
+              path('jury_rejudging_add'),
+              'Add new rejudging',
+              'primary',
+              'plus'
+            )
+          }}
+        </p>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/rejudgings.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/rejudgings.html.twig");
     }

@@ -99,8 +99,8 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
 ";
         }
         // line 29
-        echo "
-<table class=\"scoreboard center ";
+        echo "<div style=\"padding: 10px\">
+<table class=\"scoreboard center table table-striped table-bordered ";
         // line 30
         if ((isset($context["jury"]) || array_key_exists("jury", $context) ? $context["jury"] : (function () { throw new RuntimeError('Variable "jury" does not exist.', 30, $this->source); })())) {
             echo "scoreboard_jury";
@@ -172,7 +172,7 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
         }
         // line 61
         echo "
-    <thead>
+    <thead class=\"thead-dark\">
     <tr class=\"scoreheader\">
         <th title=\"rank\" scope=\"col\">rank</th>
         <th title=\"team name\" scope=\"col\" colspan=\"";
@@ -870,7 +870,7 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
         // line 290
         echo "    </tbody>
 </table>
-
+</div>
 ";
         // line 293
         if ((isset($context["showLegends"]) || array_key_exists("showLegends", $context) ? $context["showLegends"] : (function () { throw new RuntimeError('Variable "showLegends" does not exist.', 293, $this->source); })())) {
@@ -1120,8 +1120,8 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
         }
     </style>
 {% endif %}
-
-<table class=\"scoreboard center {% if jury %}scoreboard_jury{% endif %}\">
+<div style=\"padding: 10px\">
+<table class=\"scoreboard center table table-striped table-bordered {% if jury %}scoreboard_jury{% endif %}\">
 
     {# output table column groups (for the styles) #}
     <colgroup>
@@ -1153,7 +1153,7 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
         {% set teamColspan = teamColspan + 1 %}
     {% endif %}
 
-    <thead>
+    <thead class=\"thead-dark\">
     <tr class=\"scoreheader\">
         <th title=\"rank\" scope=\"col\">rank</th>
         <th title=\"team name\" scope=\"col\" colspan=\"{{ teamColspan }}\">team</th>
@@ -1383,7 +1383,7 @@ class __TwigTemplate_67fca87903641cd61d6483a0c2d4570c6f4b300773bd09257fdcc7ac1b3
     {% include 'partials/scoreboard_summary.html.twig' with {sortOrder: previousSortOrder} %}
     </tbody>
 </table>
-
+</div>
 {% if showLegends %}
     <p><br/><br/></p>
 

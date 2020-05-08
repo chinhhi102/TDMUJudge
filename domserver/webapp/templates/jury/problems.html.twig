@@ -1,24 +1,41 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Problems - {{ parent() }}{% endblock %}
+{% block title %}
+  Problems - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Problems
+        </h1>
+        <div style="overflow: auto">
+          {{ macros.table(problems, table_fields, num_actions) }}
 
-    <h1>Problems</h1>
+          {% if is_granted('ROLE_ADMIN') %}
+            <p>
+              {{
+                button(
+                  path('jury_problem_add'),
+                  'Add new problem',
+                  'primary',
+                  'plus'
+                )
+              }}
+            </p>
 
-    {{ macros.table(problems, table_fields, num_actions) }}
-
-    {% if is_granted('ROLE_ADMIN') %}
-        <p>
-            {{ button(path('jury_problem_add'), 'Add new problem', 'primary', 'plus') }}
-        </p>
-
-        {{ form(form) }}
-    {% endif %}
+            {{ form(form) }}
+          {% endif %}
+        </div>       
+      </div>
+    </div>
+  </div>
 {% endblock %}

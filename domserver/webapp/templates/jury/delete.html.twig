@@ -1,38 +1,53 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Delete {{ type }} {{ primaryKey }} - "{{ description }}" - {{ parent() }}{% endblock %}
-
+{% block title %}
+  Delete {{ type }} {{ primaryKey }} - "{{ description }}" - {{ parent() }}
+{% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Delete {{ type }} {{ primaryKey }} - "{{ description }}"
+        </h1>
 
-    <h1>Delete {{ type }} {{ primaryKey }} - "{{ description }}"</h1>
-
-    {% if isError %}
-        <div class="alert alert-danger">
-            <strong>Error: {{ messages.0 }}</strong>
-        </div>
-    {% else %}
-        <div class="alert alert-warning">
+        {% if isError %}
+          <div class="alert alert-danger">
+            <strong>Error: {{ messages[0] }}</strong>
+          </div>
+        {% else %}
+          <div class="alert alert-warning">
             <form method="post">
-                <p>You're about to delete {{ type }} {{ primaryKey }} "{{ description }}".</p>
+              <p>
+                You're about to delete {{ type }} {{ primaryKey }} "{{
+                  description
+                }}".
+              </p>
 
-                {% if messages is not empty %}
-                    <p>
-                        <strong>Warning, this will:</strong>
-                    </p>
-                    <ul>
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+              {% if messages is not empty %}
+                <p>
+                  <strong>Warning, this will:</strong>
+                </p>
+                <ul>
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
 
-                <p>Are you sure?</p>
-                <hr>
-                <a href="{{ redirectUrl }}" class="btn btn-secondary">Cancel</a>
-                <button type="submit" class="btn btn-danger">Delete</button>
+              <p>
+                Are you sure?
+              </p>
+              <hr />
+              <a href="{{ redirectUrl }}" class="btn btn-secondary">Cancel</a>
+              <button type="submit" class="btn btn-danger">
+                Delete
+              </button>
             </form>
-        </div>
-    {% endif %}
-
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

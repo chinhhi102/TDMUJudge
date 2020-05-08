@@ -1,12 +1,22 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Error{% endblock %}
+{% block title %}
+  Error
+{% endblock %}
 
 {% block content %}
-<div class="alert alert-danger">
-  <h1>Error</h1>
-  <p>
-    {{ error|default('Unknown error') }}
-  </p>
-</div>
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <div class="alert alert-danger">
+          <h1>
+            Error
+          </h1>
+          <p>
+            {{ error|default('Unknown error') }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

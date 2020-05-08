@@ -51,38 +51,50 @@ class __TwigTemplate_f47b68d17e50dc186c0e9ff5e940b525a3cfb9cbf6d4807b7f97a12e925
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Internal errors - ";
+        // line 5
+        echo "  Internal errors - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 8, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 11
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 13
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 12
-        echo "
-    <h1>Internal errors</h1>
+        // line 14
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\" style=\"overflow: auto\">
+        <h1>
+          Internal errors
+        </h1>
 
-    ";
-        // line 15
-        echo twig_call_macro($macros["macros"], "macro_table", [(isset($context["internal_errors"]) || array_key_exists("internal_errors", $context) ? $context["internal_errors"] : (function () { throw new RuntimeError('Variable "internal_errors" does not exist.', 15, $this->source); })()), (isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 15, $this->source); })()), 0, ["ordering" => "false"]], 15, $context, $this->getSourceContext());
+        ";
+        // line 21
+        echo twig_call_macro($macros["macros"], "macro_table", [        // line 23
+(isset($context["internal_errors"]) || array_key_exists("internal_errors", $context) ? $context["internal_errors"] : (function () { throw new RuntimeError('Variable "internal_errors" does not exist.', 23, $this->source); })()),         // line 24
+(isset($context["table_fields"]) || array_key_exists("table_fields", $context) ? $context["table_fields"] : (function () { throw new RuntimeError('Variable "table_fields" does not exist.', 24, $this->source); })()), 0, ["ordering" => "false"]], 22, $context, $this->getSourceContext());
+        // line 30
         echo "
-
+      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -98,27 +110,44 @@ class __TwigTemplate_f47b68d17e50dc186c0e9ff5e940b525a3cfb9cbf6d4807b7f97a12e925
 
     public function getDebugInfo()
     {
-        return array (  83 => 15,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  94 => 30,  92 => 24,  91 => 23,  90 => 21,  81 => 14,  77 => 13,  71 => 10,  66 => 9,  62 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Internal errors - {{ parent() }}{% endblock %}
+{% block title %}
+  Internal errors - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\" style=\"overflow: auto\">
+        <h1>
+          Internal errors
+        </h1>
 
-    <h1>Internal errors</h1>
-
-    {{ macros.table(internal_errors, table_fields, 0, {ordering: 'false'}) }}
-
+        {{
+          macros.table(
+            internal_errors,
+            table_fields,
+            0,
+            {
+              ordering: 'false'
+            }
+          )
+        }}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/internal_errors.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/internal_errors.html.twig");
     }

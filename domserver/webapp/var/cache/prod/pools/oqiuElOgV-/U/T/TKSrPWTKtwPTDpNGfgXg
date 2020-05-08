@@ -1,0 +1,53 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'contests' => [
+                        0,
+                    ],
+                    'result' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.teamid AS teamid_0, count(t0_.teamid) AS sclr_1 FROM team t0_ INNER JOIN submission s1_ ON t0_.teamid = s1_.teamid INNER JOIN judging j2_ ON s1_.submitid = j2_.submitid WHERE s1_.cid IN (?) AND j2_.valid = 1 AND j2_.result = ? GROUP BY s1_.teamid',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'teamid_0' => 'teamid',
+                    'sclr_1' => 'num_correct',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'teamid_0' => 'integer',
+                    'sclr_1' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

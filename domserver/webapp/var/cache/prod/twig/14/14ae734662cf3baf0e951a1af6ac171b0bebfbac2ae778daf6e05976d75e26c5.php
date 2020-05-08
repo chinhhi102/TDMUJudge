@@ -50,23 +50,32 @@ class __TwigTemplate_d1a09430834fcab1c5f17de4570175c57ede255176c4e0b501dbfdb1bb2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Add user - ";
+        // line 5
+        echo "  Add user - ";
         $this->displayParentBlock("title", $context, $blocks);
+        echo "
+";
     }
 
-    // line 6
+    // line 8
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 7
-        echo "
-    <h1>Add user</h1>
+        // line 9
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Add user
+        </h1>
 
-    ";
-        // line 10
-        $this->loadTemplate("jury/partials/user_form.html.twig", "jury/user_add.html.twig", 10)->display($context);
-        // line 11
-        echo "
+        ";
+        // line 16
+        $this->loadTemplate("jury/partials/user_form.html.twig", "jury/user_add.html.twig", 16)->display($context);
+        // line 17
+        echo "      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -82,22 +91,30 @@ class __TwigTemplate_d1a09430834fcab1c5f17de4570175c57ede255176c4e0b501dbfdb1bb2
 
     public function getDebugInfo()
     {
-        return array (  69 => 11,  67 => 10,  62 => 7,  58 => 6,  50 => 4,  45 => 1,  43 => 2,  36 => 1,);
+        return array (  76 => 17,  74 => 16,  65 => 9,  61 => 8,  54 => 5,  50 => 4,  45 => 1,  43 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Add user - {{ parent() }}{% endblock %}
+{% block title %}
+  Add user - {{ parent() }}
+{% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Add user
+        </h1>
 
-    <h1>Add user</h1>
-
-    {% include 'jury/partials/user_form.html.twig' %}
-
+        {% include 'jury/partials/user_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/user_add.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/user_add.html.twig");
     }

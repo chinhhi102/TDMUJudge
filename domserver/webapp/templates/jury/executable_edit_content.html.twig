@@ -9,7 +9,10 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12">
+                
     <h1>Edit content of executable {{ executable.execid }}</h1>
 
     {{ form_start(form) }}
@@ -56,4 +59,7 @@
     </div>
     {{ form_end(form) }}
 
+            </div>
+        </div>
+    </div>
 {% endblock %}

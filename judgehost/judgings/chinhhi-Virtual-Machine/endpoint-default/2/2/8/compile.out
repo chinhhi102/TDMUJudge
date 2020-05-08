@@ -1,0 +1,4 @@
+Compiling failed with exitcode 255, compiler output:
+/home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+Try `/home/chinhhi/domjudge/judgehost/bin/runguard --help' for more information.
+Error: failed to set /sys/fs/cgroup/memory/domjudge/dj_cgroup_11667_1588242010/memory.memsw.limit_in_bytes: Cgroup, requested group parameter does not exist

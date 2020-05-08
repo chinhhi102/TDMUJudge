@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12">
+                
     <h1>Judging verifier</h1>
 
     <p>
@@ -58,4 +61,7 @@
     {{ checkJudgings.verifyResults('earlier', 'Verified earlier', earlier, true) }}
     {{ checkJudgings.verifyResults('nomatch', 'Without magic string', nomatch, true) }}
 
+            </div>
+        </div>
+    </div>
 {% endblock %}

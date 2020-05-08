@@ -37,7 +37,7 @@ class __TwigTemplate_81a5c8da6ac393ada887f2762adcc1e7381aaa135ca0e131cfaaa1d89e7
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
         echo "
 <div class=\"row\">
-    <div class=\"col-lg-4\">
+    <div class=\"col-lg-8\">
 
         ";
         // line 6
@@ -343,7 +343,7 @@ class __TwigTemplate_81a5c8da6ac393ada887f2762adcc1e7381aaa135ca0e131cfaaa1d89e7
     {
         return new Source("{{ form_start(form) }}
 <div class=\"row\">
-    <div class=\"col-lg-4\">
+    <div class=\"col-lg-8\">
 
         {# These are the errors related to removed intervals #}
         {{ form_errors(form) }}

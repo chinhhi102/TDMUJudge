@@ -1,11 +1,19 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Edit Judgehosts - {{ parent() }}{% endblock %}
+{% block title %}
+  Edit Judgehosts - {{ parent() }}
+{% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Edit Judgehosts
+        </h1>
 
-    <h1>Edit Judgehosts</h1>
-
-    {% include 'jury/partials/judgehosts_form.html.twig' %}
-
+        {% include 'jury/partials/judgehosts_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

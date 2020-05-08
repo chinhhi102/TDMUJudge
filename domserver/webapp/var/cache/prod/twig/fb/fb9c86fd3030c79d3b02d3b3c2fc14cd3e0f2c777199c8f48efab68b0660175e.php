@@ -51,64 +51,81 @@ class __TwigTemplate_9dd2ddbe8b890f7342c98a3ed824ce681866734d464ec3880d970a8cd83
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Edit user ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 4, $this->source); })()), "userid", [], "any", false, false, false, 4), "html", null, true);
+        // line 5
+        echo "  Edit user ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 5, $this->source); })()), "userid", [], "any", false, false, false, 5), "html", null, true);
         echo " - ";
         $this->displayParentBlock("title", $context, $blocks);
-    }
-
-    // line 6
-    public function block_extrahead($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        // line 7
-        echo "    ";
-        $this->displayParentBlock("extrahead", $context, $blocks);
-        echo "
-    ";
-        // line 8
-        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 8, $context, $this->getSourceContext());
         echo "
 ";
     }
 
-    // line 11
+    // line 8
+    public function block_extrahead($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 9
+        echo "  ";
+        $this->displayParentBlock("extrahead", $context, $blocks);
+        echo "
+  ";
+        // line 10
+        echo twig_call_macro($macros["macros"], "macro_table_extrahead", [], 10, $context, $this->getSourceContext());
+        echo "
+";
+    }
+
+    // line 13
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 12
-        echo "
-    <h1>Edit user ";
-        // line 13
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 13, $this->source); })()), "userid", [], "any", false, false, false, 13), "html", null, true);
-        echo "</h1>
-
+        // line 14
+        echo "  <div class=\"dashboard-wrapper\">
     <div class=\"row\">
-        <div class=\"col-lg-4\">
-            <table class=\"table table-sm table-striped\">
-                <tr>
-                    <th>User ID</th>
-                    <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 20, $this->source); })()), "userid", [], "any", false, false, false, 20), "html", null, true);
-        echo "</td>
-                </tr>
-                <tr>
-                    <th>Username</th>
-                    <td class=\"teamid\">";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 24, $this->source); })()), "username", [], "any", false, false, false, 24), "html", null, true);
-        echo "</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    ";
-        // line 30
-        $this->loadTemplate("jury/partials/user_form.html.twig", "jury/user_edit.html.twig", 30)->display($context);
-        // line 31
+      <div class=\"col-12\">
+        <h1>
+          Edit user ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "userid", [], "any", false, false, false, 18), "html", null, true);
         echo "
+        </h1>
+
+        <div class=\"row\">
+          <div class=\"col-lg-4\">
+            <table class=\"table table-sm table-striped\">
+              <tr>
+                <th>
+                  User ID
+                </th>
+                <td>
+                  ";
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 29, $this->source); })()), "userid", [], "any", false, false, false, 29), "html", null, true);
+        echo "
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Username
+                </th>
+                <td class=\"teamid\">
+                  ";
+        // line 37
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "username", [], "any", false, false, false, 37), "html", null, true);
+        echo "
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        ";
+        // line 44
+        $this->loadTemplate("jury/partials/user_form.html.twig", "jury/user_edit.html.twig", 44)->display($context);
+        // line 45
+        echo "      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -124,42 +141,58 @@ class __TwigTemplate_9dd2ddbe8b890f7342c98a3ed824ce681866734d464ec3880d970a8cd83
 
     public function getDebugInfo()
     {
-        return array (  111 => 31,  109 => 30,  100 => 24,  93 => 20,  83 => 13,  80 => 12,  76 => 11,  70 => 8,  65 => 7,  61 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  126 => 45,  124 => 44,  114 => 37,  103 => 29,  89 => 18,  83 => 14,  79 => 13,  73 => 10,  68 => 9,  64 => 8,  55 => 5,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
-{% import \"jury/jury_macros.twig\" as macros %}
+        return new Source("{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Edit user {{ user.userid }} - {{ parent() }}{% endblock %}
+{% block title %}
+  Edit user {{ user.userid }} - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
-
-    <h1>Edit user {{ user.userid }}</h1>
-
+  <div class=\"dashboard-wrapper\">
     <div class=\"row\">
-        <div class=\"col-lg-4\">
+      <div class=\"col-12\">
+        <h1>
+          Edit user {{ user.userid }}
+        </h1>
+
+        <div class=\"row\">
+          <div class=\"col-lg-4\">
             <table class=\"table table-sm table-striped\">
-                <tr>
-                    <th>User ID</th>
-                    <td>{{ user.userid }}</td>
-                </tr>
-                <tr>
-                    <th>Username</th>
-                    <td class=\"teamid\">{{ user.username }}</td>
-                </tr>
+              <tr>
+                <th>
+                  User ID
+                </th>
+                <td>
+                  {{ user.userid }}
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Username
+                </th>
+                <td class=\"teamid\">
+                  {{ user.username }}
+                </td>
+              </tr>
             </table>
+          </div>
         </div>
+
+        {% include 'jury/partials/user_form.html.twig' %}
+      </div>
     </div>
-
-    {% include 'jury/partials/user_form.html.twig' %}
-
+  </div>
 {% endblock %}
 ", "jury/user_edit.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/user_edit.html.twig");
     }

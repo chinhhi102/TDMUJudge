@@ -1,16 +1,24 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Send clarification - {{ parent() }}{% endblock %}
+{% block title %}
+  Send clarification - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
+  {{ parent() }}
 {% endblock %}
 
 {% block content %}
-
-<div class="container clarificationform">
-<h1>Send Clarification</h1>
-{%- include 'jury/partials/clarification_form.html.twig'  %}
-</div>
-
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <div class="container clarificationform">
+          <h1>
+            Send Clarification
+          </h1>
+          {%- include 'jury/partials/clarification_form.html.twig' %}
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

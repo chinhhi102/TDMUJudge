@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12">
+                
     <h1>Rejudging r{{ rejudging.rejudgingid }} {% if not rejudging.valid %}(canceled){% endif %}</h1>
 
     <div class="row">
@@ -140,6 +143,9 @@
 
     <div data-ajax-refresh-target data-ajax-refresh-after="updateMatrix">
         {% include 'jury/partials/rejudging_submissions.html.twig' %}
+    </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}

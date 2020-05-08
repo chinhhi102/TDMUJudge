@@ -1,0 +1,94 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        (($f = &Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (($p = &Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\TeamCategory',
+                'name',
+                3 => 'sortorder',
+            ],
+            'defaultGroup' => [
+                'TeamCategory',
+            ],
+            'members' => [
+                [
+                    'name' => [
+                        $o[1],
+                    ],
+                    'sortorder' => [
+                        $o[3],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'name' => $o[1],
+                    'sortorder' => $o[3],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\TeamCategory',
+                3 => 'App\\Entity\\TeamCategory',
+            ],
+            'property' => [
+                1 => 'name',
+                3 => 'sortorder',
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                ],
+                3 => [
+                    $o[4],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                    ],
+                    'TeamCategory' => [
+                        $o[2],
+                    ],
+                ],
+                3 => [
+                    'Default' => [
+                        $o[4],
+                    ],
+                    'TeamCategory' => [
+                        $o[4],
+                    ],
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'TeamCategory',
+                ],
+                4 => [
+                    'Default',
+                    'TeamCategory',
+                ],
+            ],
+            'message' => [
+                4 => 'Only non-negative sortorders are supported',
+            ],
+            'value' => [
+                4 => 0,
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

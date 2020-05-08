@@ -75,18 +75,21 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
     {
         $macros = $this->macros;
         // line 12
-        echo "
+        echo "<div class=\"dashboard-wrapper\">
+        <div class=\"row\">
+            <div class=\"col-12\" >
+                
     <h1>Clarifications</h1>";
-        // line 15
-        if (twig_test_empty((isset($context["current_contests"]) || array_key_exists("current_contests", $context) ? $context["current_contests"] : (function () { throw new RuntimeError('Variable "current_contests" does not exist.', 15, $this->source); })()))) {
-            // line 16
+        // line 18
+        if (twig_test_empty((isset($context["current_contests"]) || array_key_exists("current_contests", $context) ? $context["current_contests"] : (function () { throw new RuntimeError('Variable "current_contests" does not exist.', 18, $this->source); })()))) {
+            // line 19
             echo "
         <div class=\"alert alert-danger\">No active contest(s)</div>";
         } else {
-            // line 19
+            // line 22
             echo "
         <a href=\"";
-            // line 20
+            // line 23
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_clarification_new");
             echo "\" class=\"btn btn-primary btn-sm\">
                 <i class=\"fas fa-envelope\"></i> Send clarification
@@ -97,190 +100,190 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
         Filter:
         <div class=\"btn-group btn-group-toggle btn-group-sm mb-3\" data-toggle=\"buttons\">
             <label class=\"btn btn-secondary ";
-            // line 28
-            if ((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 28, $this->source); })()))) {
+            // line 31
+            if ((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 31, $this->source); })()))) {
                 echo "active";
             }
             echo "\">
                 <input type=\"radio\" name=\"filter\" autocomplete=\"off\" value=\"all\"
                        ";
-            // line 30
-            if ((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 30, $this->source); })()))) {
+            // line 33
+            if ((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 33, $this->source); })()))) {
                 echo "checked";
             }
             echo "> All
             </label>
             <label class=\"btn btn-secondary ";
-            // line 32
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 32, $this->source); })()) == "new")) {
+            // line 35
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 35, $this->source); })()) == "new")) {
                 echo "active";
             }
             echo "\">
                 <input type=\"radio\" name=\"filter\" autocomplete=\"off\" value=\"new\"
                        ";
-            // line 34
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 34, $this->source); })()) == "new")) {
+            // line 37
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 37, $this->source); })()) == "new")) {
                 echo "checked";
             }
             echo "> New
             </label>
             <label class=\"btn btn-secondary ";
-            // line 36
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 36, $this->source); })()) == "old")) {
+            // line 39
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 39, $this->source); })()) == "old")) {
                 echo "active";
             }
             echo "\">
                 <input type=\"radio\" name=\"filter\" autocomplete=\"off\" value=\"old\"
                        ";
-            // line 38
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 38, $this->source); })()) == "old")) {
+            // line 41
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 41, $this->source); })()) == "old")) {
                 echo "checked";
             }
             echo "> Old
             </label>
             <label class=\"btn btn-secondary ";
-            // line 40
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 40, $this->source); })()) == "general")) {
+            // line 43
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 43, $this->source); })()) == "general")) {
                 echo "active";
             }
             echo "\">
                 <input type=\"radio\" name=\"filter\" autocomplete=\"off\" value=\"general\"
                        ";
-            // line 42
-            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 42, $this->source); })()) == "general")) {
+            // line 45
+            if (((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 45, $this->source); })()) == "general")) {
                 echo "checked";
             }
             echo "> General
             </label>
         </div>
-
-        ";
-            // line 46
-            if ((twig_length_filter($this->env, (isset($context["queues"]) || array_key_exists("queues", $context) ? $context["queues"] : (function () { throw new RuntimeError('Variable "queues" does not exist.', 46, $this->source); })())) > 0)) {
-                // line 47
-                echo "            Queue:
-            <div class=\"btn-group btn-group-toggle btn-group-sm mb-3\" data-toggle=\"buttons\">
-                <label class=\"btn btn-secondary ";
-                // line 49
-                if ((null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 49, $this->source); })()))) {
+        <div  style=\"overflow: auto\">
+            ";
+            // line 49
+            if ((twig_length_filter($this->env, (isset($context["queues"]) || array_key_exists("queues", $context) ? $context["queues"] : (function () { throw new RuntimeError('Variable "queues" does not exist.', 49, $this->source); })())) > 0)) {
+                // line 50
+                echo "                Queue:
+                <div class=\"btn-group btn-group-toggle btn-group-sm mb-3\" data-toggle=\"buttons\">
+                    <label class=\"btn btn-secondary ";
+                // line 52
+                if ((null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 52, $this->source); })()))) {
                     echo "active";
                 }
                 echo "\">
-                    <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"all\"
-                           ";
-                // line 51
-                if ((null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 51, $this->source); })()))) {
+                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"all\"
+                            ";
+                // line 54
+                if ((null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 54, $this->source); })()))) {
                     echo "checked";
                 }
                 echo "> All
-                </label>
-                <label class=\"btn btn-secondary ";
-                // line 53
-                if (( !(null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 53, $this->source); })())) && ((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 53, $this->source); })()) == ""))) {
+                    </label>
+                    <label class=\"btn btn-secondary ";
+                // line 56
+                if (( !(null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 56, $this->source); })())) && ((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 56, $this->source); })()) == ""))) {
                     echo "active";
                 }
                 echo "\">
-                    <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"\"
-                           ";
-                // line 55
-                if (( !(null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 55, $this->source); })())) && ((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 55, $this->source); })()) == ""))) {
+                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"\"
+                            ";
+                // line 58
+                if (( !(null === (isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 58, $this->source); })())) && ((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 58, $this->source); })()) == ""))) {
                     echo "checked";
                 }
                 echo "> Unassigned
-                </label>";
-                // line 57
+                    </label>";
+                // line 60
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable((isset($context["queues"]) || array_key_exists("queues", $context) ? $context["queues"] : (function () { throw new RuntimeError('Variable "queues" does not exist.', 57, $this->source); })()));
+                $context['_seq'] = twig_ensure_traversable((isset($context["queues"]) || array_key_exists("queues", $context) ? $context["queues"] : (function () { throw new RuntimeError('Variable "queues" does not exist.', 60, $this->source); })()));
                 foreach ($context['_seq'] as $context["queue"] => $context["name"]) {
-                    // line 58
-                    echo "                    <label class=\"btn btn-secondary ";
-                    if (((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 58, $this->source); })()) == $context["queue"])) {
+                    // line 61
+                    echo "                        <label class=\"btn btn-secondary ";
+                    if (((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 61, $this->source); })()) == $context["queue"])) {
                         echo "active";
                     }
                     echo "\">
-                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"";
-                    // line 59
+                            <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"";
+                    // line 62
                     echo twig_escape_filter($this->env, $context["queue"], "html", null, true);
                     echo "\"
-                               ";
-                    // line 60
-                    if (((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 60, $this->source); })()) == $context["queue"])) {
+                                ";
+                    // line 63
+                    if (((isset($context["currentQueue"]) || array_key_exists("currentQueue", $context) ? $context["currentQueue"] : (function () { throw new RuntimeError('Variable "currentQueue" does not exist.', 63, $this->source); })()) == $context["queue"])) {
                         echo "checked";
                     }
                     echo "> ";
                     echo twig_escape_filter($this->env, $context["name"], "html", null, true);
                     echo "
-                    </label>";
+                        </label>";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['queue'], $context['name'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 63
-                echo "            </div>
-        ";
+                // line 66
+                echo "                </div>
+            ";
             }
-            // line 65
+            // line 68
             echo "
-        ";
-            // line 66
-            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 66, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 66, $this->source); })()) == "new"))) {
-                // line 67
-                echo "            <h3 id=\"newrequests\">New requests:</h3>";
-                // line 68
-                if ((twig_length_filter($this->env, (isset($context["newClarifications"]) || array_key_exists("newClarifications", $context) ? $context["newClarifications"] : (function () { throw new RuntimeError('Variable "newClarifications" does not exist.', 68, $this->source); })())) == 0)) {
-                    // line 69
-                    echo "                <p class=\"nodata\">No new clarification requests.</p>";
+            ";
+            // line 69
+            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 69, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 69, $this->source); })()) == "new"))) {
+                // line 70
+                echo "                <h3 id=\"newrequests\">New requests:</h3>";
+                // line 71
+                if ((twig_length_filter($this->env, (isset($context["newClarifications"]) || array_key_exists("newClarifications", $context) ? $context["newClarifications"] : (function () { throw new RuntimeError('Variable "newClarifications" does not exist.', 71, $this->source); })())) == 0)) {
+                    // line 72
+                    echo "                    <p class=\"nodata\">No new clarification requests.</p>";
                 } else {
-                    // line 71
-                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 71)->display(twig_array_merge($context, ["clarifications" => (isset($context["newClarifications"]) || array_key_exists("newClarifications", $context) ? $context["newClarifications"] : (function () { throw new RuntimeError('Variable "newClarifications" does not exist.', 71, $this->source); })())]));
+                    // line 74
+                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 74)->display(twig_array_merge($context, ["clarifications" => (isset($context["newClarifications"]) || array_key_exists("newClarifications", $context) ? $context["newClarifications"] : (function () { throw new RuntimeError('Variable "newClarifications" does not exist.', 74, $this->source); })())]));
                 }
-                // line 73
-                echo "        ";
-            }
-            // line 74
-            echo "
-        ";
-            // line 75
-            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 75, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 75, $this->source); })()) == "old"))) {
                 // line 76
-                echo "            <h3 id=\"oldrequests\">Old requests:</h3>";
-                // line 77
-                if ((twig_length_filter($this->env, (isset($context["oldClarifications"]) || array_key_exists("oldClarifications", $context) ? $context["oldClarifications"] : (function () { throw new RuntimeError('Variable "oldClarifications" does not exist.', 77, $this->source); })())) == 0)) {
-                    // line 78
-                    echo "                <p class=\"nodata\">No old clarification requests.</p>";
-                } else {
-                    // line 80
-                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 80)->display(twig_array_merge($context, ["clarifications" => (isset($context["oldClarifications"]) || array_key_exists("oldClarifications", $context) ? $context["oldClarifications"] : (function () { throw new RuntimeError('Variable "oldClarifications" does not exist.', 80, $this->source); })())]));
-                }
-                // line 82
-                echo "        ";
+                echo "            ";
             }
-            // line 83
+            // line 77
             echo "
-        ";
-            // line 84
-            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 84, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 84, $this->source); })()) == "general"))) {
-                // line 85
-                echo "            <h3 id=\"clarifications\">General clarifications:</h3>";
-                // line 86
-                if ((twig_length_filter($this->env, (isset($context["generalClarifications"]) || array_key_exists("generalClarifications", $context) ? $context["generalClarifications"] : (function () { throw new RuntimeError('Variable "generalClarifications" does not exist.', 86, $this->source); })())) == 0)) {
-                    // line 87
-                    echo "                <p class=\"nodata\">No general clarifications.</p>";
+            ";
+            // line 78
+            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 78, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 78, $this->source); })()) == "old"))) {
+                // line 79
+                echo "                <h3 id=\"oldrequests\">Old requests:</h3>";
+                // line 80
+                if ((twig_length_filter($this->env, (isset($context["oldClarifications"]) || array_key_exists("oldClarifications", $context) ? $context["oldClarifications"] : (function () { throw new RuntimeError('Variable "oldClarifications" does not exist.', 80, $this->source); })())) == 0)) {
+                    // line 81
+                    echo "                    <p class=\"nodata\">No old clarification requests.</p>";
                 } else {
-                    // line 89
-                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 89)->display(twig_array_merge($context, ["clarifications" => (isset($context["generalClarifications"]) || array_key_exists("generalClarifications", $context) ? $context["generalClarifications"] : (function () { throw new RuntimeError('Variable "generalClarifications" does not exist.', 89, $this->source); })())]));
+                    // line 83
+                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 83)->display(twig_array_merge($context, ["clarifications" => (isset($context["oldClarifications"]) || array_key_exists("oldClarifications", $context) ? $context["oldClarifications"] : (function () { throw new RuntimeError('Variable "oldClarifications" does not exist.', 83, $this->source); })())]));
                 }
-                // line 91
-                echo "        ";
+                // line 85
+                echo "            ";
+            }
+            // line 86
+            echo "
+            ";
+            // line 87
+            if (((null === (isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 87, $this->source); })())) || ((isset($context["currentFilter"]) || array_key_exists("currentFilter", $context) ? $context["currentFilter"] : (function () { throw new RuntimeError('Variable "currentFilter" does not exist.', 87, $this->source); })()) == "general"))) {
+                // line 88
+                echo "                <h3 id=\"clarifications\">General clarifications:</h3>";
+                // line 89
+                if ((twig_length_filter($this->env, (isset($context["generalClarifications"]) || array_key_exists("generalClarifications", $context) ? $context["generalClarifications"] : (function () { throw new RuntimeError('Variable "generalClarifications" does not exist.', 89, $this->source); })())) == 0)) {
+                    // line 90
+                    echo "                    <p class=\"nodata\">No general clarifications.</p>";
+                } else {
+                    // line 92
+                    $this->loadTemplate("jury/partials/clarification_list.html.twig", "jury/clarifications.html.twig", 92)->display(twig_array_merge($context, ["clarifications" => (isset($context["generalClarifications"]) || array_key_exists("generalClarifications", $context) ? $context["generalClarifications"] : (function () { throw new RuntimeError('Variable "generalClarifications" does not exist.', 92, $this->source); })())]));
+                }
+                // line 94
+                echo "            ";
             }
         }
-        // line 93
-        echo "
+        // line 96
+        echo "    </div>
     <script>
         function doSwitch() {
             // Fallback the queue to all, since it might not be defined.
             window.location = '";
-        // line 97
+        // line 100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_clarifications", ["queue" => "REPLACE_QUEUE", "filter" => "REPLACE_FILTER"]), "html", null, true);
         echo "'
                 .replace('REPLACE_QUEUE', \$('input[name=queue]:checked').val())
@@ -308,7 +311,7 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
                 var parenttr = \$(this).closest('tr');
                 var newname = \$(this).closest('label').text().trim();
                 \$.post(\"";
-        // line 122
+        // line 125
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_clarification_change_queue", ["clarId" => 12345]);
         echo "\".replace('12345', \$(this).attr('data-clarid')),
                     {'queue': \$(this).val()})
@@ -327,6 +330,9 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
             \$('input[name=filter]').on('change', doSwitch);
         });
     </script>
+            </div>
+        </div>
+    </div>
 
 ";
     }
@@ -343,7 +349,7 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
 
     public function getDebugInfo()
     {
-        return array (  312 => 122,  284 => 97,  278 => 93,  274 => 91,  271 => 89,  268 => 87,  266 => 86,  264 => 85,  262 => 84,  259 => 83,  256 => 82,  253 => 80,  250 => 78,  248 => 77,  246 => 76,  244 => 75,  241 => 74,  238 => 73,  235 => 71,  232 => 69,  230 => 68,  228 => 67,  226 => 66,  223 => 65,  219 => 63,  207 => 60,  203 => 59,  196 => 58,  192 => 57,  186 => 55,  179 => 53,  172 => 51,  165 => 49,  161 => 47,  159 => 46,  150 => 42,  143 => 40,  136 => 38,  129 => 36,  122 => 34,  115 => 32,  108 => 30,  101 => 28,  90 => 20,  87 => 19,  83 => 16,  81 => 15,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  315 => 125,  287 => 100,  281 => 96,  277 => 94,  274 => 92,  271 => 90,  269 => 89,  267 => 88,  265 => 87,  262 => 86,  259 => 85,  256 => 83,  253 => 81,  251 => 80,  249 => 79,  247 => 78,  244 => 77,  241 => 76,  238 => 74,  235 => 72,  233 => 71,  231 => 70,  229 => 69,  226 => 68,  222 => 66,  210 => 63,  206 => 62,  199 => 61,  195 => 60,  189 => 58,  182 => 56,  175 => 54,  168 => 52,  164 => 50,  162 => 49,  153 => 45,  146 => 43,  139 => 41,  132 => 39,  125 => 37,  118 => 35,  111 => 33,  104 => 31,  93 => 23,  90 => 22,  86 => 19,  84 => 18,  78 => 12,  74 => 11,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -359,7 +365,10 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
 {% endblock %}
 
 {% block content %}
-
+<div class=\"dashboard-wrapper\">
+        <div class=\"row\">
+            <div class=\"col-12\" >
+                
     <h1>Clarifications</h1>
 
     {%- if current_contests is empty %}
@@ -392,55 +401,55 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
                        {% if currentFilter == 'general' %}checked{% endif %}> General
             </label>
         </div>
-
-        {% if queues | length > 0 %}
-            Queue:
-            <div class=\"btn-group btn-group-toggle btn-group-sm mb-3\" data-toggle=\"buttons\">
-                <label class=\"btn btn-secondary {% if currentQueue is null %}active{% endif %}\">
-                    <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"all\"
-                           {% if currentQueue is null %}checked{% endif %}> All
-                </label>
-                <label class=\"btn btn-secondary {% if currentQueue is not null and currentQueue == '' %}active{% endif %}\">
-                    <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"\"
-                           {% if currentQueue is not null and currentQueue == '' %}checked{% endif %}> Unassigned
-                </label>
-                {%- for queue, name in queues %}
-                    <label class=\"btn btn-secondary {% if currentQueue == queue %}active{% endif %}\">
-                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"{{ queue }}\"
-                               {% if currentQueue == queue %}checked{% endif %}> {{ name }}
+        <div  style=\"overflow: auto\">
+            {% if queues | length > 0 %}
+                Queue:
+                <div class=\"btn-group btn-group-toggle btn-group-sm mb-3\" data-toggle=\"buttons\">
+                    <label class=\"btn btn-secondary {% if currentQueue is null %}active{% endif %}\">
+                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"all\"
+                            {% if currentQueue is null %}checked{% endif %}> All
                     </label>
-                {%- endfor %}
-            </div>
-        {% endif %}
+                    <label class=\"btn btn-secondary {% if currentQueue is not null and currentQueue == '' %}active{% endif %}\">
+                        <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"\"
+                            {% if currentQueue is not null and currentQueue == '' %}checked{% endif %}> Unassigned
+                    </label>
+                    {%- for queue, name in queues %}
+                        <label class=\"btn btn-secondary {% if currentQueue == queue %}active{% endif %}\">
+                            <input type=\"radio\" name=\"queue\" autocomplete=\"off\" value=\"{{ queue }}\"
+                                {% if currentQueue == queue %}checked{% endif %}> {{ name }}
+                        </label>
+                    {%- endfor %}
+                </div>
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'new' %}
-            <h3 id=\"newrequests\">New requests:</h3>
-            {%- if newClarifications | length == 0 %}
-                <p class=\"nodata\">No new clarification requests.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: newClarifications} %}
-            {%- endif %}
-        {% endif %}
+            {% if currentFilter is null or currentFilter == 'new' %}
+                <h3 id=\"newrequests\">New requests:</h3>
+                {%- if newClarifications | length == 0 %}
+                    <p class=\"nodata\">No new clarification requests.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: newClarifications} %}
+                {%- endif %}
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'old' %}
-            <h3 id=\"oldrequests\">Old requests:</h3>
-            {%- if oldClarifications | length == 0 %}
-                <p class=\"nodata\">No old clarification requests.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: oldClarifications} %}
-            {%- endif %}
-        {% endif %}
+            {% if currentFilter is null or currentFilter == 'old' %}
+                <h3 id=\"oldrequests\">Old requests:</h3>
+                {%- if oldClarifications | length == 0 %}
+                    <p class=\"nodata\">No old clarification requests.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: oldClarifications} %}
+                {%- endif %}
+            {% endif %}
 
-        {% if currentFilter is null or currentFilter == 'general' %}
-            <h3 id=\"clarifications\">General clarifications:</h3>
-            {%- if generalClarifications | length == 0 %}
-                <p class=\"nodata\">No general clarifications.</p>
-            {%- else %}
-                {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: generalClarifications} %}
-            {%- endif %}
-        {% endif %}
-    {%- endif %}
-
+            {% if currentFilter is null or currentFilter == 'general' %}
+                <h3 id=\"clarifications\">General clarifications:</h3>
+                {%- if generalClarifications | length == 0 %}
+                    <p class=\"nodata\">No general clarifications.</p>
+                {%- else %}
+                    {%- include 'jury/partials/clarification_list.html.twig' with {clarifications: generalClarifications} %}
+                {%- endif %}
+            {% endif %}
+        {%- endif %}
+    </div>
     <script>
         function doSwitch() {
             // Fallback the queue to all, since it might not be defined.
@@ -486,6 +495,9 @@ class __TwigTemplate_139d14e097839f3d21bbc15b4588d4a14ca9868b244c0bc48071f59e3e5
             \$('input[name=filter]').on('change', doSwitch);
         });
     </script>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 ", "jury/clarifications.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/clarifications.html.twig");

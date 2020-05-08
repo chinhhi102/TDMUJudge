@@ -1,0 +1,69 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'ORMQueryBuilderLoader_getEntitiesByIds_restrictionid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT j0_.restrictionid AS restrictionid_0, j0_.name AS name_1, j0_.restrictions AS restrictions_2 FROM judgehost_restriction j0_ WHERE j0_.restrictionid IN (?)',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'e' => 'App\\Entity\\JudgehostRestriction',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'restrictionid_0' => 'restrictionid',
+                    'name_1' => 'name',
+                    'restrictions_2' => 'restrictions',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'e' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'restrictionid_0' => 'e',
+                    'name_1' => 'e',
+                    'restrictions_2' => 'e',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'restrictionid_0' => 'App\\Entity\\JudgehostRestriction',
+                    'name_1' => 'App\\Entity\\JudgehostRestriction',
+                    'restrictions_2' => 'App\\Entity\\JudgehostRestriction',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

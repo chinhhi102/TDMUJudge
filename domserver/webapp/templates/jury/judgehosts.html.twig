@@ -1,41 +1,60 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Judgehosts - {{ parent() }}{% endblock %}
+{% block title %}
+  Judgehosts - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Judgehosts
+        </h1>
 
-    <h1>Judgehosts</h1>
-
-    <div data-ajax-refresh-target>
-        {% include 'jury/partials/judgehost_list.html.twig' %}
-    </div>
-
-    {%- if is_granted('ROLE_ADMIN') %}
-
-        <div class="mb-4">
-            <form action="{{ path('jury_judgehost_activate_all') }}" method="post" class="d-inline">
-                <button type="submit" name="cmd-activate" class="btn btn-success">
-                    <i class="fas fa-play"></i>
-                    Start all judgehosts
-                </button>
-            </form>
-            <form action="{{ path('jury_judgehost_deactivate_all') }}" method="post" class="d-inline">
-                <button type="submit" name="cmd-deactivate" class="btn btn-warning">
-                    <i class="fas fa-pause"></i>
-                    Stop all judgehosts
-                </button>
-            </form>
-            <div class="d-inline">
-                {{ button(path('jury_judgehost_edit'), 'Edit judgehosts', 'secondary', 'edit') }}
-            </div>
+        <div data-ajax-refresh-target>
+          {% include 'jury/partials/judgehost_list.html.twig' %}
         </div>
 
-    {%- endif %}
-
+        {%- if is_granted('ROLE_ADMIN') %}
+          <div class="mb-4">
+            <form action="{{ path('jury_judgehost_activate_all') }}"
+              method="post"
+              class="d-inline">
+              <button type="submit" name="cmd-activate" class="btn btn-success">
+                <i class="fas fa-play"></i>
+                Start all judgehosts
+              </button>
+            </form>
+            <form action="{{ path('jury_judgehost_deactivate_all') }}"
+              method="post"
+              class="d-inline">
+              <button type="submit"
+                name="cmd-deactivate"
+                class="btn btn-warning">
+                <i class="fas fa-pause"></i>
+                Stop all judgehosts
+              </button>
+            </form>
+            <div class="d-inline">
+              {{
+                button(
+                  path('jury_judgehost_edit'),
+                  'Edit judgehosts',
+                  'secondary',
+                  'edit'
+                )
+              }}
+            </div>
+          </div>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

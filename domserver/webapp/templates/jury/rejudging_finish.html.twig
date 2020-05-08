@@ -1,50 +1,62 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}{{ action | capitalize }} rejudging r{{ rejudging.rejudgingid }} - {{ parent() }}{% endblock %}
+{% block title %}
+  {{ action|capitalize }} rejudging r{{ rejudging.rejudgingid }} - {{
+    parent()
+  }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
-    {{ macros.select2_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
+  {{ macros.select2_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          {{ action|capitalize }} rejudging r{{ rejudging.rejudgingid }}
+        </h1>
 
-    <h1>{{ action | capitalize }} rejudging r{{ rejudging.rejudgingid }}</h1>
+        {% if action == 'apply' %}
+          <p>
+            Applying rejudge may take some time, please be patient.
+          </p>
+        {% endif %}
 
-    {% if action == "apply" %}
-    <p>Applying rejudge may take some time, please be patient.</p>
-    {% endif %}
-
-    <div id="rejudging-status"></div>
-
+        <div id="rejudging-status"></div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 
 {% block extrafooter %}
-    <script>
-        $(function() {
-            var lastResponseLength = false;
-            var $status = $('div#rejudging-status');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '{{ (path('jury_rejudging_finish', {rejudgingId: rejudging.rejudgingid, action: action})) }}', true);
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  <script>
+    $(function() { var lastResponseLength = false; var $status =
+    $('div#rejudging-status'); var xhr = new XMLHttpRequest(); xhr.open('GET', '{{
+      path(
+        'jury_rejudging_finish',
+        {
+          rejudgingId: rejudging.rejudgingid,
+          action: action
+        }
+      )
+    }}', true); xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-            xhr.onprogress = function(e) {
-                var response = e.currentTarget.response;
-                var output = lastResponseLength === false
-                    ? response
-                    : response.substring(lastResponseLength);
+    xhr.onprogress = function(e) { var response = e.currentTarget.response; var
+    output = lastResponseLength === false ? response :
+    response.substring(lastResponseLength);
 
-                lastResponseLength = response.length;
+    lastResponseLength = response.length;
 
-                $status.append(output);
+    $status.append(output);
 
-                // Scroll page to bottom of div to keep showing progress
-                $('html, body').animate({scrollTop: $status.offset().top + $status.height()}, 0);
-            };
+    // Scroll page to bottom of div to keep showing progress $('html,
+    body').animate({scrollTop: $status.offset().top + $status.height()}, 0); };
 
-            xhr.send();
-        });
-    </script>
+    xhr.send(); });
+  </script>
 {% endblock %}

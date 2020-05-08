@@ -1,27 +1,36 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Executables - {{ parent() }}{% endblock %}
+{% block title %}
+  Executables - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Executables
+        </h1>
 
-    <h1>Executables</h1>
+        {{ macros.table(executables, table_fields, num_actions) }}
 
-    {{ macros.table(executables, table_fields, num_actions) }}
-
-    {%- if is_granted('ROLE_ADMIN') %}
-
-        <h3>Upload new executable</h3>
-        <div class="row">
+        {%- if is_granted('ROLE_ADMIN') %}
+          <h3>
+            Upload new executable
+          </h3>
+          <div class="row">
             <div class="col-lg-4">
-                {{ form(form) }}
+              {{ form(form) }}
             </div>
-        </div>
-    {%- endif %}
-
+          </div>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

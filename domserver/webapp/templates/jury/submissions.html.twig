@@ -10,89 +10,95 @@
 {% endblock %}
 
 {% block content %}
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12">
+                            
+                <h1>Submissions</h1>
 
-    <h1>Submissions</h1>
+                Show submissions:
+                <div class="btn-group btn-group-toggle btn-group-sm mb-3" data-toggle="buttons">
+                    {%- for idx, type in viewTypes %}
 
-    Show submissions:
-    <div class="btn-group btn-group-toggle btn-group-sm mb-3" data-toggle="buttons">
-        {%- for idx, type in viewTypes %}
+                        <label class="btn btn-secondary {% if idx == view %}active{% endif %}">
+                            <input type="radio" name="viewtype" autocomplete="off" value="{{ type }}"
+                                {% if idx == view %}checked{% endif %}> {{ type }}
+                        </label>
+                    {%- endfor %}
 
-            <label class="btn btn-secondary {% if idx == view %}active{% endif %}">
-                <input type="radio" name="viewtype" autocomplete="off" value="{{ type }}"
-                       {% if idx == view %}checked{% endif %}> {{ type }}
-            </label>
-        {%- endfor %}
+                </div>
 
-    </div>
+                <div class="mb-3">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-secondary {% if hasFilters %}active{% endif %}">
+                            <input type="checkbox" id="filter-toggle" {% if hasFilters %}checked{% endif %} autocomplete="off">
+                            <i class="fas fa-filter"></i> Filter
+                        </label>
+                    </div>
+                    <div class="card mt-3{% if not hasFilters %} d-none{% endif %}" id="filter-card">
+                        <div class="card-body">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="problems-filter">Filter on problem(s)</label>
+                                    <select class="select2 form-control" multiple data-filter-field="problem-id"
+                                            data-ajax-url="{{ path('jury_ajax_data', {datatype: 'problems', select2: true}) }}">
+                                        {%- for problem in filteredProblems %}
 
-    <div class="mb-3">
-        <div class="btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-outline-secondary {% if hasFilters %}active{% endif %}">
-                <input type="checkbox" id="filter-toggle" {% if hasFilters %}checked{% endif %} autocomplete="off">
-                <i class="fas fa-filter"></i> Filter
-            </label>
-        </div>
-        <div class="card mt-3{% if not hasFilters %} d-none{% endif %}" id="filter-card">
-            <div class="card-body">
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="problems-filter">Filter on problem(s)</label>
-                        <select class="select2 form-control" multiple data-filter-field="problem-id"
-                                data-ajax-url="{{ path('jury_ajax_data', {datatype: 'problems', select2: true}) }}">
-                            {%- for problem in filteredProblems %}
+                                            <option value="{{ problem.probid }}" selected>
+                                                {{ problem.name }} (p{{ problem.probid }})
+                                            </option>
+                                        {%- endfor %}
 
-                                <option value="{{ problem.probid }}" selected>
-                                    {{ problem.name }} (p{{ problem.probid }})
-                                </option>
-                            {%- endfor %}
+                                    </select>
+                                </div>
+                            </div>
 
-                        </select>
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="problems-filter">Filter on language(s)</label>
+                                    <select class="select2 form-control" multiple data-filter-field="language-id"
+                                            data-ajax-url="{{ path('jury_ajax_data', {datatype: 'languages', select2: true}) }}">
+                                        {%- for language in filteredLanguages %}
+
+                                            <option value="{{ language.langid }}" selected>
+                                                {{ language.name }} ({{ language.langid }})
+                                            </option>
+                                        {%- endfor %}
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="problems-filter">Filter on team(s)</label>
+                                    <select class="select2 form-control" multiple data-filter-field="team-id"
+                                            data-ajax-url="{{ path('jury_ajax_data', {datatype: 'teams', select2: true}) }}">
+                                        {%- for team in filteredTeams %}
+
+                                            <option value="{{ team.teamid }}" selected>
+                                                {{ team.name }} (t{{ team.teamid }})
+                                            </option>
+                                        {%- endfor %}
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-secondary" id="clear-filters"><i class="fas fa-times-circle"></i> Clear all
+                                filters
+                            </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="problems-filter">Filter on language(s)</label>
-                        <select class="select2 form-control" multiple data-filter-field="language-id"
-                                data-ajax-url="{{ path('jury_ajax_data', {datatype: 'languages', select2: true}) }}">
-                            {%- for language in filteredLanguages %}
-
-                                <option value="{{ language.langid }}" selected>
-                                    {{ language.name }} ({{ language.langid }})
-                                </option>
-                            {%- endfor %}
-
-                        </select>
-                    </div>
+                <div data-ajax-refresh-target data-ajax-refresh-after="process_submissions_filter">
+                    {%- include 'jury/partials/submission_list.html.twig' with {showTestcases: true} %}
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-sm-6">
-                        <label for="problems-filter">Filter on team(s)</label>
-                        <select class="select2 form-control" multiple data-filter-field="team-id"
-                                data-ajax-url="{{ path('jury_ajax_data', {datatype: 'teams', select2: true}) }}">
-                            {%- for team in filteredTeams %}
-
-                                <option value="{{ team.teamid }}" selected>
-                                    {{ team.name }} (t{{ team.teamid }})
-                                </option>
-                            {%- endfor %}
-
-                        </select>
-                    </div>
-                </div>
-
-                <button class="btn btn-secondary" id="clear-filters"><i class="fas fa-times-circle"></i> Clear all
-                    filters
-                </button>
             </div>
         </div>
     </div>
-
-    <div data-ajax-refresh-target data-ajax-refresh-after="process_submissions_filter">
-        {%- include 'jury/partials/submission_list.html.twig' with {showTestcases: true} %}
-    </div>
-
 {% endblock %}
 
 {% block extrafooter %}

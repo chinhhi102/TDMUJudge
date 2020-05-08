@@ -1,11 +1,19 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Add language - {{ parent() }}{% endblock %}
+{% block title %}
+  Add language - {{ parent() }}
+{% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Add language
+        </h1>
 
-    <h1>Add language</h1>
-
-    {% include 'jury/partials/language_form.html.twig' %}
-
+        {% include 'jury/partials/language_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

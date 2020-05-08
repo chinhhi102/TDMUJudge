@@ -1,18 +1,26 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Edit judgehost restriction {{ judgehostRestriction.name }} - {{ parent() }}{% endblock %}
+{% block title %}
+  Edit judgehost restriction {{ judgehostRestriction.name }} - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
-    {{ macros.select2_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
+  {{ macros.select2_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Edit judgehost restriction {{ judgehostRestriction.name }}
+        </h1>
 
-    <h1>Edit judgehost restriction {{ judgehostRestriction.name }}</h1>
-
-    {{ form(form) }}
-
+        {{ form(form) }}
+      </div>
+    </div>
+  </div>
 {% endblock %}

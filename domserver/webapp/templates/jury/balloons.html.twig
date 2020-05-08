@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="dashboard-wrapper">
+        <div class="row">
+            <div class="col-12">
+                
     {% if current_contest is null %}
         <h1>Balloons</h1>
         <p class="nodata">No active contest</p>
@@ -57,6 +60,9 @@
     </div>
     {% endif %}
 
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block extrafooter %}

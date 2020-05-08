@@ -7,7 +7,7 @@
         <img class="banner" src="{{ asset('images/banner.png') }}" alt="Banner"/>
     {% endif %}
 
-    <div data-ajax-refresh-target data-ajax-refresh-after="initializeScoreboard" class="mt-3">
+    <div data-ajax-refresh-target data-ajax-refresh-after="initializeScoreboard" class="mt-3" style="clear:both">
         {% include 'partials/scoreboard.html.twig' with {jury: false, public: true, current_contest: current_public_contest} %}
     </div>
 {% endblock %}

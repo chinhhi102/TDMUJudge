@@ -1,0 +1,111 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        clone (($p = &Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'cid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT b0_.balloonid AS balloonid_0, b0_.submitid AS submitid_1, b0_.done AS done_2, s1_.submittime AS submittime_3, p2_.probid AS probid_4, t3_.teamid AS teamid_5, t3_.name AS name_6, t3_.room AS room_7, t4_.name AS name_8, s1_.cid AS cid_9, c5_.shortname AS shortname_10, c6_.shortname AS shortname_11, c6_.color AS color_12, t7_.affilid AS affilid_13, t7_.shortname AS shortname_14, b0_.submitid AS submitid_15 FROM balloon b0_ LEFT JOIN submission s1_ ON b0_.submitid = s1_.submitid LEFT JOIN problem p2_ ON s1_.probid = p2_.probid LEFT JOIN contest c5_ ON s1_.cid = c5_.cid LEFT JOIN contestproblem c6_ ON p2_.probid = c6_.probid AND (c5_.cid = c6_.cid AND p2_.probid = c6_.probid) LEFT JOIN team t3_ ON s1_.teamid = t3_.teamid LEFT JOIN team_category t4_ ON t3_.categoryid = t4_.categoryid LEFT JOIN team_affiliation t7_ ON t3_.affilid = t7_.affilid WHERE c5_.cid = ? ORDER BY b0_.done ASC, s1_.submittime DESC',
+            ],
+        ],
+        'stdClass' => [
+            'isMixed' => [
+                2 => true,
+            ],
+            'aliasMap' => [
+                2 => [
+                    'b' => 'App\\Entity\\Balloon',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'balloonid_0' => 'balloonid',
+                    'submitid_1' => 'submitid',
+                    'done_2' => 'done',
+                ],
+            ],
+            'scalarMappings' => [
+                2 => [
+                    'submittime_3' => 'submittime',
+                    'probid_4' => 'probid',
+                    'teamid_5' => 'teamid',
+                    'name_6' => 'teamname',
+                    'room_7' => 'room',
+                    'name_8' => 'catname',
+                    'cid_9' => 'cid',
+                    'shortname_10' => 'shortname',
+                    'shortname_11' => 'probshortname',
+                    'color_12' => 'color',
+                    'affilid_13' => 'affilid',
+                    'shortname_14' => 'affilshort',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'submittime_3' => 'decimal',
+                    'probid_4' => 'integer',
+                    'teamid_5' => 'integer',
+                    'name_6' => 'string',
+                    'room_7' => 'string',
+                    'name_8' => 'string',
+                    'cid_9' => 'integer',
+                    'shortname_10' => 'string',
+                    'shortname_11' => 'string',
+                    'color_12' => 'string',
+                    'affilid_13' => 'integer',
+                    'shortname_14' => 'string',
+                    'submitid_15' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'b' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'submitid_15' => 'submitid',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'balloonid_0' => 'b',
+                    'submitid_1' => 'b',
+                    'done_2' => 'b',
+                    'submitid_15' => 'b',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'balloonid_0' => 'App\\Entity\\Balloon',
+                    'submitid_1' => 'App\\Entity\\Balloon',
+                    'done_2' => 'App\\Entity\\Balloon',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

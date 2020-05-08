@@ -80,241 +80,245 @@ class __TwigTemplate_bed5183efea54f397da46990dc775e356ea7e5386eaf252879f8317716a
     {
         $macros = $this->macros;
         // line 17
-        echo "    <h1>Configuration</h1>
+        echo "<div class=\"dashboard-wrapper\">
+        <div class=\"row\">
+            <div class=\"col-12\">
+               
+    <h1>Configuration</h1>
 
     <form method=\"post\">
         ";
-        // line 20
+        // line 24
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["options"]) || array_key_exists("options", $context) ? $context["options"] : (function () { throw new RuntimeError('Variable "options" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["options"]) || array_key_exists("options", $context) ? $context["options"] : (function () { throw new RuntimeError('Variable "options" does not exist.', 24, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 21
+            // line 25
             echo "            <div class=\"card\">
                 <div class=\"card-header\">
                     ";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 23), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 27), "html", null, true);
             echo " Options
                 </div>
                 <div class=\"card-body\">
                     <ul class=\"list-group list-group-flush\">
                         ";
-            // line 27
+            // line 31
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["category"], "data", [], "any", false, false, false, 27));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["category"], "data", [], "any", false, false, false, 31));
             foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
-                // line 28
+                // line 32
                 echo "                            <li class=\"list-group-item\" style=\"padding:0;padding-top:10px;\">
                                 <div class=\"form-group\">
                                     ";
-                // line 30
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 30), "html", null, true);
+                // line 34
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 34), "html", null, true);
                 echo "
                                     ";
-                // line 31
-                if ((twig_get_attribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 31) == "bool")) {
-                    // line 32
+                // line 35
+                if ((twig_get_attribute($this->env, $this->source, $context["option"], "type", [], "any", false, false, false, 35) == "bool")) {
+                    // line 36
                     echo "                                        <input type=\"checkbox\" data-toggle=\"toggle\" data-size=\"mini\" data-on=\"Yes\"
                                                data-off=\"No\"
                                                name=\"config_";
-                    // line 34
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 34), "html", null, true);
+                    // line 38
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 38), "html", null, true);
                     echo "\" id=\"config_";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 34), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 38), "html", null, true);
                     echo "\"
                                             ";
-                    // line 35
-                    if ((twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 35) == 1)) {
+                    // line 39
+                    if ((twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 39) == 1)) {
                         echo " checked=\"checked\"";
                     }
                     echo ">
                                         <br/>
                                     ";
-                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 37
-$context["option"], "type", [], "any", false, false, false, 37) == "int")) {
-                    // line 38
+                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 41
+$context["option"], "type", [], "any", false, false, false, 41) == "int")) {
+                    // line 42
                     echo "                                        <input class=\"form-control form-control-sm\"
                                                style=\"margin-left:5px;width:7em;text-align:right;display:inline-block;\"
                                                type=\"number\"
                                                name=\"config_";
-                    // line 41
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 41), "html", null, true);
+                    // line 45
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 45), "html", null, true);
                     echo "\" id=\"config_";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 41), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 45), "html", null, true);
                     echo "\"
                                                value=\"";
-                    // line 42
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 42), "html", null, true);
+                    // line 46
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 46), "html", null, true);
                     echo "\">
                                         <br/>
                                     ";
-                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 44
-$context["option"], "type", [], "any", false, false, false, 44) == "string")) {
-                    // line 45
+                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 48
+$context["option"], "type", [], "any", false, false, false, 48) == "string")) {
+                    // line 49
                     echo "                                        <input class=\"form-control form-control-sm\" style=\"width:30em;\" type=\"text\"
                                                name=\"config_";
-                    // line 46
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 46), "html", null, true);
+                    // line 50
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 50), "html", null, true);
                     echo "\" id=\"config_";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 46), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 50), "html", null, true);
                     echo "\"
                                                value=\"";
-                    // line 47
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 47), "html", null, true);
+                    // line 51
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 51), "html", null, true);
                     echo "\">
                                     ";
-                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 48
-$context["option"], "type", [], "any", false, false, false, 48) == "array_keyval")) {
-                    // line 49
+                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 52
+$context["option"], "type", [], "any", false, false, false, 52) == "array_keyval")) {
+                    // line 53
                     echo "                                        <br/>
                                         ";
-                    // line 50
+                    // line 54
                     $context["counter"] = 0;
-                    // line 51
+                    // line 55
                     echo "                                        ";
                     $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 51));
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 55));
                     foreach ($context['_seq'] as $context["key"] => $context["val"]) {
-                        // line 52
+                        // line 56
                         echo "                                            <input class=\"form-control form-control-sm\"
                                                    style=\"width:10em;text-align:right;display:inline-block;\" type=\"text\"
                                                    value=\"";
-                        // line 54
+                        // line 58
                         echo twig_escape_filter($this->env, $context["key"], "html", null, true);
                         echo "\"
                                                    name=\"config_";
-                        // line 55
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 55), "html", null, true);
+                        // line 59
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 59), "html", null, true);
                         echo "[";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 55, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 59, $this->source); })()), "html", null, true);
                         echo "][key]\"
                                                    id=\"config_";
-                        // line 56
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 56), "html", null, true);
+                        // line 60
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 60), "html", null, true);
                         echo "_";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 56, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 60, $this->source); })()), "html", null, true);
                         echo "__key_\">
                                             <input class=\"form-control form-control-sm\"
                                                    style=\"width:30em;display:inline-block;\" type=\"text\"
                                                    value=\"";
-                        // line 59
+                        // line 63
                         echo twig_escape_filter($this->env, $context["val"], "html", null, true);
                         echo "\"
                                                    name=\"config_";
-                        // line 60
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 60), "html", null, true);
+                        // line 64
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 64), "html", null, true);
                         echo "[";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 60, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 64, $this->source); })()), "html", null, true);
                         echo "][val]\"
                                                    id=\"config_";
-                        // line 61
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 61), "html", null, true);
+                        // line 65
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 65), "html", null, true);
                         echo "_";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 61, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 65, $this->source); })()), "html", null, true);
                         echo "__val\">
                                             <br/>
                                             ";
-                        // line 63
-                        $context["counter"] = ((isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 63, $this->source); })()) + 1);
-                        // line 64
+                        // line 67
+                        $context["counter"] = ((isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 67, $this->source); })()) + 1);
+                        // line 68
                         echo "                                        ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['key'], $context['val'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 65
+                    // line 69
                     echo "                                        <input class=\"form-control form-control-sm\"
                                                style=\"width:10em;text-align:right;display:inline-block;\" type=\"text\"
-                                               name=\"config_";
-                    // line 67
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 67), "html", null, true);
-                    echo "[";
-                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 67, $this->source); })()), "html", null, true);
-                    echo "][key]\"
-                                               id=\"config_";
-                    // line 68
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 68), "html", null, true);
-                    echo "_";
-                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 68, $this->source); })()), "html", null, true);
-                    echo "__key_\">
-                                        <input class=\"form-control form-control-sm\"
-                                               style=\"width:30em;display:inline-block;\" type=\"text\"
                                                name=\"config_";
                     // line 71
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 71), "html", null, true);
                     echo "[";
                     echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 71, $this->source); })()), "html", null, true);
-                    echo "][val]\"
+                    echo "][key]\"
                                                id=\"config_";
                     // line 72
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 72), "html", null, true);
                     echo "_";
                     echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 72, $this->source); })()), "html", null, true);
+                    echo "__key_\">
+                                        <input class=\"form-control form-control-sm\"
+                                               style=\"width:30em;display:inline-block;\" type=\"text\"
+                                               name=\"config_";
+                    // line 75
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 75), "html", null, true);
+                    echo "[";
+                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 75, $this->source); })()), "html", null, true);
+                    echo "][val]\"
+                                               id=\"config_";
+                    // line 76
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 76), "html", null, true);
+                    echo "_";
+                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 76, $this->source); })()), "html", null, true);
                     echo "__val\">
                                         <br/>
                                     ";
-                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 74
-$context["option"], "type", [], "any", false, false, false, 74) == "array_val")) {
-                    // line 75
+                } elseif ((twig_get_attribute($this->env, $this->source,                 // line 78
+$context["option"], "type", [], "any", false, false, false, 78) == "array_val")) {
+                    // line 79
                     echo "                                        <br/>
                                         ";
-                    // line 76
+                    // line 80
                     $context["counter"] = 0;
-                    // line 77
+                    // line 81
                     echo "                                        ";
                     $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 77));
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["option"], "value", [], "any", false, false, false, 81));
                     foreach ($context['_seq'] as $context["_key"] => $context["val"]) {
-                        // line 78
+                        // line 82
                         echo "                                            <input class=\"form-control form-control-sm\"
                                                    style=\"width:30em;display:inline-block;\" type=\"text\"
                                                    value=\"";
-                        // line 80
+                        // line 84
                         echo twig_escape_filter($this->env, $context["val"], "html", null, true);
                         echo "\"
                                                    name=\"config_";
-                        // line 81
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 81), "html", null, true);
+                        // line 85
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 85), "html", null, true);
                         echo "[";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 81, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 85, $this->source); })()), "html", null, true);
                         echo "]\"
                                                    id=\"config_";
-                        // line 82
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 82), "html", null, true);
+                        // line 86
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 86), "html", null, true);
                         echo "_";
-                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 82, $this->source); })()), "html", null, true);
+                        echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 86, $this->source); })()), "html", null, true);
                         echo "_\">
                                             <br/>
                                             ";
-                        // line 84
-                        $context["counter"] = ((isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 84, $this->source); })()) + 1);
-                        // line 85
+                        // line 88
+                        $context["counter"] = ((isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 88, $this->source); })()) + 1);
+                        // line 89
                         echo "                                        ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['val'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 86
+                    // line 90
                     echo "                                        <input class=\"form-control form-control-sm\"
                                                style=\"width:30em;display:inline-block;\" type=\"text\"
                                                name=\"config_";
-                    // line 88
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 88), "html", null, true);
+                    // line 92
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 92), "html", null, true);
                     echo "[";
-                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 88, $this->source); })()), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 92, $this->source); })()), "html", null, true);
                     echo "]\"
                                                id=\"config_";
-                    // line 89
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 89), "html", null, true);
+                    // line 93
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "name", [], "any", false, false, false, 93), "html", null, true);
                     echo "_";
-                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 89, $this->source); })()), "html", null, true);
+                    echo twig_escape_filter($this->env, (isset($context["counter"]) || array_key_exists("counter", $context) ? $context["counter"] : (function () { throw new RuntimeError('Variable "counter" does not exist.', 93, $this->source); })()), "html", null, true);
                     echo "_\">
                                         <br/>
                                     ";
                 }
-                // line 92
+                // line 96
                 echo "                                    <small class=\"text-muted\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "description", [], "any", false, false, false, 92), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["option"], "description", [], "any", false, false, false, 96), "html", null, true);
                 echo "</small>
                                 </div>
                             </li>
@@ -323,7 +327,7 @@ $context["option"], "type", [], "any", false, false, false, 74) == "array_val"))
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['option'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 96
+            // line 100
             echo "                    </ul>
                 </div>
             </div>
@@ -333,9 +337,12 @@ $context["option"], "type", [], "any", false, false, false, 74) == "array_val"))
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 101
+        // line 105
         echo "        <input class=\"btn btn-primary\" type=\"submit\" value=\"Submit\" id=\"save\" name=\"save\">
-    </form>
+    </form> 
+            </div>
+        </div>
+    </div>
 ";
     }
 
@@ -351,7 +358,7 @@ $context["option"], "type", [], "any", false, false, false, 74) == "array_val"))
 
     public function getDebugInfo()
     {
-        return array (  337 => 101,  327 => 96,  316 => 92,  308 => 89,  302 => 88,  298 => 86,  292 => 85,  290 => 84,  283 => 82,  277 => 81,  273 => 80,  269 => 78,  264 => 77,  262 => 76,  259 => 75,  257 => 74,  250 => 72,  244 => 71,  236 => 68,  230 => 67,  226 => 65,  220 => 64,  218 => 63,  211 => 61,  205 => 60,  201 => 59,  193 => 56,  187 => 55,  183 => 54,  179 => 52,  174 => 51,  172 => 50,  169 => 49,  167 => 48,  163 => 47,  157 => 46,  154 => 45,  152 => 44,  147 => 42,  141 => 41,  136 => 38,  134 => 37,  127 => 35,  121 => 34,  117 => 32,  115 => 31,  111 => 30,  107 => 28,  103 => 27,  96 => 23,  92 => 21,  88 => 20,  83 => 17,  79 => 16,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
+        return array (  341 => 105,  331 => 100,  320 => 96,  312 => 93,  306 => 92,  302 => 90,  296 => 89,  294 => 88,  287 => 86,  281 => 85,  277 => 84,  273 => 82,  268 => 81,  266 => 80,  263 => 79,  261 => 78,  254 => 76,  248 => 75,  240 => 72,  234 => 71,  230 => 69,  224 => 68,  222 => 67,  215 => 65,  209 => 64,  205 => 63,  197 => 60,  191 => 59,  187 => 58,  183 => 56,  178 => 55,  176 => 54,  173 => 53,  171 => 52,  167 => 51,  161 => 50,  158 => 49,  156 => 48,  151 => 46,  145 => 45,  140 => 42,  138 => 41,  131 => 39,  125 => 38,  121 => 36,  119 => 35,  115 => 34,  111 => 32,  107 => 31,  100 => 27,  96 => 25,  92 => 24,  83 => 17,  79 => 16,  68 => 8,  63 => 7,  59 => 6,  51 => 4,  46 => 1,  44 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -372,6 +379,10 @@ $context["option"], "type", [], "any", false, false, false, 74) == "array_val"))
 {% endblock %}
 
 {% block content %}
+<div class=\"dashboard-wrapper\">
+        <div class=\"row\">
+            <div class=\"col-12\">
+               
     <h1>Configuration</h1>
 
     <form method=\"post\">
@@ -457,7 +468,10 @@ $context["option"], "type", [], "any", false, false, false, 74) == "array_val"))
             <br/>
         {% endfor %}
         <input class=\"btn btn-primary\" type=\"submit\" value=\"Submit\" id=\"save\" name=\"save\">
-    </form>
+    </form> 
+            </div>
+        </div>
+    </div>
 {% endblock %}
 ", "jury/config.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/config.html.twig");
     }

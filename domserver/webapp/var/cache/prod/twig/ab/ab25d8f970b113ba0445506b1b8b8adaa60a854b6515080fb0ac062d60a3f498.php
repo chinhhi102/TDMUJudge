@@ -270,17 +270,9 @@ class __TwigTemplate_44c8e131e4286b5d1402307c0af77442e92c0cef2b561a854bdc3039489
             }
             // line 144
             echo "
-\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
-            // line 146
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("jury_rejudgings");
-            echo "\" id=\"menu_rejudgings\">
-\t\t\t\t\t\t\t\t<i class=\"fas fa-sync\"></i>
-\t\t\t\t\t\t\t\tRejudgings
-\t\t\t\t\t\t\t\t<span class=\"badge badge-info\" id=\"num-alerts-rejudgings\"></span>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t";
+\t\t\t\t\t\t";
+            // line 152
+            echo "\t\t\t\t\t";
         }
         // line 153
         echo "
@@ -336,7 +328,7 @@ class __TwigTemplate_44c8e131e4286b5d1402307c0af77442e92c0cef2b561a854bdc3039489
 
     public function getDebugInfo()
     {
-        return array (  316 => 168,  308 => 163,  305 => 162,  302 => 161,  294 => 156,  291 => 155,  289 => 154,  286 => 153,  276 => 146,  272 => 144,  264 => 139,  261 => 138,  259 => 137,  251 => 132,  239 => 123,  236 => 122,  234 => 121,  231 => 120,  218 => 110,  208 => 103,  196 => 93,  194 => 92,  191 => 91,  183 => 86,  180 => 85,  178 => 84,  170 => 79,  152 => 63,  150 => 62,  147 => 61,  145 => 60,  142 => 59,  134 => 54,  131 => 53,  122 => 47,  119 => 46,  115 => 44,  109 => 42,  107 => 41,  104 => 40,  100 => 38,  96 => 36,  94 => 35,  89 => 32,  87 => 31,  75 => 21,  69 => 19,  67 => 18,  60 => 16,  57 => 15,  55 => 14,  44 => 6,  37 => 1,);
+        return array (  308 => 168,  300 => 163,  297 => 162,  294 => 161,  286 => 156,  283 => 155,  281 => 154,  278 => 153,  275 => 152,  272 => 144,  264 => 139,  261 => 138,  259 => 137,  251 => 132,  239 => 123,  236 => 122,  234 => 121,  231 => 120,  218 => 110,  208 => 103,  196 => 93,  194 => 92,  191 => 91,  183 => 86,  180 => 85,  178 => 84,  170 => 79,  152 => 63,  150 => 62,  147 => 61,  145 => 60,  142 => 59,  134 => 54,  131 => 53,  122 => 47,  119 => 46,  115 => 44,  109 => 42,  107 => 41,  104 => 40,  100 => 38,  96 => 36,  94 => 35,  89 => 32,  87 => 31,  75 => 21,  69 => 19,  67 => 18,  60 => 16,  57 => 15,  55 => 14,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -485,13 +477,13 @@ class __TwigTemplate_44c8e131e4286b5d1402307c0af77442e92c0cef2b561a854bdc3039489
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% endif %}
 
-\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t{# <li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{ path('jury_rejudgings') }}\" id=\"menu_rejudgings\">
 \t\t\t\t\t\t\t\t<i class=\"fas fa-sync\"></i>
 \t\t\t\t\t\t\t\tRejudgings
 \t\t\t\t\t\t\t\t<span class=\"badge badge-info\" id=\"num-alerts-rejudgings\"></span>
 \t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
+\t\t\t\t\t\t</li> #}
 \t\t\t\t\t{% endif %}
 
 \t\t\t\t\t{% if is_granted('ROLE_JURY') %}

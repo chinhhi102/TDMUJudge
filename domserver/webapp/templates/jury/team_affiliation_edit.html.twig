@@ -1,17 +1,25 @@
-{% extends "jury/base.html.twig" %}
+{% extends 'jury/base.html.twig' %}
 
-{% block title %}Edit affiliation {{ teamAffiliation.affilid }} - {{ parent() }}{% endblock %}
+{% block title %}
+  Edit affiliation {{ teamAffiliation.affilid }} - {{ parent() }}
+{% endblock %}
 
-{% import "jury/jury_macros.twig" as macros %}
+{% import 'jury/jury_macros.twig' as macros %}
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.select2_extrahead() }}
+  {{ parent() }}
+  {{ macros.select2_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          Edit affiliation {{ teamAffiliation.affilid }}
+        </h1>
 
-    <h1>Edit affiliation {{ teamAffiliation.affilid }}</h1>
-
-    {% include 'jury/partials/team_affiliation_form.html.twig' %}
-
+        {% include 'jury/partials/team_affiliation_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

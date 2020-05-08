@@ -34,7 +34,7 @@ class __TwigTemplate_ba3cd824c9acfcf57059cfe3f2ca6d615985fee3466f8c49196dc3d3243
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"alert alert-";
+        echo "<div style=\"position: fixed; bottom: 10px; right: 10px\" class=\"alert alert-";
         echo twig_escape_filter($this->env, (isset($context["type"]) || array_key_exists("type", $context) ? $context["type"] : (function () { throw new RuntimeError('Variable "type" does not exist.', 1, $this->source); })()), "html", null, true);
         echo " alert-dismissible fade show\">
     ";
@@ -65,7 +65,7 @@ class __TwigTemplate_ba3cd824c9acfcf57059cfe3f2ca6d615985fee3466f8c49196dc3d3243
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"alert alert-{{ type }} alert-dismissible fade show\">
+        return new Source("<div style=\"position: fixed; bottom: 10px; right: 10px\" class=\"alert alert-{{ type }} alert-dismissible fade show\">
     {{ message | raw }}
     <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">
         <span aria-hidden=\"true\">&times;</span>

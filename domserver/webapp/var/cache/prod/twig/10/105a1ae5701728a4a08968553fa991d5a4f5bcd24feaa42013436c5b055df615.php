@@ -64,7 +64,7 @@ class __TwigTemplate_0fd78cabfa2e452d8acddfb971254661a334087ad1ac60959375a193d03
         } else {
             // line 14
             echo "    <div class=\"card\">
-        <div class=\"card-header\" style=\"font-family: Roboto, sans-serif; display: flex;\">
+        <div class=\"card-header\" style=\"font-family: verdana, arial, sans-serif; display: flex;\">
             <span style=\"font-weight: bold;\">";
             // line 16
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["current_contest"]) || array_key_exists("current_contest", $context) ? $context["current_contest"] : (function () { throw new RuntimeError('Variable "current_contest" does not exist.', 16, $this->source); })()), "name", [], "any", false, false, false, 16), "html", null, true);
@@ -455,7 +455,7 @@ class __TwigTemplate_0fd78cabfa2e452d8acddfb971254661a334087ad1ac60959375a193d03
     <p class=\"nodata\">No active contest</p>
 {% else %}
     <div class=\"card\">
-        <div class=\"card-header\" style=\"font-family: Roboto, sans-serif; display: flex;\">
+        <div class=\"card-header\" style=\"font-family: verdana, arial, sans-serif; display: flex;\">
             <span style=\"font-weight: bold;\">{{ current_contest.name }}</span>
             <span style=\"color: DimGray; margin-left: auto;\">
                 {% if scoreboard is null %}

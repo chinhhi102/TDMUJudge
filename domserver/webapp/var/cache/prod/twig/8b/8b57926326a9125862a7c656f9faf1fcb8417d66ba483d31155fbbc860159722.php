@@ -35,7 +35,7 @@ class __TwigTemplate_0022cdb76104ca63f282d42dac6f26f2d5c4ab7a15c0d5f0e61f8ae0794
         $macros = $this->macros;
         // line 1
         echo "<div class=\"row\">
-    <div class=\"col-lg-4\">
+    <div class=\"col-lg-8\">
         ";
         // line 3
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 3, $this->source); })()), 'form_start');
@@ -114,7 +114,7 @@ class __TwigTemplate_0022cdb76104ca63f282d42dac6f26f2d5c4ab7a15c0d5f0e61f8ae0794
     public function getSourceContext()
     {
         return new Source("<div class=\"row\">
-    <div class=\"col-lg-4\">
+    <div class=\"col-lg-8\">
         {{ form_start(form) }}
         {% if form.offsetExists('username') %}
             {{ form_row(form.username) }}

@@ -985,3 +985,426 @@
 [Mar 05 20:40:50.594] judgedaemon[30877]: API request GET config
 [Mar 05 20:40:50.775] judgedaemon[30877]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
 [Mar 05 20:40:51.056] judgedaemon[30877]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 16:52:29.770] judgedaemon[7004]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 16:52:29.782] judgedaemon[7004]: Installing signal handlers
+[Apr 30 16:52:29.792] judgedaemon[7004]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 16:52:29.808] judgedaemon[7004]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 16:52:29.817] judgedaemon[7004]: API request POST judgehosts
+[Apr 30 16:52:30.140] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:30.329] judgedaemon[7004]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 16:52:31.099] judgedaemon[7004]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j1...
+[Apr 30 16:52:31.099] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:31.275] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:31.412] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:31.589] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:31.729] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:31.866] judgedaemon[7004]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/1
+[Apr 30 16:52:31.874] judgedaemon[7004]: API request GET contests/2/submissions/1/source-code
+[Apr 30 16:52:32.087] judgedaemon[7004]: Fetching new executable 'cpp'
+[Apr 30 16:52:32.094] judgedaemon[7004]: API request GET executables/cpp
+[Apr 30 16:52:32.278] judgedaemon[7004]: Unzipping
+[Apr 30 16:52:32.314] judgedaemon[7004]: Compiling
+[Th04 30 16:52:32.354] compile.sh[7029]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 7029
+[Th04 30 16:52:32.356] compile.sh[7029]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/1'
+[Th04 30 16:52:32.359] compile.sh[7029]: source file(s): a.cpp
+[Th04 30 16:52:32.364] compile.sh[7029]: starting compile
+[Th04 30 16:52:32.529] compile.sh[7029]: unexpected error, aborting!
+[Apr 30 16:52:32.534] judgedaemon[7004]: Unknown exitcode from compile.sh for s1: 127
+[Apr 30 16:52:32.555] judgedaemon[7004]: API request POST judgehosts/internal-error
+[Apr 30 16:52:33.039] judgedaemon[7004]: API request GET config
+[Apr 30 16:52:33.199] judgedaemon[7004]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 16:52:33.420] judgedaemon[7004]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 16:55:40.101] judgedaemon[7004]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j2...
+[Apr 30 16:55:40.101] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:40.396] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:40.562] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:40.698] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:40.863] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:41.031] judgedaemon[7004]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/2
+[Apr 30 16:55:41.048] judgedaemon[7004]: API request GET contests/2/submissions/1/source-code
+[Th04 30 16:55:41.284] compile.sh[7152]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 7152
+[Th04 30 16:55:41.285] compile.sh[7152]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/2'
+[Th04 30 16:55:41.289] compile.sh[7152]: source file(s): a.cpp
+[Th04 30 16:55:41.296] compile.sh[7152]: starting compile
+[Th04 30 16:55:41.317] compile.sh[7152]: unexpected error, aborting!
+[Apr 30 16:55:41.322] judgedaemon[7004]: Unknown exitcode from compile.sh for s1: 127
+[Apr 30 16:55:41.336] judgedaemon[7004]: API request POST judgehosts/internal-error
+[Apr 30 16:55:41.875] judgedaemon[7004]: API request GET config
+[Apr 30 16:55:42.120] judgedaemon[7004]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 16:55:42.458] judgedaemon[7004]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 16:57:34.793] judgedaemon[7004]: Signal 2 received
+[Apr 30 16:57:34.793] judgedaemon[7004]: Received signal, exiting.
+[Apr 30 16:57:47.713] judgedaemon[7231]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 16:57:47.717] judgedaemon[7231]: Installing signal handlers
+[Apr 30 16:57:47.718] judgedaemon[7231]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 16:57:47.721] judgedaemon[7231]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 16:57:47.727] judgedaemon[7231]: API request POST judgehosts
+[Apr 30 16:57:48.021] judgedaemon[7231]: API request GET config
+[Apr 30 16:57:48.178] judgedaemon[7231]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 16:57:48.402] judgedaemon[7231]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 16:57:59.998] judgedaemon[7231]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j3...
+[Apr 30 16:57:59.998] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:00.281] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:00.429] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:00.629] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:00.799] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:00.954] judgedaemon[7231]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/3
+[Apr 30 16:58:00.969] judgedaemon[7231]: API request GET contests/2/submissions/1/source-code
+[Th04 30 16:58:01.413] compile.sh[7265]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 7265
+[Th04 30 16:58:01.421] compile.sh[7265]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/3'
+[Th04 30 16:58:01.432] compile.sh[7265]: source file(s): a.cpp
+[Th04 30 16:58:01.436] compile.sh[7265]: starting compile
+[Th04 30 16:58:01.591] compile.sh[7265]: checking compilation exit-status
+[Th04 30 16:58:01.595] compile.sh[7265]: exiting, code = '101'
+[Apr 30 16:58:01.603] judgedaemon[7231]: API request POST judgehosts/internal-error
+[Apr 30 16:58:02.186] judgedaemon[7231]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 16:58:02.187] judgedaemon[7231]: API request GET config
+[Apr 30 16:58:02.417] judgedaemon[7231]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 16:58:02.733] judgedaemon[7231]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:05:51.165] judgedaemon[7231]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j4...
+[Apr 30 17:05:51.165] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:51.378] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:51.521] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:51.665] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:51.822] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:52.009] judgedaemon[7231]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/4
+[Apr 30 17:05:52.014] judgedaemon[7231]: API request GET contests/2/submissions/1/source-code
+[Th04 30 17:05:52.306] compile.sh[10767]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 10767
+[Th04 30 17:05:52.310] compile.sh[10767]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/4'
+[Th04 30 17:05:52.313] compile.sh[10767]: source file(s): a.cpp
+[Th04 30 17:05:52.318] compile.sh[10767]: starting compile
+[Th04 30 17:05:52.343] compile.sh[10767]: checking compilation exit-status
+[Th04 30 17:05:52.347] compile.sh[10767]: exiting, code = '101'
+[Apr 30 17:05:52.355] judgedaemon[7231]: API request POST judgehosts/internal-error
+[Apr 30 17:05:52.861] judgedaemon[7231]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:05:52.861] judgedaemon[7231]: API request GET config
+[Apr 30 17:05:53.077] judgedaemon[7231]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:05:53.449] judgedaemon[7231]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:08:13.366] judgedaemon[7231]: Signal 2 received
+[Apr 30 17:08:13.366] judgedaemon[7231]: Signal 2 received
+[Apr 30 17:08:13.366] judgedaemon[7231]: Received signal, exiting.
+[Apr 30 17:10:26.909] judgedaemon[11283]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 17:10:26.913] judgedaemon[11283]: Installing signal handlers
+[Apr 30 17:10:26.913] judgedaemon[11283]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 17:10:26.917] judgedaemon[11283]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 17:10:26.920] judgedaemon[11283]: API request POST judgehosts
+[Apr 30 17:10:27.185] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:27.370] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:10:27.632] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:10:38.568] judgedaemon[11283]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j5...
+[Apr 30 17:10:38.568] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:38.816] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:39.046] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:39.236] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:39.503] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:39.801] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/5
+[Apr 30 17:10:39.805] judgedaemon[11283]: API request GET contests/2/submissions/1/source-code
+[Th04 30 17:10:40.076] compile.sh[11317]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 11317
+[Th04 30 17:10:40.081] compile.sh[11317]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/5'
+[Th04 30 17:10:40.090] compile.sh[11317]: source file(s): a.cpp
+[Th04 30 17:10:40.105] compile.sh[11317]: starting compile
+[Th04 30 17:10:40.161] compile.sh[11317]: checking compilation exit-status
+[Th04 30 17:10:40.173] compile.sh[11317]: exiting, code = '101'
+[Apr 30 17:10:40.190] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:10:40.754] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:10:40.754] judgedaemon[11283]: API request GET config
+[Apr 30 17:10:40.948] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:10:41.166] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:15:22.057] judgedaemon[11283]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j6...
+[Apr 30 17:15:22.057] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:22.352] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:22.592] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:22.837] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:23.068] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:23.215] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/6
+[Apr 30 17:15:23.223] judgedaemon[11283]: API request GET contests/2/submissions/1/source-code
+[Th04 30 17:15:23.485] compile.sh[11429]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 11429
+[Th04 30 17:15:23.488] compile.sh[11429]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/6'
+[Th04 30 17:15:23.494] compile.sh[11429]: source file(s): a.cpp
+[Th04 30 17:15:23.503] compile.sh[11429]: starting compile
+[Th04 30 17:15:23.559] compile.sh[11429]: checking compilation exit-status
+[Th04 30 17:15:23.569] compile.sh[11429]: exiting, code = '101'
+[Apr 30 17:15:23.586] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:15:23.784] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:15:23.784] judgedaemon[11283]: API request GET config
+[Apr 30 17:15:24.035] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:15:24.241] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:18:56.806] judgedaemon[11283]: Judging submission s2 (endpoint default) (t3/p2/cpp), id j7...
+[Apr 30 17:18:56.806] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:57.067] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:57.336] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:57.526] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:57.671] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:57.829] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/7
+[Apr 30 17:18:57.834] judgedaemon[11283]: API request GET contests/2/submissions/2/source-code
+[Th04 30 17:18:58.071] compile.sh[11539]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 11539
+[Th04 30 17:18:58.074] compile.sh[11539]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/7'
+[Th04 30 17:18:58.075] compile.sh[11539]: source file(s): a.cpp
+[Th04 30 17:18:58.079] compile.sh[11539]: starting compile
+[Th04 30 17:18:58.140] compile.sh[11539]: checking compilation exit-status
+[Th04 30 17:18:58.149] compile.sh[11539]: exiting, code = '101'
+[Apr 30 17:18:58.163] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:18:58.691] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:18:58.691] judgedaemon[11283]: API request GET config
+[Apr 30 17:18:58.929] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:18:59.230] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:20:09.060] judgedaemon[11283]: Judging submission s2 (endpoint default) (t3/p2/cpp), id j8...
+[Apr 30 17:20:09.061] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:09.312] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:09.591] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:09.776] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:09.990] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:10.223] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/8
+[Apr 30 17:20:10.229] judgedaemon[11283]: API request GET contests/2/submissions/2/source-code
+[Th04 30 17:20:10.441] compile.sh[11638]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 11638
+[Th04 30 17:20:10.443] compile.sh[11638]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/8'
+[Th04 30 17:20:10.445] compile.sh[11638]: source file(s): a.cpp
+[Th04 30 17:20:10.450] compile.sh[11638]: starting compile
+[Th04 30 17:20:10.472] compile.sh[11638]: checking compilation exit-status
+[Th04 30 17:20:10.476] compile.sh[11638]: exiting, code = '101'
+[Apr 30 17:20:10.483] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:20:11.130] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:20:11.130] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:11.355] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:20:11.587] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:20:28.049] judgedaemon[11283]: Judging submission s2 (endpoint default) (t3/p2/cpp), id j9...
+[Apr 30 17:20:28.049] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:28.305] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:28.574] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:28.823] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:29.126] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:29.353] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/9
+[Apr 30 17:20:29.362] judgedaemon[11283]: API request GET contests/2/submissions/2/source-code
+[Th04 30 17:20:29.619] compile.sh[11697]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 11697
+[Th04 30 17:20:29.624] compile.sh[11697]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/9'
+[Th04 30 17:20:29.627] compile.sh[11697]: source file(s): a.cpp
+[Th04 30 17:20:29.633] compile.sh[11697]: starting compile
+[Th04 30 17:20:29.690] compile.sh[11697]: checking compilation exit-status
+[Th04 30 17:20:29.700] compile.sh[11697]: exiting, code = '101'
+[Apr 30 17:20:29.724] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:20:30.334] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:20:30.334] judgedaemon[11283]: API request GET config
+[Apr 30 17:20:30.599] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:20:30.868] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:31:00.067] judgedaemon[11283]: Judging submission s2 (endpoint default) (t3/p2/cpp), id j10...
+[Apr 30 17:31:00.067] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:00.416] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:00.670] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:00.897] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:01.061] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:01.285] judgedaemon[11283]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/10
+[Apr 30 17:31:01.293] judgedaemon[11283]: API request GET contests/2/submissions/2/source-code
+[Th04 30 17:31:01.621] compile.sh[13236]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 13236
+[Th04 30 17:31:01.630] compile.sh[13236]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/10'
+[Th04 30 17:31:01.639] compile.sh[13236]: source file(s): a.cpp
+[Th04 30 17:31:01.649] compile.sh[13236]: starting compile
+[Th04 30 17:31:01.673] compile.sh[13236]: checking compilation exit-status
+[Th04 30 17:31:01.679] compile.sh[13236]: exiting, code = '101'
+[Apr 30 17:31:01.690] judgedaemon[11283]: API request POST judgehosts/internal-error
+[Apr 30 17:31:02.361] judgedaemon[11283]: Running compile.sh caused an error/crash: /home/chinhhi/domjudge/judgehost/bin/runguard: creating cgroup: Unknown error 50029
+[Apr 30 17:31:02.361] judgedaemon[11283]: API request GET config
+[Apr 30 17:31:02.642] judgedaemon[11283]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:31:03.015] judgedaemon[11283]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:32:32.980] judgedaemon[11283]: Signal 15 received
+[Apr 30 17:32:32.980] judgedaemon[11283]: Received signal, exiting.
+[Apr 30 17:39:41.467] judgedaemon[3220]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 17:39:41.520] judgedaemon[3220]: Installing signal handlers
+[Apr 30 17:39:41.541] judgedaemon[3220]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 17:39:41.631] judgedaemon[3220]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 17:39:41.687] judgedaemon[3220]: API request POST judgehosts
+[Apr 30 17:39:50.546] judgedaemon[3220]: Found unfinished judging j6 in my name; given back
+[Apr 30 17:39:50.546] judgedaemon[3220]: API request GET config
+[Apr 30 17:39:51.223] judgedaemon[3220]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:39:51.554] judgedaemon[3220]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:48:43.028] judgedaemon[3220]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j11...
+[Apr 30 17:48:43.028] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:43.333] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:43.572] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:43.819] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:44.129] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:44.371] judgedaemon[3220]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/11
+[Apr 30 17:48:44.375] judgedaemon[3220]: API request GET contests/2/submissions/1/source-code
+[Th04 30 17:48:44.799] compile.sh[4018]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 4018
+[Th04 30 17:48:44.802] compile.sh[4018]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/11'
+[Th04 30 17:48:44.803] compile.sh[4018]: source file(s): a.cpp
+[Th04 30 17:48:44.807] compile.sh[4018]: starting compile
+[Th04 30 17:48:44.823] compile.sh[4018]: unexpected error, aborting!
+[Apr 30 17:48:44.842] judgedaemon[3220]: Unknown exitcode from compile.sh for s1: 127
+[Apr 30 17:48:44.850] judgedaemon[3220]: API request POST judgehosts/internal-error
+[Apr 30 17:48:45.358] judgedaemon[3220]: API request GET config
+[Apr 30 17:48:45.540] judgedaemon[3220]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:48:45.796] judgedaemon[3220]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:49:05.937] judgedaemon[3220]: Signal 2 received
+[Apr 30 17:49:05.938] judgedaemon[3220]: Received signal, exiting.
+[Apr 30 17:50:33.238] judgedaemon[4176]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 17:50:33.241] judgedaemon[4176]: Installing signal handlers
+[Apr 30 17:50:33.244] judgedaemon[4176]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 17:50:33.246] judgedaemon[4176]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 17:50:33.249] judgedaemon[4176]: API request POST judgehosts
+[Apr 30 17:50:33.532] judgedaemon[4176]: API request GET config
+[Apr 30 17:50:33.706] judgedaemon[4176]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:50:33.961] judgedaemon[4176]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:50:36.060] judgedaemon[4176]: Signal 2 received
+[Apr 30 17:50:36.060] judgedaemon[4176]: Received signal, exiting.
+[Apr 30 17:56:44.533] judgedaemon[4710]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[Apr 30 17:56:44.536] judgedaemon[4710]: Installing signal handlers
+[Apr 30 17:56:44.537] judgedaemon[4710]: executing chroot script: 'chroot-startstop.sh check'
+[Apr 30 17:56:44.541] judgedaemon[4710]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[Apr 30 17:56:44.544] judgedaemon[4710]: API request POST judgehosts
+[Apr 30 17:56:44.789] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:44.948] judgedaemon[4710]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:56:45.173] judgedaemon[4710]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 17:56:51.042] judgedaemon[4710]: Judging submission s1 (endpoint default) (t3/p3/cpp), id j12...
+[Apr 30 17:56:51.042] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:51.257] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:51.419] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:51.579] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:51.726] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:51.878] judgedaemon[4710]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/12
+[Apr 30 17:56:51.881] judgedaemon[4710]: API request GET contests/2/submissions/1/source-code
+[Th04 30 17:56:52.118] compile.sh[4727]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 4727
+[Th04 30 17:56:52.125] compile.sh[4727]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/12'
+[Th04 30 17:56:52.131] compile.sh[4727]: source file(s): a.cpp
+[Th04 30 17:56:52.139] compile.sh[4727]: starting compile
+[Th04 30 17:56:58.979] compile.sh[4727]: checking compilation exit-status
+[Th04 30 17:56:58.983] compile.sh[4727]: Compilation successful
+[Th04 30 17:56:58.985] compile.sh[4727]: exiting, code = '0'
+[Apr 30 17:56:58.987] judgedaemon[4710]: API request PUT judgehosts/update-judging/chinhhi-Virtual-Machine/12
+[Apr 30 17:56:59.410] judgedaemon[4710]: executing chroot script: 'chroot-startstop.sh start'
+[Apr 30 17:56:59.777] judgedaemon[4710]: API request GET config
+[Apr 30 17:56:59.953] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:00.099] judgedaemon[4710]: Running testcase 1...
+[Apr 30 17:57:00.115] judgedaemon[4710]: API request GET testcases/5/file/input
+[Apr 30 17:57:00.522] judgedaemon[4710]: API request GET testcases/5/file/output
+[Apr 30 17:57:00.759] judgedaemon[4710]: Fetched new input,output testcase 1 for problem p3
+[Apr 30 17:57:00.766] judgedaemon[4710]: Fetching new executable 'boolfind_run'
+[Apr 30 17:57:00.778] judgedaemon[4710]: API request GET executables/boolfind_run
+[Apr 30 17:57:01.093] judgedaemon[4710]: Unzipping
+[Apr 30 17:57:01.120] judgedaemon[4710]: Compiling
+[Apr 30 17:57:01.959] judgedaemon[4710]: Fetching new executable 'boolfind_cmp'
+[Apr 30 17:57:01.967] judgedaemon[4710]: API request GET executables/boolfind_cmp
+[Apr 30 17:57:02.174] judgedaemon[4710]: Unzipping
+[Apr 30 17:57:02.185] judgedaemon[4710]: Compiling
+check_boolfind.c: In function ‘main’:
+check_boolfind.c:28:2: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+  fscanf(testin,"%d\n",&nruns);
+  ^
+check_boolfind.c:31:3: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   fscanf(testin,"%ld\n",&nbools);
+   ^
+check_boolfind.c:39:33: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+   for(pos=0; pos<nbools; pos++) fscanf(testin,"%d\n",&bools[pos]);
+                                 ^
+[Th04 30 17:57:02.404] testcase_run.sh[4892]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/testcase_run.sh', PID = 4892
+[Th04 30 17:57:02.406] testcase_run.sh[4892]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/testcase/testcase.3.1.90864a8759427d63b40f1f5f75e32308.in' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/testcase/testcase.3.1.6267776644f5bd2bf0edccf5a210e087.out' '5:6' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/12/testcase001'
+[Th04 30 17:57:02.412] testcase_run.sh[4892]: optionals: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/boolfind_run/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/boolfind_cmp/run' ''
+[Th04 30 17:57:02.428] testcase_run.sh[4892]: setting up testing (chroot) environment
+[Th04 30 17:57:02.527] testcase_run.sh[4892]: creating /dev/null character-special device
+[Th04 30 17:57:02.542] testcase_run.sh[4892]: running program
+[Th04 30 17:57:02.546] testcase_run.sh[4892]: runcheck: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/boolfind_run/run testdata.in program.out sudo -n /home/chinhhi/domjudge/judgehost/bin/runguard -r /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/1/12/testcase001/.. --nproc=64 --no-core --streamsize=8192 --user=domjudge-run --group=domjudge-run --walltime=5:6 --cputime=5:6 --memsize=2097152 --filesize=8192 --stderr=program.err --outmeta=program.meta -- /testcase001/execdir/program
+[Th04 30 17:57:02.641] testcase_run.sh[4892]: comparing output
+[Th04 30 17:57:02.644] testcase_run.sh[4892]: starting compare script '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/boolfind_cmp/run'
+[Th04 30 17:57:02.649] testcase_run.sh[4892]: runcheck: sudo -n /home/chinhhi/domjudge/judgehost/bin/runguard -u domjudge-run -g domjudge-run -m 2097152 -t 30 -c -f 540672 -s 540672 -M compare.meta -- /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/boolfind_cmp/run testdata.in testdata.out feedback/
+[Th04 30 17:57:02.762] testcase_run.sh[4892]: checking compare script exit-status: 43
+[Th04 30 17:57:02.768] testcase_run.sh[4892]: checking program run exit-status
+[Th04 30 17:57:02.796] testcase_run.sh[4892]: exiting with status '105'
+[Apr 30 17:57:02.799] judgedaemon[4710]: API request POST judgehosts/add-judging-run/chinhhi-Virtual-Machine/12
+[Apr 30 17:57:04.414] judgedaemon[4710]: Testcase 1 done, result: wrong-answer
+[Apr 30 17:57:04.415] judgedaemon[4710]: executing chroot script: 'chroot-startstop.sh stop'
+[Apr 30 17:57:04.590] judgedaemon[4710]: Judging s1/j12 finished
+[Apr 30 17:57:04.591] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:04.769] judgedaemon[4710]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:57:05.304] judgedaemon[4710]: Judging submission s2 (endpoint default) (t3/p2/cpp), id j13...
+[Apr 30 17:57:05.304] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:05.561] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:05.739] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:05.972] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:06.205] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:06.450] judgedaemon[4710]: Working directory: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/13
+[Apr 30 17:57:06.474] judgedaemon[4710]: API request GET contests/2/submissions/2/source-code
+[Th04 30 17:57:06.716] compile.sh[5071]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/compile.sh', PID = 5071
+[Th04 30 17:57:06.719] compile.sh[5071]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/cpp/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/13'
+[Th04 30 17:57:06.727] compile.sh[5071]: source file(s): a.cpp
+[Th04 30 17:57:06.735] compile.sh[5071]: starting compile
+[Th04 30 17:57:07.877] compile.sh[5071]: checking compilation exit-status
+[Th04 30 17:57:07.892] compile.sh[5071]: Compilation successful
+[Th04 30 17:57:07.900] compile.sh[5071]: exiting, code = '0'
+[Apr 30 17:57:07.903] judgedaemon[4710]: API request PUT judgehosts/update-judging/chinhhi-Virtual-Machine/13
+[Apr 30 17:57:08.428] judgedaemon[4710]: executing chroot script: 'chroot-startstop.sh start'
+[Apr 30 17:57:08.875] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:09.078] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:09.322] judgedaemon[4710]: Running testcase 1...
+[Apr 30 17:57:09.323] judgedaemon[4710]: API request GET testcases/2/file/input
+[Apr 30 17:57:09.581] judgedaemon[4710]: API request GET testcases/2/file/output
+[Apr 30 17:57:09.816] judgedaemon[4710]: Fetched new input,output testcase 1 for problem p2
+[Apr 30 17:57:09.832] judgedaemon[4710]: Fetching new executable 'run'
+[Apr 30 17:57:09.847] judgedaemon[4710]: API request GET executables/run
+[Apr 30 17:57:10.072] judgedaemon[4710]: Unzipping
+[Apr 30 17:57:10.081] judgedaemon[4710]: Compiling
+[Apr 30 17:57:10.084] judgedaemon[4710]: Fetching new executable 'compare'
+[Apr 30 17:57:10.089] judgedaemon[4710]: API request GET executables/compare
+[Apr 30 17:57:10.287] judgedaemon[4710]: Unzipping
+[Apr 30 17:57:10.304] judgedaemon[4710]: Compiling
+[Th04 30 17:57:11.421] testcase_run.sh[5222]: starting '/home/chinhhi/domjudge/judgehost/lib/judge/testcase_run.sh', PID = 5222
+[Th04 30 17:57:11.427] testcase_run.sh[5222]: arguments: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/testcase/testcase.2.1.9b05c566cf4d373cd23ffe75787c1f6d.in' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/testcase/testcase.2.1.0b93bf53346750cc7e04c02f31443721.out' '5:6' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/13/testcase001'
+[Th04 30 17:57:11.431] testcase_run.sh[5222]: optionals: '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/run/run' '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/compare/run' 'float_tolerance 1E-6'
+[Th04 30 17:57:11.438] testcase_run.sh[5222]: setting up testing (chroot) environment
+[Th04 30 17:57:11.459] testcase_run.sh[5222]: creating /dev/null character-special device
+[Th04 30 17:57:11.487] testcase_run.sh[5222]: running program
+[Th04 30 17:57:11.491] testcase_run.sh[5222]: runcheck: /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/run/run testdata.in program.out sudo -n /home/chinhhi/domjudge/judgehost/bin/runguard -r /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/2/2/13/testcase001/.. --nproc=64 --no-core --streamsize=8192 --user=domjudge-run --group=domjudge-run --walltime=5:6 --cputime=5:6 --memsize=2097152 --filesize=8192 --stderr=program.err --outmeta=program.meta -- /testcase001/execdir/program
+[Th04 30 17:57:11.587] testcase_run.sh[5222]: comparing output
+[Th04 30 17:57:11.597] testcase_run.sh[5222]: starting compare script '/home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/compare/run'
+[Th04 30 17:57:11.606] testcase_run.sh[5222]: runcheck: sudo -n /home/chinhhi/domjudge/judgehost/bin/runguard -u domjudge-run -g domjudge-run -m 2097152 -t 30 -c -f 540672 -s 540672 -M compare.meta -- /home/chinhhi/domjudge/judgehost/judgings/chinhhi-Virtual-Machine/endpoint-default/executable/compare/run testdata.in testdata.out feedback/ float_tolerance 1E-6
+[Th04 30 17:57:11.702] testcase_run.sh[5222]: checking compare script exit-status: 43
+[Th04 30 17:57:11.709] testcase_run.sh[5222]: checking program run exit-status
+[Th04 30 17:57:11.775] testcase_run.sh[5222]: exiting with status '105'
+[Apr 30 17:57:11.779] judgedaemon[4710]: API request POST judgehosts/add-judging-run/chinhhi-Virtual-Machine/13
+[Apr 30 17:57:12.863] judgedaemon[4710]: Testcase 1 done, result: wrong-answer
+[Apr 30 17:57:12.863] judgedaemon[4710]: API request GET testcases/next-to-judge/13
+[Apr 30 17:57:13.124] judgedaemon[4710]: executing chroot script: 'chroot-startstop.sh stop'
+[Apr 30 17:57:13.301] judgedaemon[4710]: Judging s2/j13 finished
+[Apr 30 17:57:13.301] judgedaemon[4710]: API request GET config
+[Apr 30 17:57:13.522] judgedaemon[4710]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[Apr 30 17:57:13.798] judgedaemon[4710]: No submissions in queue (for endpoint default), waiting...
+[Apr 30 19:55:59.588] judgedaemon[4710]: Signal 15 received
+[Apr 30 19:55:59.589] judgedaemon[4710]: Received signal, exiting.
+[May 04 07:18:35.058] judgedaemon[3788]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[May 04 07:18:35.143] judgedaemon[3788]: Installing signal handlers
+[May 04 07:18:35.159] judgedaemon[3788]: executing chroot script: 'chroot-startstop.sh check'
+[May 04 07:18:35.270] judgedaemon[3788]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[May 04 07:18:35.316] judgedaemon[3788]: API request POST judgehosts
+[May 04 07:18:44.716] judgedaemon[3788]: API request GET config
+[May 04 07:18:46.267] judgedaemon[3788]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[May 04 07:18:47.300] judgedaemon[3788]: No submissions in queue (for endpoint default), waiting...
+[May 04 07:34:41.281] judgedaemon[3788]: Signal 15 received
+[May 04 07:34:41.281] judgedaemon[3788]: Received signal, exiting.
+[May 04 13:43:14.979] judgedaemon[3228]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[May 04 13:43:15.042] judgedaemon[3228]: Installing signal handlers
+[May 04 13:43:15.057] judgedaemon[3228]: executing chroot script: 'chroot-startstop.sh check'
+[May 04 13:43:15.280] judgedaemon[3228]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[May 04 13:43:15.348] judgedaemon[3228]: API request POST judgehosts
+[May 04 13:43:25.308] judgedaemon[3228]: API request GET config
+[May 04 13:43:26.293] judgedaemon[3228]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[May 04 13:43:26.805] judgedaemon[3228]: No submissions in queue (for endpoint default), waiting...
+[May 04 13:47:21.919] judgedaemon[3228]: Signal 15 received
+[May 04 13:47:21.919] judgedaemon[3228]: Received signal, exiting.
+[May 04 16:25:43.800] judgedaemon[3642]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[May 04 16:25:43.823] judgedaemon[3642]: Installing signal handlers
+[May 04 16:25:43.839] judgedaemon[3642]: executing chroot script: 'chroot-startstop.sh check'
+[May 04 16:25:43.960] judgedaemon[3642]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[May 04 16:25:43.997] judgedaemon[3642]: API request POST judgehosts
+[May 04 16:25:45.133] judgedaemon[3642]: API request GET config
+[May 04 16:25:45.616] judgedaemon[3642]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[May 04 16:25:46.051] judgedaemon[3642]: No submissions in queue (for endpoint default), waiting...
+[May 04 18:38:51.490] judgedaemon[3642]: Signal 15 received
+[May 04 18:38:51.490] judgedaemon[3642]: Received signal, exiting.
+[May 08 14:32:08.713] judgedaemon[4961]: Judge started on chinhhi-Virtual-Machine [DOMjudge/7.2.0]
+[May 08 14:32:08.808] judgedaemon[4961]: Installing signal handlers
+[May 08 14:32:08.823] judgedaemon[4961]: executing chroot script: 'chroot-startstop.sh check'
+[May 08 14:32:08.846] judgedaemon[4961]: Registering judgehost on endpoint default: http://tdmu-judge.vn/api
+[May 08 14:32:08.853] judgedaemon[4961]: API request POST judgehosts
+[May 08 14:32:20.357] judgedaemon[4961]: API request GET config
+[May 08 14:32:21.496] judgedaemon[4961]: API request POST judgehosts/next-judging/chinhhi-Virtual-Machine
+[May 08 14:32:21.959] judgedaemon[4961]: No submissions in queue (for endpoint default), waiting...
+[May 08 15:46:06.060] judgedaemon[4961]: Signal 15 received
+[May 08 15:46:06.060] judgedaemon[4961]: Received signal, exiting.

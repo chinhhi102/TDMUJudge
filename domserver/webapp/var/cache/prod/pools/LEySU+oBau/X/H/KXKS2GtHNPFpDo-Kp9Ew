@@ -1,0 +1,127 @@
+<?php
+
+namespace Symfony\Component\VarExporter\Internal;
+
+return $getExpiry ? PHP_INT_MAX : Hydrator::hydrate(
+    $o = [
+        (($f = &Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (($p = &Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        clone ($p['App\\Validator\\Constraints\\Identifier'] ?? Registry::p('App\\Validator\\Constraints\\Identifier')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Choice'] ?? Registry::p('Symfony\\Component\\Validator\\Constraints\\Choice')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Executable',
+                'execid',
+                4 => 'description',
+                6 => 'type',
+            ],
+            'defaultGroup' => [
+                'Executable',
+            ],
+            'members' => [
+                [
+                    'execid' => [
+                        $o[1],
+                    ],
+                    'description' => [
+                        $o[4],
+                    ],
+                    'type' => [
+                        $o[6],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'execid' => $o[1],
+                    'description' => $o[4],
+                    'type' => $o[6],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\Executable',
+                4 => 'App\\Entity\\Executable',
+                6 => 'App\\Entity\\Executable',
+            ],
+            'property' => [
+                1 => 'execid',
+                4 => 'description',
+                6 => 'type',
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                    $o[3],
+                ],
+                4 => [
+                    $o[5],
+                ],
+                6 => [
+                    $o[7],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                        $o[3],
+                    ],
+                    'Executable' => [
+                        $o[2],
+                        $o[3],
+                    ],
+                ],
+                4 => [
+                    'Default' => [
+                        $o[5],
+                    ],
+                    'Executable' => [
+                        $o[5],
+                    ],
+                ],
+                6 => [
+                    'Default' => [
+                        $o[7],
+                    ],
+                    'Executable' => [
+                        $o[7],
+                    ],
+                ],
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Executable',
+                ],
+                [
+                    'Default',
+                    'Executable',
+                ],
+                5 => [
+                    'Default',
+                    'Executable',
+                ],
+                7 => [
+                    'Default',
+                    'Executable',
+                ],
+            ],
+            'choices' => [
+                7 => [
+                    'compare',
+                    'compile',
+                    'run',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+);

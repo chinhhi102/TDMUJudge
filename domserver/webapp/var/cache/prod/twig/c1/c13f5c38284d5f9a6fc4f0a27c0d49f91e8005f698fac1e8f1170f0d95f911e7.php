@@ -47,23 +47,32 @@ class __TwigTemplate_ef0ff7d4bece4baff2d9bed54cbfca4e29ea5654666d172663c9d90297c
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Edit Judgehosts - ";
+        // line 4
+        echo "  Edit Judgehosts - ";
         $this->displayParentBlock("title", $context, $blocks);
+        echo "
+";
     }
 
-    // line 5
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 6
-        echo "
-    <h1>Edit Judgehosts</h1>
+        // line 8
+        echo "  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Edit Judgehosts
+        </h1>
 
-    ";
-        // line 9
-        $this->loadTemplate("jury/partials/judgehosts_form.html.twig", "jury/judgehosts_edit_multiple.html.twig", 9)->display($context);
-        // line 10
-        echo "
+        ";
+        // line 15
+        $this->loadTemplate("jury/partials/judgehosts_form.html.twig", "jury/judgehosts_edit_multiple.html.twig", 15)->display($context);
+        // line 16
+        echo "      </div>
+    </div>
+  </div>
 ";
     }
 
@@ -79,21 +88,29 @@ class __TwigTemplate_ef0ff7d4bece4baff2d9bed54cbfca4e29ea5654666d172663c9d90297c
 
     public function getDebugInfo()
     {
-        return array (  66 => 10,  64 => 9,  59 => 6,  55 => 5,  47 => 3,  36 => 1,);
+        return array (  73 => 16,  71 => 15,  62 => 8,  58 => 7,  51 => 4,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"jury/base.html.twig\" %}
+        return new Source("{% extends 'jury/base.html.twig' %}
 
-{% block title %}Edit Judgehosts - {{ parent() }}{% endblock %}
+{% block title %}
+  Edit Judgehosts - {{ parent() }}
+{% endblock %}
 
 {% block content %}
+  <div class=\"dashboard-wrapper\">
+    <div class=\"row\">
+      <div class=\"col-12\">
+        <h1>
+          Edit Judgehosts
+        </h1>
 
-    <h1>Edit Judgehosts</h1>
-
-    {% include 'jury/partials/judgehosts_form.html.twig' %}
-
+        {% include 'jury/partials/judgehosts_form.html.twig' %}
+      </div>
+    </div>
+  </div>
 {% endblock %}
 ", "jury/judgehosts_edit_multiple.html.twig", "/home/chinhhi/domjudge/domserver/webapp/templates/jury/judgehosts_edit_multiple.html.twig");
     }

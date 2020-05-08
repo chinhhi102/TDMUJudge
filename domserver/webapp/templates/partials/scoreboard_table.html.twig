@@ -26,8 +26,8 @@
         }
     </style>
 {% endif %}
-
-<table class="scoreboard center {% if jury %}scoreboard_jury{% endif %}">
+<div style="padding: 10px">
+<table class="scoreboard center table table-striped table-bordered {% if jury %}scoreboard_jury{% endif %}">
 
     {# output table column groups (for the styles) #}
     <colgroup>
@@ -59,7 +59,7 @@
         {% set teamColspan = teamColspan + 1 %}
     {% endif %}
 
-    <thead>
+    <thead class="thead-dark">
     <tr class="scoreheader">
         <th title="rank" scope="col">rank</th>
         <th title="team name" scope="col" colspan="{{ teamColspan }}">team</th>
@@ -289,7 +289,7 @@
     {% include 'partials/scoreboard_summary.html.twig' with {sortOrder: previousSortOrder} %}
     </tbody>
 </table>
-
+</div>
 {% if showLegends %}
     <p><br/><br/></p>
 

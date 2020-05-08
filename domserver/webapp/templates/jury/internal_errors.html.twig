@@ -1,17 +1,34 @@
-{% extends "jury/base.html.twig" %}
-{% import "jury/jury_macros.twig" as macros %}
+{% extends 'jury/base.html.twig' %}
+{% import 'jury/jury_macros.twig' as macros %}
 
-{% block title %}Internal errors - {{ parent() }}{% endblock %}
+{% block title %}
+  Internal errors - {{ parent() }}
+{% endblock %}
 
 {% block extrahead %}
-    {{ parent() }}
-    {{ macros.table_extrahead() }}
+  {{ parent() }}
+  {{ macros.table_extrahead() }}
 {% endblock %}
 
 {% block content %}
+  <div class="dashboard-wrapper">
+    <div class="row">
+      <div class="col-12" style="overflow: auto">
+        <h1>
+          Internal errors
+        </h1>
 
-    <h1>Internal errors</h1>
-
-    {{ macros.table(internal_errors, table_fields, 0, {ordering: 'false'}) }}
-
+        {{
+          macros.table(
+            internal_errors,
+            table_fields,
+            0,
+            {
+              ordering: 'false'
+            }
+          )
+        }}
+      </div>
+    </div>
+  </div>
 {% endblock %}
